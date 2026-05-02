@@ -113,6 +113,14 @@
     .footer-inner { grid-template-columns:1fr; gap:28px; }
   }
 </style>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://christoferholland.com/thelistingside/images/og-listing-side.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="The Listing Side">
+  <meta property="og:title" content="Current Listings | The Listing Side">
+  <meta property="og:url" content="https://christoferholland.com/thelistingside/listings.html">
 </head>
 <body>
 
@@ -140,8 +148,6 @@
   <button class="filter-btn active" onclick="filterListings('all')">All</button>
   <button class="filter-btn" onclick="filterListings('rental')">Rentals</button>
   <button class="filter-btn" onclick="filterListings('sale')">Sales</button>
-  <button class="filter-btn" onclick="filterListings('manhattan')">Manhattan</button>
-  <button class="filter-btn" onclick="filterListings('brooklyn')">Brooklyn</button>
 </div>
 
 <!-- RENTALS -->
@@ -300,6 +306,17 @@
     <div>
       <div class="footer-brand">The Listing <span>Side</span></div>
       <p class="footer-tag">Clear Rates.<br>Faster Closings.</p>
+      <div class="footer-social" style="display:flex;gap:16px;margin-top:20px;">
+        <a href="https://instagram.com/christofer.holland" target="_blank" rel="noopener" aria-label="Instagram" style="color:#ffffff;transition:color .2s;display:flex;align-items:center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/christoferholland/" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:#ffffff;transition:color .2s;display:flex;align-items:center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8.5"/><path d="M12 16v-5m4 5v-3a2 2 0 0 0-4 0"/></svg>
+        </a>
+        <a href="https://facebook.com/christoferhollandrealestate" target="_blank" rel="noopener" aria-label="Facebook" style="color:#ffffff;transition:color .2s;display:flex;align-items:center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
     </div>
     <div>
       <div class="footer-col-title">The Listing Side</div>

@@ -301,7 +301,7 @@
     padding: 16px 20px;
   }
   .relo-company-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--white); margin-bottom: 4px; }
-  .relo-company-sub { font-size: 12px; color: #6b7a99; }
+  .relo-company-sub { font-size: 12px; color: #888fa0; }
   .relo-note {
     background: rgba(200,16,46,.1);
     border-left: 3px solid var(--red);
@@ -429,7 +429,7 @@
     <div>
       <div class="hero-eyebrow">Corporate & Individual Relocation — NYC</div>
       <h1 class="hero-title">Relocating<br>To New<br>York City?<br><em>Best Rate.<br>Best Rep.</em></h1>
-      <p class="hero-sub">Whether you're moving for a new role or managing employee relocations, you need an agent who knows the market, moves fast, and doesn't pad the invoice. We provide professional representation at a capped rate — rental or purchase, individual or corporate account.</p>
+      <p class="hero-sub">Whether you're moving for a new role or coordinating employee relocations, you need an agent who knows the market, moves fast, and doesn't pad the invoice. Transparent rates, full disclosure, professional representation from first call to close.</p>
       <div class="hero-ctas">
         <button class="btn-primary" onclick="document.getElementById('intake').scrollIntoView({behavior:'smooth'})">Start Your Relocation</button>
         <button class="btn-ghost-dark" onclick="document.getElementById('corporate').scrollIntoView({behavior:'smooth'})">Corporate Accounts</button>
@@ -477,7 +477,7 @@
   <div class="section">
     <div class="section-eyebrow">The Process</div>
     <h2 class="section-title">Fast. Transparent.<br>Done Right.</h2>
-    <p class="section-sub">Relocation clients have hard start dates. We treat every file with urgency — same-day response, pre-vetted unit options, and representation agreements handled digitally before you land.</p>
+    <p class="section-sub">Relocation clients have hard start dates. We treat every file with urgency — same-day response, digital representation agreements, and your file qualified before your first showing.</p>
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-num">01</div>
@@ -508,7 +508,7 @@
   <div class="section">
     <div class="section-eyebrow">Who This Is For</div>
     <h2 class="section-title">Individual Moves.<br>Corporate Accounts.</h2>
-    <p class="section-sub">Whether you're moving yourself or managing relocations for a team, the model is the same — transparent rates, fast turnaround, professional representation.</p>
+    <p class="section-sub">Whether you're moving yourself or coordinating relocations for a team, the approach is the same — transparent rates, fast turnaround, professional representation. Rates vary depending on whether a relocation management company referral fee applies.</p>
     <div class="path-grid">
       <div class="path-card">
         <div class="path-eyebrow">Individual Relocation</div>
@@ -517,8 +517,7 @@
         <ul class="path-list">
           <li>Rental at 7% (under $10k) or 5% ($10k+)</li>
           <li>Purchase — buyer representation fee negotiable and not set by law</li>
-          <li>Commute-based neighborhood matching available</li>
-          <li>Pre-approval and income verification handled upfront</li>
+          <li>File qualified before your first showing</li>
           <li>Same-day response guaranteed on active files</li>
         </ul>
         <button class="btn-primary" onclick="document.getElementById('intake').scrollIntoView({behavior:'smooth'})">Start My Relocation</button>
@@ -532,8 +531,6 @@
           <li>Each employee handled as a separate client file</li>
           <li>Rental and purchase paths both covered</li>
           <li>Referral fee structure available for relocation management companies</li>
-          <li>Reporting and documentation for expense reimbursement</li>
-          <li>Volume relationships — ongoing pipeline</li>
         </ul>
         <button class="btn-primary" onclick="document.getElementById('corporate').scrollIntoView({behavior:'smooth'})">Set Up a Corporate Account</button>
       </div>
@@ -548,10 +545,10 @@
       <div class="corp-eyebrow">For Relocation Management Companies</div>
       <h2 class="corp-title">We Work<br>Within Your<br>Network.</h2>
       <p class="corp-body">Relocation management companies (RMCs) send employees to NYC every day. We are available to serve as your receiving broker — handling every client you send with professional representation at institutional rates.</p>
-      <p class="corp-body">We honor your standard referral fee structure. We provide full documentation for your files. Every client gets the same transparent, capped-rate representation regardless of budget.</p>
+      <p class="corp-body">We honor your standard referral fee structure and provide full documentation for every closed file. Rates for RMC referrals are negotiated per agreement — our rental floor is 15% of annual rent to ensure full representation after referral fees.</p>
       <ul class="corp-list">
         <li>Available for RMC partnership and approved broker network registration</li>
-        <li>Referral fees honored per your standard agreement (typically 25–35% of earned commission)</li>
+        <li>Referral fees honored per your standard agreement (typically 25–35% of earned commission) — our rental rate is 15% of annual rent minimum to ensure full representation after the referral cut</li>
         <li>Full documentation provided for each closed transaction</li>
         <li>Rental and purchase both covered — one relationship, both transaction types</li>
         <li>KW NYC brokerage backing — fully licensed, REBNY compliant</li>
@@ -701,7 +698,11 @@
           <span class="form-section-label">Agreement</span>
           <label class="form-checkbox">
             <input type="checkbox" name="agreement" required>
-            <span>I understand rental representation fees are capped at 7% (under $10k/mo) or 5% ($10k+/mo). Purchase representation fees are negotiable and not set by law. If a seller offers a commission, it is credited toward my balance. I acknowledge the NYS Agency Disclosure.</span>
+            <span>I understand rental representation fees are 7% (under $10k/mo) or 5% ($10k+/mo). Purchase representation fees are negotiable and not set by law. If a seller offers a commission, it is credited toward my balance. I acknowledge the NYS Agency Disclosure.</span>
+          </label>
+          <label class="form-checkbox" style="margin-top:10px;">
+            <input type="checkbox" name="rmc-agreement">
+            <span>&#42; If my relocation involves a management company (RMC) referral fee: I understand the rental representation rate is 15% of annual rent minimum, and purchase fees are negotiated prior to engagement, to account for the 25–35% referral fee owed to the RMC.</span>
           </label>
           <button class="form-submit" type="submit">Submit — Start My Relocation</button>
         </form>
@@ -718,7 +719,7 @@
 <!-- INTERCEPTS -->
 <div class="intercept" style="background:#111111;border-top:1px solid #222;">
   <div>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:8px;">Planning to Buy?</div>
+    <div style="font-family:'DM Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:8px;">Planning to Buy?</div>
     <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#ffffff;line-height:1;">From rental to ownership.</div>
     <p style="font-size:14px;color:#a0aabb;line-height:1.6;margin-top:8px;max-width:480px;">Many relocation clients start with a rental and purchase within 12–24 months. When you're ready, you're already in our system. Join the Tuesday workshop to understand your buying power now.</p>
   </div>
