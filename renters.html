@@ -409,6 +409,7 @@
     margin-bottom: 8px;
     position: relative;
     z-index: 1;
+    padding-right: 72px;
   }
 
   .benefit-body {
@@ -477,7 +478,7 @@
     font-weight: 600;
     letter-spacing: .05em;
     text-transform: uppercase;
-    color: #cccccc;
+    color: #ffffff;
   }
 
   .math-table-head span:last-child,
@@ -920,9 +921,14 @@
 </head>
 <body style="background-color:#ffffff;color:#111111;">
 
+<!-- NAV — compliance bar + main nav injected by nav.js -->
 <div id="nav"></div>
-<script src="nav.js"></script>
+<script src="../nav.js"></script>
 
+<div class="utility-bar">
+  <a href="index.html">I Am a Landlord</a>
+  <a href="lease-break.html">I Need to Break a Lease</a>
+</div>
 
 <!-- HERO -->
 <section class="hero page-section" style="background-color:#ffffff;">
@@ -1031,67 +1037,30 @@
   </div>
 </section>
 
-<!-- THE MATH -->
-<div class="math-section page-section">
-  <div class="math-inner">
-    <div>
-      <div class="math-eyebrow">The Numbers</div>
-      <h2 class="math-title">The Perpetual Rent Tax</h2>
-      <p class="math-body">When the FARE Act passed, landlords raised rents across the board to cover the coming broker fees. That adjustment is already baked into every "no-fee" apartment. You aren't avoiding a broker fee — you're paying it monthly, forever. We charge you once — 7% (or 5% for units over $10k) — and represent your interests so you aren't paying a hidden markup every single month for years. The math favors the renter. The math is below.</p>
-    </div>
-    <div>
-      <div class="math-table">
-        <div class="math-table-head" style="grid-template-columns:1fr 1fr;">
-          <span style="color:#999;">The "No-Fee" Trap<br><span style="font-size:9px;opacity:.7;">Inflated Rent — Cost Hidden in Your Lease</span></span>
-          <span style="color:#C8102E;">The Listing Side<br><span style="font-size:9px;opacity:.7;">Market Rate + One-Time Capped Fee</span></span>
-        </div>
-        <div class="math-row-data" style="grid-template-columns:1fr 1fr;background:#f9f9f9;">
-          <span style="color:#888;font-size:12px;font-weight:600;"><span style="color:#C8102E;">Inflated</span> Monthly Rent</span>
-          <span style="color:#C8102E;font-size:12px;font-weight:600;">True Market Rent</span>
-        </div>
-        <div class="math-row-data" style="grid-template-columns:1fr 1fr;">
-          <span style="color:#888;font-weight:700;font-size:22px;">$5,250 <span style="font-size:12px;font-weight:400;">/mo</span></span>
-          <span style="color:#C8102E;font-weight:700;font-size:22px;">$5,000 <span style="font-size:12px;font-weight:400;color:#555;">/mo</span></span>
-        </div>
-        <div class="math-row-data" style="grid-template-columns:1fr 1fr;background:#f9f9f9;">
-          <span style="color:#888;font-size:12px;">Year 1 Total Cost</span>
-          <span style="color:#555;font-size:12px;">Year 1 Total Cost (incl. 7% fee)</span>
-        </div>
-        <div class="math-row-data" style="grid-template-columns:1fr 1fr;">
-          <span style="color:#888;font-weight:600;font-size:18px;">$63,000</span>
-          <span style="color:#555;font-weight:600;font-size:18px;">$64,200</span>
-        </div>
-        <div class="math-row-data" style="grid-template-columns:1fr 1fr;background:#f9f9f9;">
-          <span style="color:#888;font-size:12px;">Year 3 Total Cost</span>
-          <span style="color:#555;font-size:12px;">Year 3 Total Cost</span>
-        </div>
-        <div class="math-row-data" style="grid-template-columns:1fr 1fr;border-bottom:none;">
-          <span style="color:#C8102E;font-weight:700;font-size:20px;">$189,000</span>
-          <span style="color:#C8102E;font-weight:700;font-size:20px;">$184,200</span>
-        </div>
+<!-- INTERSTITIAL BREAK -->
+<div style="background:#1A2744;padding:48px 40px;text-align:center;border-top:3px solid #C8102E;border-bottom:3px solid #C8102E;">
+  <div style="max-width:860px;margin:0 auto;">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:18px;">How Representation Works Here</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;">
+      <div style="padding:0 32px;border-right:1px solid rgba(255,255,255,.12);">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#C8102E;line-height:1;">7%</div>
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(255,255,255,.85);text-transform:uppercase;margin-top:4px;">Under $10k/mo</div>
       </div>
-      <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#333;margin-top:16px;line-height:1.6;font-weight:600;">By Year 3, the "no-fee" apartment has cost you <span style="color:#C8102E;">$4,800 more</span> than our represented model. Every year after that is pure loss.</p>
+      <div style="padding:0 32px;border-right:1px solid rgba(255,255,255,.12);">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#C8102E;line-height:1;">5%</div>
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(255,255,255,.85);text-transform:uppercase;margin-top:4px;">$10k/mo &amp; Above</div>
+      </div>
+      <div style="padding:0 32px;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#ffffff;line-height:1;">$0</div>
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(255,255,255,.85);text-transform:uppercase;margin-top:4px;">If Owner Pays</div>
+      </div>
     </div>
-  </div>
-  <div style="max-width:1100px;margin:0 auto;padding:48px 0 0;border-top:1px solid #e0e0e0;margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
-    <div>
-      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:12px;">About the Model</div>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#111111;line-height:1.05;margin-bottom:16px;">Professional Representation. Open Market.</p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;margin-bottom:16px;">The Listing Side represents your interests on the open market. Our job is to provide professional advocacy, cap your fee at 7% (5% for units $10k+), and ensure the math of your lease is transparent.</p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;margin-bottom:16px;"></p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;">Right now, we work the open market. The direct-to-owner inventory pipeline is coming. Get in now.</p>
-    </div>
-    <div>
-      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:12px;">The Long Game</div>
-      <p style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#111111;line-height:1.05;margin-bottom:16px;">Your Rental is the Beginning.</p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;margin-bottom:16px;">The path to ownership isn't a side note — it's the long-term operational goal of this platform. We are building a database of financially qualified New Yorkers. When you're ready to buy, you're already in the system.</p>
-      <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#888888;font-style:italic;line-height:1.6;margin-bottom:48px;padding-bottom:8px;">Christofer Holland, Director of Operations — The Listing Side<br><span style="font-size:11px;">Licensed Real Estate Salesperson, NY Lic. #10401390448 | NY Living Solutions | Keller Williams NYC</span></p>
-    </div>
+    <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,.9);margin-top:22px;line-height:1.6;">One-time. Capped. Credited 1:1 against any commission the owner pays. Most agents charge one month — 8.33%. Here's the process.</p>
   </div>
 </div>
 
 <!-- HOW IT WORKS -->
-<section id="how-it-works" class="page-section" style="background-color:#ffffff;">
+<section id="how-it-works" class="page-section" style="background-color:#f4f4f4;">
   <div class="section">
     <div class="section-eyebrow">The Process</div>
     <h2 class="section-title">The Clearing<br>Process.</h2>
@@ -1099,7 +1068,7 @@
       <div class="step-card">
         <div class="step-num">01</div>
         <div class="step-title">01 — Targeting</div>
-        <p class="step-body">Select your target neighborhoods by borough and zip cluster. We use this to match you against active and upcoming inventory in our Registry.</p>
+        <p class="step-body">Select your target neighborhoods by borough and zip cluster. We use this to search the open market for units that fit your criteria — and as our direct-to-owner inventory grows, you'll be matched there first.</p>
       </div>
       <div class="step-card">
         <div class="step-num">02</div>
@@ -1114,7 +1083,7 @@
       <div class="step-card">
         <div class="step-num">04</div>
         <div class="step-title">04 — Final Verification</div>
-        <p class="step-body">Submit your contact info to receive your digital Representation Agreement. Fee capped at 7% for units under $10,000 and 5% for units above. If the landlord pays the fee, the tenant pays $0. Owner-paid commissions credited 1:1.</p>
+        <p class="step-body">Submit your contact info to receive your Representation Agreement package via DocuSign. The package includes your Representation Agreement, NYS Agency Disclosure, and applicable fee disclosure. Fee capped at 7% under $10,000/mo, 5% above. If the landlord pays, you pay $0. Once signed, you're cleared and we go to work.</p>
       </div>
     </div>
     <div style="margin-top: 40px; text-align: center;">
@@ -1137,7 +1106,7 @@
         <div class="stb-card-eyebrow">Every Tuesday — 7–8 PM ET — Free</div>
         <div class="stb-card-title">Stop The<br>Bleeding.</div>
         <p class="stb-card-body">One hour. The real cost of renting vs. owning in NYC. Bring your numbers — rent, savings, income. We do the math live. No sales pitch. Just the truth.</p>
-        <a href="https://christoferholland.com/workshops/stopthebleeding.html" class="btn-primary-light">Reserve Your Seat</a>
+        <a href="../workshops/stopthebleeding.html" class="btn-primary-light">Reserve Your Seat</a>
         <a href="../buyer-orientation.html" class="stb-card-sub" style="color:#c8d0e0;font-size:12px;font-weight:500;margin-top:4px;">Or book a free Buyer Orientation Call →</a>
       </div>
     </div>
@@ -1169,7 +1138,7 @@
         <li><a href="landlord.html">Owners — Rent Your Unit</a></li>
         <li><a href="renters.html">Renters — Get Pre-Cleared</a></li>
         <li><a href="lease-break.html">Exit a Lease — Resolve the Lease Liability</a></li>
-        <li><a href="https://christoferholland.com/workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
+        <li><a href="../workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
         <li><a href="../index.html">christoferholland.com</a></li>
       </ul>
     </div>
@@ -1547,7 +1516,7 @@
       if (buyingPower === 'yes') {
         document.getElementById('stbPrompt').style.display = 'block';
         setTimeout(function() {
-          window.open('https://christoferholland.com/workshops/stopthebleeding.html', '_blank');
+          window.open('../workshops/stopthebleeding.html', '_blank');
         }, 1500);
       }
     });
