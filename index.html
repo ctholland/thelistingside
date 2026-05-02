@@ -196,24 +196,8 @@
 </head>
 <body>
 
-<div class="sticky-header" id="stickyHeader">
-<div class="compliance-bar">
-  <div class="compliance-links">
-    <a href="https://d1e1jt2fj4r8r.cloudfront.net/documents/fairhousingnotice.pdf" target="_blank" rel="noopener">Fair Housing Notice</a>
-    <span class="compliance-sep">●</span>
-    <a href="https://d1e1jt2fj4r8r.cloudfront.net/d36fff22-1ea6-464a-8fbd-aee2a2b71bb2/-jHhTwrOg/sop.pdf" target="_blank" rel="noopener">Standard Operating Procedures</a>
-    <span class="compliance-sep">●</span>
-    <a href="https://kwnyc.com/ada-disclosure" target="_blank" rel="noopener">Reasonable Accommodation</a>
-    <span class="compliance-sep">●</span>
-    <a href="https://image.info.rebny.com/lib/fe35157075640479701d77/m/1/68142058-8e73-4146-b9d6-54fc56484a07.pdf?utm_source=sfmc&utm_medium=email&utm_campaign=FARE+Act+Updated+Compliance&utm_term=Flyer&utm_id=1811434&sfmc_id=628153611" target="_blank" rel="noopener">Agency Disclosure</a>
-  </div>
-</div>
-</div><script src="../nav.js"></script>
-
-<div class="utility-bar">
-  <a href="../thelistingside/renters.html">I Am a Renter</a>
-  <a href="../thelistingside/lease-break.html">I Need to Break a Lease</a>
-</div>
+<div id="nav"></div>
+<script src="nav.js"></script>
 
 <section class="page-section" style="border-top:4px solid #C8102E;background:#ffffff;">
   <div style="max-width:1100px;margin:0 auto;padding:64px 0 64px;">
@@ -230,10 +214,10 @@
           <div class="path-eyebrow" style="color:#C8102E;">Rentals</div>
           <div class="path-title" style="color:#111111;">Find It.<br>Exit Your Lease.<br>List Your Unit.</div>
           <div class="path-links">
-            <a href="../thelistingside/renters.html" class="path-link light">I Am a Renter <span class="arrow">→</span></a>
-            <a href="../thelistingside/lease-break.html" class="path-link light">Exit a Lease <span class="arrow">→</span></a>
-            <a href="../thelistingside/landlord.html" class="path-link light">I Am a Landlord <span class="arrow">→</span></a>
-            <a href="../thelistingside/listings.html#rentals" class="path-link light">View Current Listings <span class="arrow">→</span></a>
+            <a href="renters.html" class="path-link light">I Am a Renter <span class="arrow">→</span></a>
+            <a href="lease-break.html" class="path-link light">Exit a Lease <span class="arrow">→</span></a>
+            <a href="landlord.html" class="path-link light">I Am a Landlord <span class="arrow">→</span></a>
+            <a href="listings.html#rentals" class="path-link light">View Current Listings <span class="arrow">→</span></a>
           </div>
         </div>
         <div class="path-note light">
@@ -246,9 +230,9 @@
           <div class="path-eyebrow" style="color:#C8102E;">Sales</div>
           <div class="path-title" style="color:#ffffff;">Buy Smart.<br>Sell Clean.</div>
           <div class="path-links">
-            <a href="../thelistingside/sales.html#buyer" class="path-link dark">I Want to Buy <span class="arrow">→</span></a>
-            <a href="../thelistingside/sales.html#seller" class="path-link dark">I Want to Sell <span class="arrow">→</span></a>
-            <a href="../thelistingside/listings.html#sales" class="path-link dark">View Current Listings <span class="arrow">→</span></a>
+            <a href="sales.html#buyer" class="path-link dark">I Want to Buy <span class="arrow">→</span></a>
+            <a href="sales.html#seller" class="path-link dark">I Want to Sell <span class="arrow">→</span></a>
+            <a href="listings.html#sales" class="path-link dark">View Current Listings <span class="arrow">→</span></a>
           </div>
         </div>
         <div class="path-note dark">
@@ -261,9 +245,9 @@
           <div class="path-eyebrow" style="color:#C9A04C;">Relocation</div>
           <div class="path-title" style="color:#ffffff;">Moving<br>to NYC?</div>
           <div class="path-links">
-            <a href="../thelistingside/relocation.html#individual" class="path-link navy-link">Individual Move <span class="arrow">→</span></a>
-            <a href="../thelistingside/relocation.html#corporate" class="path-link navy-link">Corporate Account <span class="arrow">→</span></a>
-            <a href="../thelistingside/relocation.html" class="path-link navy-link">Start My Relocation <span class="arrow">→</span></a>
+            <a href="relocation.html#individual" class="path-link navy-link">Individual Move <span class="arrow">→</span></a>
+            <a href="relocation.html#corporate" class="path-link navy-link">Corporate Account <span class="arrow">→</span></a>
+            <a href="relocation.html" class="path-link navy-link">Start My Relocation <span class="arrow">→</span></a>
           </div>
         </div>
         <div class="path-note navy-note">
@@ -295,9 +279,9 @@
     <div>
       <div class="footer-col-title">The Listing Side System</div>
       <ul class="footer-links">
-        <li><a href="../thelistingside/landlord.html">Landlords — Rent Your Unit</a></li>
-        <li><a href="../thelistingside/renters.html">Renters — Get Pre-Cleared</a></li>
-        <li><a href="../thelistingside/lease-break.html">Exit a Lease — Resolve Your Liability</a></li>
+        <li><a href="landlord.html">Landlords — Rent Your Unit</a></li>
+        <li><a href="renters.html">Renters — Get Pre-Cleared</a></li>
+        <li><a href="lease-break.html">Exit a Lease — Resolve Your Liability</a></li>
         <li><a href="../workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
         <li><a href="../index.html">christoferholland.com</a></li>
       </ul>
@@ -416,7 +400,7 @@
   });
 
   // Example wire: if you wanted a footer link to open it, you could target it.
-  // document.querySelector('a[href="../thelistingside/landlord.html"]').addEventListener('click', function(e) {
+  // document.querySelector('a[href="landlord.html"]').addEventListener('click', function(e) {
   //   e.preventDefault(); openSifter();
   // });
 </script>
