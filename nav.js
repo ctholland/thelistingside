@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var links = [
     { label: 'Landlords',   href: 'landlord.html' },
     { label: 'Renters',     href: 'renters.html' },
-    { label: 'Leasing',     href: 'lease.html' },
+    { label: 'Lease Break',  href: 'lease-break.html' },
     { label: 'Listings',    href: 'listings.html' },
     { label: 'Relocation',  href: 'relocation.html' },
     { label: 'Sales',       href: 'sales.html' },
