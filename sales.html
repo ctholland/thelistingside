@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Sales — Buy or Sell with The Listing Side | NY Living Solutions | Keller Williams NYC</title>
+<meta name="description" content="Professional seller and buyer representation in NYC. All fees fully negotiable and not set by law. Staging and marketing costs paid by seller directly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C8102E;
+    --navy: #1A2744;
+    --black: #111111;
+    --white: #ffffff;
+    --light: #f4f4f4;
+    --mid: #555555;
+    --border: #e0e0e0;
+    --gold: #C9A04C;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; color-scheme: light; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--black); -webkit-font-smoothing: antialiased; }
+
+  /* ── COMPLIANCE BAR ── */
+  .compliance-bar {
+    display: block !important;
+    background: #C8102E !important;
+    padding: 8px 24px;
+    margin: 0 !important;
+    border: none !important;
+    line-height: 1;
+    width: 100%;
+    text-align: center;
+  }
+  .compliance-links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .compliance-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: clamp(8px, 1.2vw, 10px);
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.9) !important;
+    text-decoration: none !important;
+    white-space: nowrap;
+    padding: 0 12px;
+    transition: color .2s;
+  }
+  .compliance-links a:hover { color: #ffffff !important; }
+  .compliance-sep { color: rgba(255,255,255,.4); font-size: 6px; flex-shrink: 0; }
+
+  /* ── STICKY HEADER ── */
+  #stickyHeader {
+    position: sticky;
+    top: 0;
+    z-index: 9001;
+    display: flex;
+    flex-direction: column;
+    padding-top: env(safe-area-inset-top);
+  }
+
+  /* ── UTILITY BAR ── */
+  .utility-bar {
+    background: #f4f4f4;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .utility-bar a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #333333;
+    text-decoration: none;
+    padding: 11px 24px;
+    border-right: 1px solid #e0e0e0;
+    transition: color .15s;
+    white-space: nowrap;
+  }
+  .utility-bar a:last-child { border-right: none; }
+  .utility-bar a:hover { color: #C8102E; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    padding: 80px 48px;
+    border-bottom: 4px solid var(--red);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: 'S';
+    position: absolute;
+    right: -20px;
+    top: -60px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 500px;
+    color: rgba(255,255,255,.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 7vw, 84px);
+    line-height: .95;
+    color: var(--white);
+    margin-bottom: 20px;
+    letter-spacing: .02em;
+  }
+  .hero-title em { color: var(--red); font-style: normal; }
+  .hero-sub { font-size: 16px; color: #a0aabb; line-height: 1.7; margin-bottom: 32px; max-width: 480px; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .btn-primary:hover { background: #a50d26; }
+  .btn-ghost {
+    display: inline-block;
+    border: 1.5px solid rgba(255,255,255,.3);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    transition: border-color .2s;
+  }
+  .btn-ghost:hover { border-color: var(--white); }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  /* Path switcher in hero */
+  .path-switcher {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .path-btn {
+    display: block;
+    padding: 24px 28px;
+    border: 1px solid rgba(255,255,255,.1);
+    background: rgba(255,255,255,.04);
+    cursor: pointer;
+    transition: all .2s;
+    text-align: left;
+  }
+  .path-btn:hover { border-color: var(--red); background: rgba(200,16,46,.06); }
+  .path-btn.active { border-color: var(--red); background: rgba(200,16,46,.1); }
+  .path-btn-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin-bottom: 6px; }
+  .path-btn-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--white); line-height: 1; margin-bottom: 6px; }
+  .path-btn-sub { font-size: 13px; color: #6b7a99; line-height: 1.5; }
+
+  /* ── SECTIONS ── */
+  .page-section { padding-left: 48px; padding-right: 48px; }
+  .section { max-width: 1100px; margin: 0 auto; padding: 80px 0; }
+  .section-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 5vw, 58px); color: var(--black); line-height: 1; margin-bottom: 16px; }
+  .section-sub { font-size: 17px; color: var(--mid); max-width: 680px; line-height: 1.65; margin-bottom: 48px; }
+
+  /* ── FEE TABLE ── */
+  .fee-table {
+    width: 100%;
+    border: 1.5px solid var(--black);
+    border-collapse: collapse;
+    margin-bottom: 24px;
+  }
+  .fee-table th {
+    background: var(--black);
+    color: #ccc;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    text-align: left;
+  }
+  .fee-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .fee-table tr:last-child td { border-bottom: none; }
+  .fee-table td:last-child { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--red); }
+  .fee-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--mid); line-height: 1.7; }
+
+  /* ── FEATURE GRID ── */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .feature-card { background: var(--white); padding: 32px 28px; }
+  .feature-num { font-family: 'Bebas Neue', sans-serif; font-size: 44px; color: var(--red); line-height: 1; margin-bottom: 10px; }
+  .feature-title { font-size: 15px; font-weight: 600; color: var(--black); margin-bottom: 8px; }
+  .feature-body { font-size: 13px; color: var(--mid); line-height: 1.65; }
+
+  /* ── FORMS ── */
+  .forms-section {
+    background: var(--navy);
+    padding: 80px 48px;
+    border-top: 4px solid var(--red);
+  }
+  .forms-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .forms-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid rgba(255,255,255,.1);
+  }
+  .tab-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.4);
+    background: none;
+    border: none;
+    padding: 16px 32px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all .2s;
+  }
+  .tab-btn.active { color: var(--white); border-bottom-color: var(--red); }
+  .tab-btn:hover { color: rgba(255,255,255,.8); }
+  .tab-panel { display: none; padding-top: 48px; }
+  .tab-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+
+  .panel-eyebrow { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .panel-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 4vw, 56px); color: var(--white); line-height: .95; margin-bottom: 20px; }
+  .panel-body { font-size: 15px; color: #a0aabb; line-height: 1.7; margin-bottom: 24px; }
+  .panel-list { list-style: none; }
+  .panel-list li { font-size: 14px; color: #c8d0e0; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.08); display: flex; align-items: center; gap: 12px; }
+  .panel-list li::before { content: ''; width: 6px; height: 6px; background: var(--red); flex-shrink: 0; }
+
+  /* Form styling */
+  .intake-form { background: var(--white); padding: 40px; }
+  .form-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--mid); margin-bottom: 20px; }
+  .form-section-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--red); margin: 20px 0 10px; display: block; border-top: 1px solid var(--border); padding-top: 16px; }
+  .form-input, .form-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--border);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--black);
+    background: var(--white);
+    margin-bottom: 10px;
+    outline: none;
+    appearance: none;
+  }
+  .form-input:focus, .form-select:focus { border-color: var(--red); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--mid);
+    margin-bottom: 14px;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .form-checkbox input { margin-top: 3px; flex-shrink: 0; accent-color: var(--red); }
+  .form-submit {
+    width: 100%;
+    padding: 18px;
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .2s;
+    margin-top: 8px;
+  }
+  .form-submit:hover { background: #a50d26; }
+  .form-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--mid); margin-top: 10px; line-height: 1.6; text-align: center; }
+  .form-success { display: none; text-align: center; padding: 40px 20px; }
+  .form-success-title { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--red); line-height: 1; margin-bottom: 12px; }
+  .form-success-body { font-size: 15px; color: var(--mid); line-height: 1.7; }
+
+  /* ── STB SECTION ── */
+  .stb-section {
+    background: var(--navy);
+    padding: 80px 48px;
+    border-top: 4px solid var(--red);
+  }
+  .stb-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .stb-eyebrow { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .stb-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 5vw, 64px); color: var(--white); line-height: .95; margin-bottom: 20px; }
+  .stb-body { font-size: 16px; color: #a0aabb; line-height: 1.7; margin-bottom: 24px; }
+  .stb-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); padding: 36px; }
+  .stb-card-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .stb-card-title { font-family: 'Bebas Neue', sans-serif; font-size: 44px; color: var(--white); line-height: 1; margin-bottom: 12px; }
+  .stb-card-body { font-size: 14px; color: #a0aabb; line-height: 1.65; margin-bottom: 24px; }
+
+  /* ── INTERCEPT ── */
+  .intercept { padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); padding: 64px 48px 48px; border-top: 4px solid var(--red); }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--white); letter-spacing: .04em; margin-bottom: 8px; }
+  .footer-brand span { color: var(--red); }
+  .footer-tag { font-size: 13px; color: var(--white); line-height: 1.6; }
+  .footer-col-title { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: #6b7a99; margin-bottom: 20px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a { font-size: 14px; color: #c8d0e0; text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-contact { font-size: 13px; color: #c8d0e0; line-height: 1.9; }
+  .footer-contact a { color: #c8d0e0; text-decoration: none; }
+  .footer-bottom { max-width: 1100px; margin: 32px auto 0; text-align: center; }
+  .footer-legal { font-family: 'DM Sans', sans-serif; font-size: 11px; color: #a0aabb; line-height: 1.7; }
+  .footer-legal a { color: #a0aabb; text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { padding: 60px 24px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .page-section { padding-left: 24px !important; padding-right: 24px !important; }
+    .section { padding: 60px 0; }
+    .feature-grid { grid-template-columns: 1fr; }
+    .forms-section { padding: 60px 24px; }
+    .tab-panel.active { grid-template-columns: 1fr; gap: 40px; }
+    .stb-section { padding: 60px 24px; }
+    .stb-inner { grid-template-columns: 1fr; gap: 40px; }
+    .intercept { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    footer { padding: 48px 24px; }
+    .form-row, .form-row-3 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="nav"></div>
+<script src="nav.js"></script>
+
+<!-- UTILITY BAR -->
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">NYC Real Estate Sales</div>
+      <h1 class="hero-title">Buy or Sell<br>In NYC.<br><em>For Less.</em></h1>
+      <p class="hero-sub">Professional representation — seller and buyer. All fees fully negotiable and not set by law. Staging and marketing costs paid directly by the seller. Fees tied to results — you pay at close.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="document.getElementById('forms').scrollIntoView({behavior:'smooth'})">I Want to Sell</button>
+        <button class="btn-ghost" onclick="document.getElementById('buyer-tab').click();document.getElementById('forms').scrollIntoView({behavior:'smooth'})">I Want to Buy</button>
+      </div>
+    </div>
+    <div class="path-switcher">
+      <div class="path-btn active" onclick="switchPath(this,'seller-tab')">
+        <div class="path-btn-eyebrow">Seller Path</div>
+        <div class="path-btn-title">List Your Property</div>
+        <div class="path-btn-sub">Negotiable commission. Seller pays staging and marketing directly. Professional representation from contract to close.</div>
+      </div>
+      <div class="path-btn" onclick="switchPath(this,'buyer-tab')">
+        <div class="path-btn-eyebrow">Buyer Path</div>
+        <div class="path-btn-title">Find Your Property</div>
+        <div class="path-btn-sub">Exclusive buyer representation. Pre-vetted, income and credit qualified. Full market access — co-op, condo, multi-family.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEE STRUCTURE -->
+<section class="page-section" style="background:#ffffff;border-bottom:1px solid var(--border);">
+  <div class="section">
+    <div class="section-eyebrow">The Fee Structure</div>
+    <h2 class="section-title">Transparent Rates.<br>Negotiable. Not Set By Law.</h2>
+    <p class="section-sub">All commissions in NYC are fully negotiable. Our structure is designed to protect your margin while delivering full professional representation.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;">
+      <div>
+        <table class="fee-table">
+          <thead>
+            <tr>
+              <th>Seller Side</th>
+              <th>Fee</th>
+              <th>Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Listing Commission</strong><br><span style="font-size:12px;color:#888;">Contract to close — negotiation, disclosures, coordination</span></td>
+              <td>Paid by seller at close</td>
+              <td style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--mid);">Negotiable</td>
+            </tr>
+            <tr>
+              <td><strong>Buyer Agent Co-Broke</strong><br><span style="font-size:12px;color:#888;">Offered to buyer's agent — negotiated outside MLS per REBNY rules</span></td>
+              <td>Seller's option — recommended</td>
+              <td style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--mid);">Negotiable</td>
+            </tr>
+            <tr>
+              <td><strong>Staging</strong><br><span style="font-size:12px;color:#888;">Professional stager paid directly by seller</span></td>
+              <td>Seller pays direct</td>
+              <td style="font-size:18px;">Pass-through</td>
+            </tr>
+            <tr>
+              <td><strong>Photography / Marketing</strong><br><span style="font-size:12px;color:#888;">Professional photos, floor plan, listing assets — seller's property forever</span></td>
+              <td>Seller pays direct</td>
+              <td style="font-size:18px;">Pass-through</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="fee-note">Co-op transactions may justify additional scope — board package, interview prep, extended timelines. Discussed per deal. All commissions are negotiable and not set by law or any association.</p>
+      </div>
+      <div>
+        <table class="fee-table">
+          <thead>
+            <tr>
+              <th>Buyer Side</th>
+              <th>Fee</th>
+              <th>Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Buyer Representation</strong><br><span style="font-size:12px;color:#888;">Exclusive representation — full market access, negotiation, contract, close</span></td>
+              <td>Ideally paid by seller — buyer's responsibility if not covered</td>
+              <td style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--mid);">Negotiable</td>
+            </tr>
+            <tr>
+              <td><strong>Buyer Consultation</strong><br><span style="font-size:12px;color:#888;">Initial buying power review — 1 hour, free</span></td>
+              <td>Included</td>
+              <td style="font-size:18px;">$0</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="fee-note">Post-NAR settlement (effective Aug 2024) and REBNY rules (effective Jan 2025): buyer rep agreements required before showings. All fees disclosed upfront. Seller offering co-broke is no longer advertised on MLS — negotiated directly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="page-section" style="background:var(--light);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section">
+    <div class="section-eyebrow">Full Service. Lower Cost.</div>
+    <h2 class="section-title">Professional Sales<br>Representation.</h2>
+    <p class="section-sub">The same institutional approach we apply to rentals — transparent rates, pass-through costs, and results-based representation — applied to the sale of your property.</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-num">01</div>
+        <div class="feature-title">Pricing Strategy</div>
+        <p class="feature-body">Comparative market analysis, OLR and RLS data, neighborhood comp review. We price to sell, not to sit.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">02</div>
+        <div class="feature-title">Professional Media</div>
+        <p class="feature-body">Photography, floor plan, and listing assets paid for directly by the seller. You own them forever. We require professional-grade media on every listing.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">03</div>
+        <div class="feature-title">Co-op & Condo Board</div>
+        <p class="feature-body">30+ years of NYC experience. Board package preparation, interview coaching, managing agent coordination. Co-ops require an agent who knows the process cold.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">04</div>
+        <div class="feature-title">Buyer Representation</div>
+        <p class="feature-body">Exclusive buyer rep agreement required before showings per REBNY. Full market access — MLS, RLS, off-market. Income verified, credit reviewed, pre-approval confirmed before we start.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">05</div>
+        <div class="feature-title">Contract & Negotiation</div>
+        <p class="feature-body">From offer to accepted deal — we manage the negotiation, the riders, the attorney coordination, and every disclosure required under NYS law.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">06</div>
+        <div class="feature-title">Close</div>
+        <p class="feature-body">You pay our fee at close. Not before. We get paid when you do. That's the alignment you should expect from any agent working your deal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMS — SELLER + BUYER TABS -->
+<section class="forms-section" id="forms">
+  <div class="forms-inner">
+    <div class="section-eyebrow" style="color:var(--gold);">Submit Your Information</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,58px);color:var(--white);line-height:1;margin-bottom:32px;">Seller or Buyer —<br>Tell Us About Your Deal.</h2>
+    <div class="forms-tabs">
+      <button class="tab-btn active" id="seller-tab" onclick="switchTab('seller')">I Want to Sell</button>
+      <button class="tab-btn" id="buyer-tab" onclick="switchTab('buyer')">I Want to Buy</button>
+    </div>
+
+    <!-- SELLER PANEL -->
+    <div class="tab-panel active" id="seller-panel">
+      <div>
+        <div class="panel-eyebrow">Seller Path</div>
+        <h3 class="panel-title">List Your<br>Property.</h3>
+        <p class="panel-body">Tell us about your property. We review every submission personally and follow up within 24 hours to discuss pricing, timing, and the listing agreement.</p>
+        <ul class="panel-list">
+          <li>Listing commission — negotiable, paid at close</li>
+          <li>Staging and photography — seller pays directly</li>
+          <li>All fees negotiable and disclosed upfront</li>
+          <li>Professional media required before listing</li>
+          <li>Co-op board package and interview prep included</li>
+          <li>30+ years NYC sales experience</li>
+        </ul>
+      </div>
+      <div class="intake-form">
+        <div class="form-eyebrow">Seller Intake</div>
+        <form name="seller-intake" method="POST" data-netlify="true" id="sellerForm">
+          <input type="hidden" name="form-name" value="seller-intake">
+          <input type="hidden" name="subject" value="🏠 NEW SELLER — The Listing Side Sales">
+
+          <span class="form-section-label" style="border-top:none;margin-top:0;padding-top:0;">Contact</span>
+          <div class="form-row">
+            <input class="form-input" type="text" name="name" placeholder="Your name" required>
+            <input class="form-input" type="email" name="email" placeholder="Email address" required>
+          </div>
+          <input class="form-input" type="tel" name="phone" placeholder="Phone number" required>
+
+          <span class="form-section-label">Property Details</span>
+          <input class="form-input" type="text" name="address" placeholder="Property address" required>
+          <div class="form-row">
+            <select class="form-select" name="building-type" required>
+              <option value="" disabled selected>Building type</option>
+              <option value="prewar-coop">Pre-war Co-op</option>
+              <option value="prewar-condo">Pre-war Condo</option>
+              <option value="postwar-coop">Post-war Co-op (1945–1970s)</option>
+              <option value="postwar-condo">Post-war Condo (1945–1970s)</option>
+              <option value="modern-condo">Modern Condo (1980s+)</option>
+              <option value="luxury-condo">Luxury / New Dev Condo</option>
+              <option value="2-family">2-Family</option>
+              <option value="3-family">3-Family</option>
+              <option value="4-family">4-Family</option>
+              <option value="mixed-use">Mixed-Use</option>
+              <option value="townhouse">Townhouse / Brownstone</option>
+            </select>
+            <select class="form-select" name="unit-type" required>
+              <option value="" disabled selected>Unit type</option>
+              <option value="studio">Studio</option>
+              <option value="1br">1 Bedroom</option>
+              <option value="2br">2 Bedroom</option>
+              <option value="3br">3 Bedroom</option>
+              <option value="4br+">4+ Bedroom</option>
+              <option value="loft">Loft</option>
+              <option value="duplex">Duplex</option>
+              <option value="penthouse">Penthouse</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <input class="form-input" type="number" name="asking-price" placeholder="Asking price ($)" required>
+            <input class="form-input" type="number" name="sq-ft" placeholder="Approx. sq ft">
+          </div>
+
+          <span class="form-section-label">Financials (Co-op / Condo)</span>
+          <div class="form-row">
+            <input class="form-input" type="number" name="maintenance" placeholder="Monthly maintenance / common charges ($)">
+            <input class="form-input" type="number" name="taxes" placeholder="Annual property taxes ($)">
+          </div>
+          <div class="form-row">
+            <input class="form-input" type="text" name="assessments" placeholder="Active assessments (amount + term)">
+            <input class="form-input" type="number" name="flip-tax" placeholder="Flip tax (% or $, if co-op)">
+          </div>
+
+          <span class="form-section-label">Unit Amenities</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+            <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mid);cursor:pointer;"><input type="checkbox" name="amenity-doorman" style="accent-color:var(--red);">Doorman</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mid);cursor:pointer;"><input type="checkbox" name="amenity-elevator" style="accent-color:var(--red);">Elevator</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mid);cursor:pointer;"><input type="checkbox" name="amenity-outdoor" style="accent-color:var(--red);">Outdoor Space</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mid);cursor:pointer;"><input type="checkbox" name="amenity-parking" style="accent-color:var(--red);">Parking</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mid);cursor:pointer;"><input type="checkbox" name="amenity-laundry" style="accent-color:var(--red);">In-unit Laundry</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mid);cursor:pointer;"><input type="checkbox" name="amenity-storage" style="accent-color:var(--red);">Storage</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mid);cursor:pointer;"><input type="checkbox" name="amenity-gym" style="accent-color:var(--red);">Gym</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mid);cursor:pointer;"><input type="checkbox" name="amenity-roofdeck" style="accent-color:var(--red);">Roof Deck</label>
+          </div>
+
+          <span class="form-section-label">Listing Assets</span>
+          <select class="form-select" name="photography">
+            <option value="" disabled selected>Professional photography status</option>
+            <option value="yes">Yes — ready</option>
+            <option value="no">No — need referral</option>
+            <option value="scheduled">Scheduled / in progress</option>
+          </select>
+          <input class="form-input" type="url" name="photo-link" placeholder="Link to existing photos (Dropbox, Google Drive, etc.) — optional">
+          <select class="form-select" name="timeline">
+            <option value="" disabled selected>Timeline to list</option>
+            <option value="now">Ready now</option>
+            <option value="30">Within 30 days</option>
+            <option value="60">30–60 days</option>
+            <option value="60-plus">60+ days / exploring</option>
+          </select>
+
+          <span class="form-section-label">Agreement</span>
+          <label class="form-checkbox">
+            <input type="checkbox" name="seller-agreement" required>
+            <span>I understand the listing commission is negotiable and not set by law, paid at close. Staging and marketing costs are paid by me directly.</span>
+          </label>
+          <button class="form-submit" type="submit">Submit — I Want to List</button>
+        </form>
+        <div class="form-success" id="sellerSuccess">
+          <div class="form-success-title">Received.</div>
+          <p class="form-success-body">Christofer Holland is reviewing your property details and will be in touch within 24 hours to discuss pricing strategy and next steps.</p>
+        </div>
+        <p class="form-note">Reviewed personally. Christofer Holland, Director of Operations.</p>
+      </div>
+    </div>
+
+    <!-- BUYER PANEL -->
+    <div class="tab-panel" id="buyer-panel">
+      <div>
+        <div class="panel-eyebrow">Buyer Path</div>
+        <h3 class="panel-title">Find Your<br>Property.</h3>
+        <p class="panel-body">Before we start searching, we need to know you're qualified. Fill out the buyer sifter — income, credit, DTI, pre-approval status. We review within 24 hours and reach out to schedule your free buying power consultation.</p>
+        <ul class="panel-list">
+          <li>Free 1-hour buying power consultation</li>
+          <li>Full market access — MLS, RLS, off-market</li>
+          <li>Co-op, condo, multi-family, townhouse</li>
+          <li>Pre-approval confirmed before showings</li>
+          <li>Buyer rep agreement required before touring</li>
+          <li>Buyer agent fee — negotiable, ideally covered by seller</li>
+          <li>Stop the Bleeding workshop recommended for first-timers</li>
+        </ul>
+      </div>
+      <div class="intake-form">
+        <div class="form-eyebrow">Buyer Sifter</div>
+        <form name="buyer-sifter" method="POST" data-netlify="true" id="buyerForm">
+          <input type="hidden" name="form-name" value="buyer-sifter">
+          <input type="hidden" name="subject" value="🔑 NEW BUYER — The Listing Side Sales">
+
+          <span class="form-section-label" style="border-top:none;margin-top:0;padding-top:0;">Contact</span>
+          <div class="form-row">
+            <input class="form-input" type="text" name="name" placeholder="Your name" required>
+            <input class="form-input" type="email" name="email" placeholder="Email address" required>
+          </div>
+          <input class="form-input" type="tel" name="phone" placeholder="Phone number" required>
+
+          <span class="form-section-label">Financials & Qualification</span>
+          <select class="form-select" name="annual-income" required>
+            <option value="" disabled selected>Annual household income</option>
+            <option value="under-100k">Under $100,000</option>
+            <option value="100-150k">$100,000 – $150,000</option>
+            <option value="150-200k">$150,000 – $200,000</option>
+            <option value="200-300k">$200,000 – $300,000</option>
+            <option value="300-500k">$300,000 – $500,000</option>
+            <option value="500k-plus">$500,000+</option>
+          </select>
+          <div class="form-row">
+            <select class="form-select" name="credit-score" required>
+              <option value="" disabled selected>Credit score</option>
+              <option value="750-plus">750+</option>
+              <option value="720-749">720–749</option>
+              <option value="700-719">700–719</option>
+              <option value="680-699">680–699</option>
+              <option value="650-679">650–679</option>
+              <option value="below-650">Below 650</option>
+            </select>
+            <select class="form-select" name="dti" required>
+              <option value="" disabled selected>Estimated DTI (debt-to-income)</option>
+              <option value="under-28">Under 28%</option>
+              <option value="28-36">28–36%</option>
+              <option value="36-43">36–43%</option>
+              <option value="43-plus">Above 43%</option>
+              <option value="unsure">Not sure</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <select class="form-select" name="pre-approval" required>
+              <option value="" disabled selected>Pre-approval status</option>
+              <option value="yes">Yes — pre-approved</option>
+              <option value="in-progress">In progress</option>
+              <option value="no">Not yet</option>
+            </select>
+            <input class="form-input" type="number" name="down-payment" placeholder="Available down payment ($)" required>
+          </div>
+          <select class="form-select" name="guarantor">
+            <option value="" disabled selected>Guarantor available if needed?</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="na">Not applicable</option>
+          </select>
+
+          <span class="form-section-label">What You're Looking For</span>
+          <div class="form-row">
+            <input class="form-input" type="number" name="budget-min" placeholder="Budget min ($)">
+            <input class="form-input" type="number" name="budget-max" placeholder="Budget max ($)" required>
+          </div>
+          <select class="form-select" name="property-type" required>
+            <option value="" disabled selected>Property type preference</option>
+            <option value="coop">Co-op</option>
+            <option value="condo">Condo</option>
+            <option value="coop-or-condo">Either — co-op or condo</option>
+            <option value="multi-family">Multi-family (2–4 units)</option>
+            <option value="townhouse">Townhouse / Brownstone</option>
+            <option value="open">Open to anything</option>
+          </select>
+          <select class="form-select" name="bedrooms" required>
+            <option value="" disabled selected>Bedrooms needed</option>
+            <option value="studio">Studio</option>
+            <option value="1">1 Bedroom</option>
+            <option value="2">2 Bedrooms</option>
+            <option value="3">3 Bedrooms</option>
+            <option value="4-plus">4+ Bedrooms</option>
+          </select>
+          <input class="form-input" type="text" name="neighborhoods" placeholder="Target neighborhoods (e.g. UWS, Gramercy, Park Slope)" required>
+          <select class="form-select" name="timeline" required>
+            <option value="" disabled selected>Timeline to buy</option>
+            <option value="now">Ready now</option>
+            <option value="3-months">Within 3 months</option>
+            <option value="6-months">3–6 months</option>
+            <option value="exploring">Exploring / learning</option>
+          </select>
+
+          <span class="form-section-label">Agreement</span>
+          <label class="form-checkbox">
+            <input type="checkbox" name="buyer-agreement" required>
+            <span>I understand a signed Buyer Representation Agreement is required before showings per REBNY rules (effective Jan 2025). The buyer agent fee is negotiable and not set by law — ideally covered by the seller, otherwise my responsibility. I acknowledge the NYS Agency Disclosure.</span>
+          </label>
+          <button class="form-submit" type="submit">Submit — I Want to Buy</button>
+        </form>
+        <div class="form-success" id="buyerSuccess">
+          <div class="form-success-title">Received.</div>
+          <p class="form-success-body">Christofer Holland is reviewing your buyer profile. You'll receive a link to schedule your free Buying Power Consultation within 24 hours.</p>
+          <p style="font-size:12px;color:#888;margin-top:12px;line-height:1.6;">Note: A signed Buyer Representation Agreement is required before we begin touring properties.</p>
+        </div>
+        <p class="form-note">Reviewed personally. Christofer Holland, Director of Operations.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STB BRIDGE -->
+<section class="stb-section">
+  <div class="stb-inner">
+    <div>
+      <div class="stb-eyebrow">For First-Time Buyers</div>
+      <h2 class="stb-title">Stop The<br>Bleeding.</h2>
+      <p class="stb-body">Every month you pay rent, you're building someone else's equity. A lot of NYC renters are closer to buying than they think. The math is the proof. We run it live — bring your numbers.</p>
+      <blockquote style="font-size:15px;color:#a0aabb;font-style:italic;border-left:3px solid var(--red);padding-left:20px;line-height:1.7;">"I work with NYC renters who are on the edge of buying but don't realize it yet."<br><span style="font-size:12px;color:#6b7a99;font-style:normal;">— Christofer Holland</span></blockquote>
+    </div>
+    <div class="stb-card">
+      <div class="stb-card-eyebrow">Every Tuesday — 7–8 PM ET — Free</div>
+      <div class="stb-card-title">From Renting<br>to Owning.</div>
+      <p class="stb-card-body">One hour. The real cost of renting vs. owning in NYC. Bring your income, your savings, and your questions. We do the math live. No sales pitch.</p>
+      <a href="https://christoferholland.com/workshops/stopthebleeding.html" class="btn-primary" style="display:inline-block;margin-bottom:12px;">Reserve Your Seat</a><br>
+      <a href="../buyer-orientation.html" style="font-size:12px;color:#c8d0e0;font-weight:500;">Or book a free Buyer Orientation Call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTERCEPT -->
+<div class="intercept" style="background:#111111;border-top:1px solid #222;">
+  <div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:8px;">Looking for a Rental First?</div>
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#ffffff;line-height:1;">Renting while you plan to buy.</div>
+    <p style="font-size:14px;color:#a0aabb;line-height:1.6;margin-top:8px;max-width:480px;">7% representation cap for renters. If you're not ready to buy today, we get you into the right rental — at the right rate — while you build your buying power.</p>
+  </div>
+  <a href="renters.html" style="display:inline-block;background:#C8102E;color:#ffffff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:16px 36px;text-decoration:none;white-space:nowrap;flex-shrink:0;">Get Renter Representation →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">The Listing <span>Side</span></div>
+      <p class="footer-tag">Clear Rates.<br>Faster Closings.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">The Listing Side System</div>
+      <ul class="footer-links">
+        <li><a href="sales.html">Sales — Buy or Sell</a></li>
+        <li><a href="landlord.html">Owners — Rent Your Unit</a></li>
+        <li><a href="renters.html">Renters — Get Representation</a></li>
+        <li><a href="lease-break.html">Exit a Lease</a></li>
+        <li><a href="https://christoferholland.com/workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
+        <li><a href="../index.html">christoferholland.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact">
+        Christofer Holland<br>
+        Director of Operations — The Listing Side<br>
+        Licensed Real Estate Salesperson<br>
+        NY Lic. #10401390448<br><br>
+        NY Living Solutions | Keller Williams NYC<br>
+        90 John Street, Storefront<br>
+        New York, NY 10038<br><br>
+        <a href="tel:9172071414">917-207-1414</a><br>
+        <a href="mailto:christofer@kw.com">christofer@kw.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      © 2026 The Listing Side | NY Living Solutions | Keller Williams NYC<br>
+      Christofer Holland, Licensed Real Estate Salesperson, NY Lic. #10401390448<br>
+      All commission rates are negotiable and not set by law or any Realtor® association.<br>
+      REBNY buyer representation agreements required before showings per Jan 2025 rules.<br>
+      All transactions subject to Fair Housing laws.<br>
+      <span style="margin-top:8px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;">
+        <a href="https://d1e1jt2fj4r8r.cloudfront.net/documents/fairhousingnotice.pdf" target="_blank" rel="noopener">Fair Housing Notice</a>
+        <a href="https://d1e1jt2fj4r8r.cloudfront.net/d36fff22-1ea6-464a-8fbd-aee2a2b71bb2/-jHhTwrOg/sop.pdf" target="_blank" rel="noopener">Standard Operating Procedures</a>
+        <a href="https://kwnyc.com/ada-disclosure" target="_blank" rel="noopener">Reasonable Accommodation</a>
+        <a href="https://image.info.rebny.com/lib/fe35157075640479701d77/m/1/68142058-8e73-4146-b9d6-54fc56484a07.pdf?utm_source=sfmc&utm_medium=email&utm_campaign=FARE+Act+Updated+Compliance&utm_term=Flyer&utm_id=1811434&sfmc_id=628153611" target="_blank" rel="noopener">Agency Disclosure</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function switchTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById(tab + '-tab').classList.add('active');
+    document.getElementById(tab + '-panel').classList.add('active');
+  }
+
+  function switchPath(btn, tabId) {
+    document.querySelectorAll('.path-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    switchTab(tabId.replace('-tab',''));
+  }
+
+  // Seller form
+  document.getElementById('sellerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    fetch('/', { method: 'POST', body: new FormData(this) }).finally(function() {
+      document.getElementById('sellerForm').style.display = 'none';
+      document.getElementById('sellerSuccess').style.display = 'block';
+    });
+  });
+
+  // Buyer form
+  document.getElementById('buyerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    fetch('/', { method: 'POST', body: new FormData(this) }).finally(function() {
+      document.getElementById('buyerForm').style.display = 'none';
+      document.getElementById('buyerSuccess').style.display = 'block';
+    });
+  });
+</script>
+
+</body>
+</html>

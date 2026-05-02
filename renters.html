@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<title>Renters — The Listing Side | NY Living Solutions | Keller Williams NYC</title>
+<meta name="description" content="Professional renter representation. Fee capped at 7% — 5% on rent $10,000/mo and above. If the landlord pays a commission, you pay $0. NYS licensed. FARE Act compliant.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: light; background-color: #ffffff; }
+  :root {
+    --red: #C8102E;
+    --navy: #1A2744;
+    --cream: #F5F0E8;
+    --white: #ffffff;
+    --black: #111111;
+    --mid: #555555;
+    --light: #f4f4f4;
+    --border: #e0e0e0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; color-scheme: light; }
+
+  @media (prefers-color-scheme: dark) {
+    /* Body and page base */
+    body { background-color: #ffffff !important; color: #111111 !important; }
+    /* White sections */
+    .benefit-card { background-color: #ffffff !important; }
+    .step-card { background-color: #ffffff !important; }
+    .sifter-modal { background-color: #ffffff !important; }
+    .math-section { background-color: #f4f4f4 !important; }
+    .benefits-grid { background-color: #e0e0e0 !important; }
+    .steps-row { background-color: #e0e0e0 !important; }
+    /* Text in white sections */
+    .benefit-title, .step-title, .section-title, .math-title { color: #111111 !important; }
+    .benefit-body, .step-body, .math-body { color: #555555 !important; }
+    .benefit-num, .step-num, .section-eyebrow, .math-eyebrow { color: #C8102E !important; }
+    .math-row-data span { color: #111111 !important; }
+    .math-row-data .save { color: #1D9E75 !important; }
+    /* Sifter modal text */
+    .sifter-title, .sifter-step-q { color: #111111 !important; }
+    .sifter-step-label, .sifter-note { color: #555555 !important; }
+    /* Dark sections — keep them dark explicitly */
+    .hero { background-color: #ffffff !important; color: #111111 !important; }
+    .hero-title { color: #111111 !important; }
+    .hero-title em { color: #C8102E !important; }
+    .hero-eyebrow { color: #C8102E !important; }
+    .hero-sub { color: #555555 !important; }
+    .deal-card { background-color: #ffffff !important; border-color: #111111 !important; }
+    .deal-card-label { color: #6b7a99 !important; }
+    .deal-label { color: #111111 !important; }
+    .deal-range { color: #6b7a99 !important; }
+    .deal-old-num { color: #555 !important; }
+    .deal-new-num { color: #C8102E !important; }
+    .deal-card-note { color: #444f6a !important; }
+    .stb-section { background-color: #1A2744 !important; }
+    .ticker-wrap { background-color: #111111 !important; }
+    footer { background-color: #111111 !important; }
+    .compliance-bar { background-color: #C8102E !important; }
+  }
+
+  
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #ffffff;
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── FLUSH HEADER FIX ── */
+  .compliance-bar {
+    display: block !important;
+    background: #C8102E !important;
+    padding: 7px 48px;
+    margin: 0 !important;
+    border: none !important;
+    line-height: 1;
+    vertical-align: bottom;
+    width: 100%;
+    text-align: center;
+  }
+  .compliance-links {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: nowrap;
+  }
+  .compliance-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.85);
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0 14px;
+    transition: color .2s;
+  }
+  .compliance-links a:hover { color: #ffffff; }
+  .compliance-sep {
+    color: rgba(255,255,255,.5);
+    font-size: 7px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  @media (max-width: 700px) {
+    .compliance-bar { padding: 8px 16px; overflow-x: auto; justify-content: flex-start; }
+    .compliance-links a { font-size: 8.5px; padding: 0 10px; }
+  }
+
+
+  /* ── STICKY HEADER WRAPPER ── */
+  #stickyHeader {
+    position: sticky;
+    top: 0;
+    z-index: 9001;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    padding-top: env(safe-area-inset-top);
+  }
+  #stickyHeader .compliance-bar {
+    margin: 0 !important;
+    padding: 7px 48px;
+  }
+  #stickyHeader .site-nav {
+    position: relative !important;
+    top: 0 !important;
+    margin: 0 !important;
+    z-index: 9000;
+  }
+
+  /* ── TICKER ── */
+  .ticker-wrap {
+    background: #111111;
+    border-bottom: 1px solid #222;
+    padding: 11px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .ticker-track {
+    display: inline-block;
+    animation: ticker 30s linear infinite;
+  }
+  .ticker-track:hover { animation-play-state: paused; }
+  .ticker-item {
+    display: inline-block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 0 32px;
+  }
+  .ticker-item span {
+    color: #C8102E;
+    font-size: 18px;
+    margin-right: 6px;
+  }
+  .ticker-sep { color: #C8102E; margin: 0 4px; font-family: 'Bebas Neue', sans-serif; font-size: 14px; }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: #ffffff;
+    background-color: #ffffff;
+    padding: 80px 48px 72px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid #e0e0e0;
+    border-top: 4px solid #C8102E;
+  }
+
+  .hero::before {
+    content: '7%';
+    position: absolute;
+    right: -20px;
+    top: -40px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 320px;
+    color: rgba(200,16,46,.05);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #C8102E;
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 7vw, 88px);
+    line-height: .95;
+    color: #111111;
+    margin-bottom: 24px;
+    letter-spacing: .02em;
+  }
+
+  .hero-title em {
+    color: #C8102E;
+    font-style: normal;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    color: #555555;
+    line-height: 1.65;
+    margin-bottom: 36px;
+    max-width: 460px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background .2s, transform .15s;
+  }
+  .btn-primary:hover { background: #a50d26; transform: translateY(-1px); }
+
+  .btn-ghost-light {
+    display: inline-block;
+    border: 1.5px solid #1A2744;
+    color: #1A2744;
+    background: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    text-decoration: none;
+    transition: border-color .2s, background .2s;
+  }
+  .btn-ghost-light:hover { background: #1A2744; color: #ffffff; }
+
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  /* Hero right — the deal card */
+  .deal-card {
+    border: 1.5px solid #111111;
+    padding: 36px;
+    background: #ffffff;
+    position: relative;
+  }
+  .deal-card::before {
+    content: '';
+    position: absolute;
+    top: 6px; left: 6px;
+    right: -6px; bottom: -6px;
+    border: 1.5px solid #C8102E;
+    z-index: -1;
+  }
+
+  .deal-card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+
+  .deal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .deal-row:last-of-type { border-bottom: none; }
+
+  .deal-label { font-size: 16px; font-weight: 500; color: #111111; }
+  .deal-range { font-family: 'DM Mono', monospace; font-size: 12px; color: #555555; margin-top: 4px; }
+
+  .deal-old {
+    text-align: right;
+  }
+  .deal-old-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: #555;
+    text-decoration: line-through;
+  }
+  .deal-new-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: #C8102E;
+    line-height: 1;
+  }
+
+  .deal-card-note {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: #444444;
+    margin-top: 20px;
+    line-height: 1.6;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 16px;
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+  .page-section {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+
+
+  .section-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #C8102E;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 5vw, 58px);
+    color: #111111;
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+
+  .benefit-card {
+    background: #ffffff;
+    padding: 36px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .benefit-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    color: #d8d8d8;
+    line-height: 1;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    z-index: 0;
+  }
+
+  .benefit-icon {
+    font-size: 24px;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .benefit-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .benefit-body {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── MATH SECTION ── */
+  .math-section {
+    background: #f4f4f4;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .math-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .math-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #C8102E;
+    margin-bottom: 12px;
+  }
+
+  .math-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 5vw, 58px);
+    color: #111111;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .math-body {
+    font-size: 16px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  .math-table {
+    border: 1.5px solid var(--black);
+  }
+
+  .math-table-head {
+    background: var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 16px;
+  }
+
+  .math-table-head span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: #cccccc;
+  }
+
+  .math-table-head span:last-child,
+  .math-row-data span:last-child { text-align: right; }
+
+  .math-row-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+  }
+
+  .math-row-data:last-child { border-bottom: none; }
+
+  .math-row-data span {
+    font-size: 14px;
+    color: #111111;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+  }
+
+  .math-row-data .save {
+    color: #1D9E75;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: right;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .steps-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+  }
+
+  .step-card {
+    padding: 32px 24px;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+
+  .step-card:last-child { border-right: none; }
+
+  .step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--red);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .step-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+
+  .step-body {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.6;
+  }
+
+  /* ── STB BRIDGE ── */
+  .stb-section {
+    background-color: #1A2744 !important;
+    padding: 80px 48px;
+    border-top: 4px solid #C8102E;
+  }
+
+  .stb-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .stb-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #C9A04C;
+    margin-bottom: 12px;
+  }
+
+  .stb-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(44px, 5vw, 64px);
+    color: var(--white);
+    line-height: .95;
+    margin-bottom: 20px;
+  }
+
+  .stb-body {
+    font-size: 16px;
+    color: #a0aabb;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  .stb-quote {
+    border-left: 3px solid var(--red);
+    padding-left: 20px;
+    font-size: 15px;
+    color: rgba(255,255,255,.7);
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .stb-card {
+    border: 1px solid rgba(255,255,255,.15);
+    padding: 36px;
+    background: rgba(255,255,255,.04);
+  }
+
+  .stb-card-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #a0aabb;
+    margin-bottom: 12px;
+  }
+
+  .stb-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+
+  .stb-card-body {
+    font-size: 14px;
+    color: #a0aabb;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .btn-primary-light {
+    display: block;
+    text-align: center;
+    background: var(--red);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 15px 24px;
+    text-decoration: none;
+    transition: background .2s;
+    margin-bottom: 12px;
+  }
+  .btn-primary-light:hover { background: #a50d26; }
+
+  .stb-card-sub {
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .06em;
+    color: #8899bb;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* ── SIFTER MODAL ── */
+  .sifter-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.75);
+    z-index: 8000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s;
+  }
+  .sifter-overlay.open { opacity: 1; pointer-events: auto; }
+
+  .sifter-modal {
+    background: #ffffff;
+    max-width: 520px;
+    width: 100%;
+    padding: 48px 40px;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform .25s;
+  }
+  .sifter-overlay.open .sifter-modal { transform: translateY(0); }
+
+  .sifter-close {
+    position: absolute;
+    top: 16px; right: 20px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--mid);
+  }
+
+  .sifter-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+
+  .sifter-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--black);
+    margin-bottom: 28px;
+    line-height: 1;
+  }
+
+  .sifter-progress {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 28px;
+  }
+  .sifter-pip { height: 3px; flex: 1; background: var(--border); transition: background .3s; }
+  .sifter-pip.done { background: var(--red); }
+
+  .sifter-step { display: none; }
+  .sifter-step.active { display: block; }
+
+  .sifter-step-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 6px;
+  }
+
+  .sifter-step-q {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+
+  .sifter-select, .sifter-input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid var(--border);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--black);
+    background: #ffffff;
+    margin-bottom: 20px;
+    outline: none;
+    appearance: none;
+  }
+  .sifter-select:focus, .sifter-input:focus { border-color: var(--red); }
+
+  .sifter-toggle { display: flex; gap: 12px; margin-bottom: 24px; }
+  .sifter-toggle-btn {
+    flex: 1;
+    padding: 14px;
+    border: 1.5px solid var(--border);
+    background: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s;
+    color: var(--black);
+  }
+  .sifter-toggle-btn.selected { background: var(--red); border-color: var(--red); color: var(--white); }
+
+  .sifter-next {
+    width: 100%;
+    padding: 16px;
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .sifter-next:hover { background: #a50d26; }
+
+  .sifter-note {
+    font-size: 12px;
+    color: var(--mid);
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .footer-social a {
+    color: #6b7a99;
+    transition: color .2s;
+    display: flex;
+    align-items: center;
+  }
+  .footer-social a:hover { color: #ffffff; }
+
+  /* ── UTILITY BAR ── */
+  .utility-bar {
+    background: #f4f4f4;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .utility-bar a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #333333;
+    text-decoration: none;
+    padding: 11px 24px;
+    border-right: 1px solid #e0e0e0;
+    transition: color .15s;
+    white-space: nowrap;
+  }
+  .utility-bar a:last-child { border-right: none; }
+  .utility-bar a:hover { color: #C8102E; }
+  @media (max-width: 600px) {
+    .utility-bar a { font-size: 9px; padding: 9px 14px; }
+  }
+  /* ── FOOTER ── */
+  footer {
+    background: #1A2744;
+    padding: 64px 48px 48px;
+    border-top: 4px solid #C8102E;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+  .footer-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #ffffff;
+    letter-spacing: .04em;
+    margin-bottom: 8px;
+  }
+  .footer-brand span { color: #C8102E; }
+  .footer-tag { font-size: 13px; color: #a0aabb; line-height: 1.6; font-style: normal; margin-bottom: 0; }
+  .footer-social { display: flex; gap: 16px; margin-top: 20px; }
+  .footer-social a { color: #ffffff; transition: color .2s; display: flex; align-items: center; }
+  .footer-social a:hover { color: #ffffff; }
+  .footer-col-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #6b7a99;
+    margin-bottom: 20px;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a { font-size: 14px; color: #c8d0e0; text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: #ffffff; }
+  .footer-contact { font-size: 13px; color: #c8d0e0; line-height: 1.9; }
+  .footer-contact a { color: #c8d0e0; text-decoration: none; transition: color .2s; }
+  .footer-contact a:hover { color: #ffffff; }
+  .footer-bottom {
+    max-width: 1100px;
+    margin: 32px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+  .footer-legal {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: #a0aabb;
+    letter-spacing: 0;
+    line-height: 1.7;
+    text-align: center;
+  }
+  .footer-eho {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: #a0aabb;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { padding: 60px 24px !important; }
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero::before { font-size: 160px; }
+    .hero-ctas { flex-direction: column; }
+    .deal-card::before { display: none; }
+    .section { padding: 60px 0 !important; }
+    .page-section { padding-left: 24px !important; padding-right: 24px !important; }
+    .benefits-grid { grid-template-columns: 1fr; }
+    .math-section { background-color: #f4f4f4 !important; }
+    .math-inner { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
+    .steps-row { grid-template-columns: 1fr 1fr; }
+    .step-card:nth-child(2) { border-right: none; }
+    .step-card:nth-child(3) { border-top: 1px solid #e0e0e0; }
+    .step-card:nth-child(4) { border-right: none; border-top: 1px solid #e0e0e0; }
+    .stb-section { padding: 60px 24px; }
+    .stb-inner { grid-template-columns: 1fr; gap: 40px; }
+    footer { padding: 48px 24px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+
+    .btn-primary, .btn-ghost-light { text-align: center; width: 100%; }
+  }
+
+</style>
+</head>
+<body style="background-color:#ffffff;color:#111111;">
+
+<div id="nav"></div>
+<script src="nav.js"></script>
+
+
+<!-- HERO -->
+<section class="hero page-section" style="background-color:#ffffff;">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">NYC Rental Representation</div>
+      <h1 class="hero-title">Get Rental<br>Representation<br>At The Best<br><em>Rate In NYC.</em></h1>
+      <p class="hero-sub">When the FARE Act passed, rents went up all over NYC to cover the coming broker fees. Now, those one-time fees are perpetually baked into inflated rents. Some rental agents are still trying to charge 15% of annual rent, while most broker fees have been reduced to one month — 8.33% of annual rent.</p>
+      <p class="hero-sub" style="margin-top:16px;">We charge 7% for rent under $10,000/mo and 5% for rent $10,000/mo and above. If the landlord pays a commission, that credit applies to your fee — in many cases, you pay us $0.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="openSifter()">Request Representation — Free</button>
+        <a href="#how-it-works" class="btn-ghost-light">See How It Works</a>
+      </div>
+    </div>
+    <div>
+      <div class="deal-card">
+        <div class="deal-card-label">What You Pay — The Listing Side vs. Old Model</div>
+        <div class="deal-row" style="margin-bottom:20px;">
+          <div>
+            <div class="deal-label">Units Under $10,000 / mo</div>
+            <div class="deal-range">Market Standard: 8.33% (1 Month)</div>
+            <div class="deal-range" style="color:#C8102E;font-weight:600;">The Listing Side: Capped at 7%</div>
+          </div>
+          <div class="deal-old">
+            <div class="deal-new-num">7%</div>
+          </div>
+        </div>
+        <div class="deal-row" style="padding-bottom:16px;">
+          <div>
+            <div class="deal-label">Units $10,000 / mo and Above</div>
+            <div class="deal-range">Market Standard: 8.33% (1 Month)</div>
+            <div class="deal-range" style="color:#C8102E;font-weight:600;">The Listing Side: Capped at 5%</div>
+          </div>
+          <div class="deal-old">
+            <div class="deal-new-num">5%</div>
+          </div>
+        </div>
+        <div class="deal-card-note">
+          All representation requires a signed Representation Certificate. No handshake deals. Professional standards only. FARE Act compliant.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item">7% Renter Cap</span>
+    <span class="ticker-sep">·</span>
+    <span class="ticker-item">5% Over $10k/mo</span>
+    <span class="ticker-sep">·</span>
+    <span class="ticker-item">Owner-Paid Credits Applied</span>
+    <span class="ticker-sep">·</span>
+    <span class="ticker-item">Lease Resolution</span>
+    <span class="ticker-sep">·</span>
+    <span class="ticker-item">7% Renter Cap</span>
+    <span class="ticker-sep">·</span>
+    <span class="ticker-item">5% Over $10k/mo</span>
+    <span class="ticker-sep">·</span>
+    <span class="ticker-item">Owner-Paid Credits Applied</span>
+    <span class="ticker-sep">·</span>
+    <span class="ticker-item">Lease Resolution</span>
+    <span class="ticker-sep">·</span>
+  </div>
+</div>
+
+<!-- WHAT YOU GET -->
+<section class="page-section" style="background-color:#ffffff !important;">
+  <div class="section">
+    <div class="section-eyebrow">Why The Listing Side</div>
+    <h2 class="section-title">Institutional<br>Efficiency.<br>Market Integrity.</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-num">01</div>
+        <div class="benefit-title">Capped Fee. No Games.</div>
+        <p class="benefit-body">Rent under $10,000/mo: fee capped at 7% of annual rent. Rent $10,000/mo and above: fee is 5%. Any commission paid by the Owner is credited 1:1 to your balance. If the Owner pays 1.0 month or more, your fee is $0.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">02</div>
+        <div class="benefit-title">The Inventory Pipeline</div>
+        <p class="benefit-body">The Listing Side is actively building a direct-to-owner pipeline. While this private inventory is being registered, we work the open market to ensure your 7% cap is protected against standard 15% industry rates.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">03</div>
+        <div class="benefit-title">Pre-Cleared Status</div>
+        <p class="benefit-body">A Verification Certificate tells landlords you are income-verified and credit-reviewed before you walk in. In a competitive market, being Ready to Sign is the difference between getting the apartment and getting a voicemail.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">04</div>
+        <div class="benefit-title">The Representation Certificate</div>
+        <p class="benefit-body">Signing your Representation Certificate is your protection. It locks in your capped rate — 7% under $10k/mo, 5% over $10k/mo — and establishes a legal relationship with a licensed advocate who ensures the math of your lease is transparent.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">05</div>
+        <div class="benefit-title">Neighborhood Targeting</div>
+        <p class="benefit-body">You tell us where and when. We work the open market harder than anyone else to find units that fit your criteria while maintaining your fee protection. Direct inventory matching is the goal; market expertise is the current reality.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">06</div>
+        <div class="benefit-title">Stop The Bleeding: From Renting to Owning</div>
+        <p class="benefit-body">Our goal is building you toward ownership. When you request representation, you are invited to our weekly Stop The Bleeding Webinar. Learn how to calculate your true buying power and transition from paying rent to building equity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE MATH -->
+<div class="math-section page-section">
+  <div class="math-inner">
+    <div>
+      <div class="math-eyebrow">The Numbers</div>
+      <h2 class="math-title">The Perpetual Rent Tax</h2>
+      <p class="math-body">When the FARE Act passed, landlords raised rents across the board to cover the coming broker fees. That adjustment is already baked into every "no-fee" apartment. You aren't avoiding a broker fee — you're paying it monthly, forever. We charge you once — 7% (or 5% for units over $10k) — and represent your interests so you aren't paying a hidden markup every single month for years. The math favors the renter. The math is below.</p>
+    </div>
+    <div>
+      <div class="math-table">
+        <div class="math-table-head" style="grid-template-columns:1fr 1fr;">
+          <span style="color:#999;">The "No-Fee" Trap<br><span style="font-size:9px;opacity:.7;">Inflated Rent — Cost Hidden in Your Lease</span></span>
+          <span style="color:#C8102E;">The Listing Side<br><span style="font-size:9px;opacity:.7;">Market Rate + One-Time Capped Fee</span></span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;background:#f9f9f9;">
+          <span style="color:#888;font-size:12px;font-weight:600;"><span style="color:#C8102E;">Inflated</span> Monthly Rent</span>
+          <span style="color:#C8102E;font-size:12px;font-weight:600;">True Market Rent</span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;">
+          <span style="color:#888;font-weight:700;font-size:22px;">$5,250 <span style="font-size:12px;font-weight:400;">/mo</span></span>
+          <span style="color:#C8102E;font-weight:700;font-size:22px;">$5,000 <span style="font-size:12px;font-weight:400;color:#555;">/mo</span></span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;background:#f9f9f9;">
+          <span style="color:#888;font-size:12px;">Year 1 Total Cost</span>
+          <span style="color:#555;font-size:12px;">Year 1 Total Cost (incl. 7% fee)</span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;">
+          <span style="color:#888;font-weight:600;font-size:18px;">$63,000</span>
+          <span style="color:#555;font-weight:600;font-size:18px;">$64,200</span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;background:#f9f9f9;">
+          <span style="color:#888;font-size:12px;">Year 3 Total Cost</span>
+          <span style="color:#555;font-size:12px;">Year 3 Total Cost</span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;border-bottom:none;">
+          <span style="color:#C8102E;font-weight:700;font-size:20px;">$189,000</span>
+          <span style="color:#C8102E;font-weight:700;font-size:20px;">$184,200</span>
+        </div>
+      </div>
+      <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#333;margin-top:16px;line-height:1.6;font-weight:600;">By Year 3, the "no-fee" apartment has cost you <span style="color:#C8102E;">$4,800 more</span> than our represented model. Every year after that is pure loss.</p>
+    </div>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;padding:48px 0 0;border-top:1px solid #e0e0e0;margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+    <div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:12px;">About the Model</div>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#111111;line-height:1.05;margin-bottom:16px;">Professional Representation. Open Market.</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;margin-bottom:16px;">The Listing Side represents your interests on the open market. Our job is to provide professional advocacy, cap your fee at 7% (5% for units $10k+), and ensure the math of your lease is transparent.</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;margin-bottom:16px;"></p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;">Right now, we work the open market. The direct-to-owner inventory pipeline is coming. Get in now.</p>
+    </div>
+    <div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:12px;">The Long Game</div>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#111111;line-height:1.05;margin-bottom:16px;">Your Rental is the Beginning.</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;margin-bottom:16px;">The path to ownership isn't a side note — it's the long-term operational goal of this platform. We are building a database of financially qualified New Yorkers. When you're ready to buy, you're already in the system.</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#888888;font-style:italic;line-height:1.6;margin-bottom:48px;padding-bottom:8px;">Christofer Holland, Director of Operations — The Listing Side<br><span style="font-size:11px;">Licensed Real Estate Salesperson, NY Lic. #10401390448 | NY Living Solutions | Keller Williams NYC</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="page-section" style="background-color:#ffffff;">
+  <div class="section">
+    <div class="section-eyebrow">The Process</div>
+    <h2 class="section-title">The Clearing<br>Process.</h2>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-title">01 — Targeting</div>
+        <p class="step-body">Select your target neighborhoods by borough and zip cluster. We use this to match you against active and upcoming inventory in our Registry.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-title">02 — Vitals</div>
+        <p class="step-body">Confirm your move-in window, income range, and target rent. We run the 40x qualification automatically. If the math works, you advance. If not, we route you to a consultation.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-title">03 — Credit & Buying Power</div>
+        <p class="step-body">Self-certify your credit score and answer one question: do you want to know your buying power? Your answers determine your Cleared tier and trigger the right follow-up — rental search or ownership path.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-title">04 — Final Verification</div>
+        <p class="step-body">Submit your contact info to receive your digital Representation Agreement. Fee capped at 7% for units under $10,000 and 5% for units above. If the landlord pays the fee, the tenant pays $0. Owner-paid commissions credited 1:1.</p>
+      </div>
+    </div>
+    <div style="margin-top: 40px; text-align: center;">
+      <button class="btn-primary" onclick="openSifter()">Get Cleared — Request Representation</button>
+    </div>
+  </div>
+</section>
+
+<!-- STB BRIDGE -->
+<section class="stb-section">
+  <div class="stb-inner">
+    <div>
+      <div class="stb-eyebrow">One Question Worth Asking</div>
+      <h2 class="stb-title">Still Renting<br>Next Year?</h2>
+      <p class="stb-body">Every month you pay rent, you're building someone else's equity. That's not a lecture — it's math. A lot of NYC renters are closer to buying than they think. We run a free buying power review. Ten minutes. Most people are surprised.</p>
+      <blockquote class="stb-quote">"I work with NYC renters who are on the edge of buying but don't realize it yet."</blockquote>
+    </div>
+    <div>
+      <div class="stb-card">
+        <div class="stb-card-eyebrow">Every Tuesday — 7–8 PM ET — Free</div>
+        <div class="stb-card-title">Stop The<br>Bleeding.</div>
+        <p class="stb-card-body">One hour. The real cost of renting vs. owning in NYC. Bring your numbers — rent, savings, income. We do the math live. No sales pitch. Just the truth.</p>
+        <a href="https://christoferholland.com/workshops/stopthebleeding.html" class="btn-primary-light">Reserve Your Seat</a>
+        <a href="../buyer-orientation.html" class="stb-card-sub" style="color:#c8d0e0;font-size:12px;font-weight:500;margin-top:4px;">Or book a free Buyer Orientation Call →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">The Listing <span>Side</span></div>
+      <p class="footer-tag">Clear Rates.<br>Faster Closings.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/christofer.holland" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/christoferholland" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8.5"/><path d="M12 16v-5m4 5v-3a2 2 0 0 0-4 0"/></svg>
+        </a>
+        <a href="https://facebook.com/christoferhollandrealestate" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">The Listing Side System</div>
+      <ul class="footer-links">
+        <li><a href="landlord.html">Owners — Rent Your Unit</a></li>
+        <li><a href="renters.html">Renters — Get Pre-Cleared</a></li>
+        <li><a href="lease-break.html">Exit a Lease — Resolve the Lease Liability</a></li>
+        <li><a href="https://christoferholland.com/workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
+        <li><a href="../index.html">christoferholland.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact">
+        Christofer Holland<br>
+        Licensed Real Estate Salesperson<br>
+        NY Lic. #10401390448<br><br>
+        NY Living Solutions | Keller Williams NYC<br>
+        90 John Street, Storefront<br>
+        New York, NY 10038<br><br>
+        <a href="tel:9172071414">917-207-1414</a><br>
+        <a href="mailto:christofer@kw.com">christofer@kw.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      © 2026 The Listing Side | NY Living Solutions | Keller Williams NYC<br>
+      Christofer Holland, Licensed Real Estate Salesperson, NY Lic. #10401390448<br>
+      FARE Act compliant (Local Law 119 of 2024). All transactions subject to Fair Housing laws.<br>
+      <span style="margin-top:8px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;">
+        <a href="https://d1e1jt2fj4r8r.cloudfront.net/documents/fairhousingnotice.pdf" target="_blank" rel="noopener" style="color:#a0aabb;text-decoration:none;">Fair Housing Notice</a>
+        <a href="https://d1e1jt2fj4r8r.cloudfront.net/d36fff22-1ea6-464a-8fbd-aee2a2b71bb2/-jHhTwrOg/sop.pdf" target="_blank" rel="noopener" style="color:#a0aabb;text-decoration:none;">Standard Operating Procedures</a>
+        <a href="https://kwnyc.com/ada-disclosure" target="_blank" rel="noopener" style="color:#a0aabb;text-decoration:none;">Reasonable Accommodation</a>
+        <a href="https://image.info.rebny.com/lib/fe35157075640479701d77/m/1/68142058-8e73-4146-b9d6-54fc56484a07.pdf?utm_source=sfmc&utm_medium=email&utm_campaign=FARE+Act+Updated+Compliance&utm_term=Flyer&utm_id=1811434&sfmc_id=628153611" target="_blank" rel="noopener" style="color:#a0aabb;text-decoration:none;">Agency Disclosure</a>
+      </span>
+    </div>
+    <div class="footer-eho">Equal Housing Opportunity</div>
+  </div>
+</footer>
+
+<!-- SIFTER MODAL -->
+<div class="sifter-overlay" id="sifterOverlay">
+  <div class="sifter-modal" role="dialog" aria-modal="true">
+    <button class="sifter-close" id="sifterClose">✕</button>
+    <div class="sifter-eyebrow">The Sifter</div>
+    <div class="sifter-title">Request Representation.</div>
+    <div class="sifter-progress">
+      <div class="sifter-pip done" id="pip1"></div>
+      <div class="sifter-pip" id="pip2"></div>
+      <div class="sifter-pip" id="pip3"></div>
+      <div class="sifter-pip" id="pip4"></div>
+      <div class="sifter-pip" id="pip5"></div>
+      <div class="sifter-pip" id="pip6"></div>
+    </div>
+
+    <!-- STEP 1: Neighborhood -->
+    <div class="sifter-step active" id="step1">
+      <div class="sifter-step-label">Step 1 of 6</div>
+      <div class="sifter-step-q">Where are you looking to rent?</div>
+      <select class="sifter-select" id="s-neighborhood">
+        <option value="" disabled selected>Select a neighborhood</option>
+        <optgroup label="Manhattan">
+          <option value="fidi-10004">FiDi / Seaport (10004, 10005, 10038)</option>
+          <option value="tribeca-10013">Tribeca / Battery Park City (10013, 10280)</option>
+          <option value="soho-10012">SoHo / NoLita / Village (10012, 10014)</option>
+          <option value="les-10002">Lower East Side / East Village (10002, 10009)</option>
+          <option value="chelsea-10011">Chelsea / Hudson Yards (10001, 10011)</option>
+          <option value="gramercy-10010">Gramercy / Flatiron / NoMad (10010, 10016)</option>
+          <option value="midtown-10019">Midtown / Hell's Kitchen (10019, 10036)</option>
+          <option value="uws-10024">Upper West Side (10023, 10024, 10025)</option>
+          <option value="ues-10021">Upper East Side (10021, 10028, 10075)</option>
+          <option value="harlem-10026">Harlem / Morningside Heights (10026, 10027, 10031)</option>
+        </optgroup>
+        <optgroup label="Brooklyn">
+          <option value="williamsburg-11211">Williamsburg / Greenpoint (11211, 11222)</option>
+          <option value="dumbo-11201">DUMBO / Downtown Brooklyn / Brooklyn Heights (11201)</option>
+          <option value="parkslope-11215">Park Slope / Prospect Heights (11215, 11217, 11238)</option>
+          <option value="bushwick-11206">Bushwick / Bed-Stuy (11206, 11221, 11237)</option>
+          <option value="fortgreene-11205">Fort Greene / Clinton Hill (11205)</option>
+          <option value="cobblehill-11231">Cobble Hill / Carroll Gardens / Red Hook (11231)</option>
+        </optgroup>
+        <optgroup label="Queens">
+          <option value="lic-11101">Long Island City / Astoria (11101, 11102, 11106)</option>
+          <option value="sunnyside-11104">Sunnyside / Woodside (11104, 11377)</option>
+          <option value="foresthills-11375">Forest Hills / Rego Park (11375)</option>
+        </optgroup>
+        <optgroup label="The Bronx">
+          <option value="southbronx-10451">South Bronx / Mott Haven (10451, 10454)</option>
+          <option value="riverdale-10463">Riverdale (10463, 10471)</option>
+        </optgroup>
+        <option value="other">Other / Open to Suggestions</option>
+      </select>
+      <button class="sifter-next" onclick="sifterNext(1)">Continue →</button>
+    </div>
+
+    <!-- STEP 2: Move-in window -->
+    <div class="sifter-step" id="step2">
+      <div class="sifter-step-label">Step 2 of 6</div>
+      <div class="sifter-step-q">What's your target move-in window?</div>
+      <select class="sifter-select" id="s-movein">
+        <option value="" disabled selected>Select a timeframe</option>
+        <option value="0-30">Within 30 days</option>
+        <option value="30-60">30–60 days</option>
+        <option value="60-90">60–90 days</option>
+        <option value="90-plus">90+ days (planning ahead)</option>
+      </select>
+      <button class="sifter-next" onclick="sifterNext(2)">Continue →</button>
+    </div>
+
+    <!-- STEP 3: Vetting Layer -->
+    <div class="sifter-step" id="step3">
+      <div class="sifter-step-label">Step 3 of 6 — Qualification</div>
+      <div class="sifter-step-q">Tell us about your financial profile.</div>
+      <select class="sifter-select" id="s-income">
+        <option value="" disabled selected>Annual income</option>
+        <option value="under-80k">Under $80,000</option>
+        <option value="80-120k">$80,000 – $120,000</option>
+        <option value="120-200k">$120,000 – $200,000</option>
+        <option value="200k-plus">$200,000+</option>
+      </select>
+      <select class="sifter-select" id="s-credit">
+        <option value="" disabled selected>Credit score range</option>
+        <option value="700-plus">700 or above</option>
+        <option value="650-699">650 – 699</option>
+        <option value="below-650">Below 650</option>
+      </select>
+      <input class="sifter-input" type="number" id="s-rent" placeholder="Target monthly rent (e.g. 3500)" min="500" max="50000" oninput="showFeeCalc()">
+      <div id="feeCalc" style="display:none;background:#f4f4f4;border-left:3px solid #C8102E;padding:12px;margin-bottom:12px;font-size:13px;color:#333;">
+        <span id="feeLabel"></span>
+      </div>
+      <div style="margin-bottom:16px;">
+        <div class="sifter-step-label" style="margin-bottom:8px;">Do you need a guarantor?</div>
+        <div class="sifter-toggle">
+          <button class="sifter-toggle-btn" id="gYes" onclick="guarantorToggle('yes')">Yes</button>
+          <button class="sifter-toggle-btn" id="gNo" onclick="guarantorToggle('no')">No</button>
+          <button class="sifter-toggle-btn" id="gMaybe" onclick="guarantorToggle('maybe')">Not sure</button>
+        </div>
+      </div>
+      <div id="creditWarning" style="display:none;background:#fff8f8;border-left:3px solid #C8102E;padding:12px;margin-bottom:16px;font-size:13px;color:#555;">
+        No problem — we'll flag your application for a credit consultation call rather than an immediate placement. You can still submit.
+      </div>
+      <div id="incomeWarning" style="display:none;background:#fff8f8;border-left:3px solid #C8102E;padding:12px;margin-bottom:16px;font-size:13px;color:#555;">
+        Heads up — your target rent may exceed the 40x income guideline. We'll discuss options on your consultation call.
+      </div>
+      <button class="sifter-next" onclick="sifterNext(3)">Continue →</button>
+    </div>
+
+
+    <!-- STEP 4: Real-world filters -->
+    <div class="sifter-step" id="step4">
+      <div class="sifter-step-label">Step 4 of 6 — Your Profile</div>
+      <div class="sifter-step-q">A few more things that help us place you.</div>
+
+      <select class="sifter-select" id="s-occupants">
+        <option value="" disabled selected>Number of occupants</option>
+        <option value="1">Just me</option>
+        <option value="2">2 people</option>
+        <option value="3">3 people</option>
+        <option value="4+">4 or more</option>
+      </select>
+
+      <div style="margin-bottom:16px;">
+        <div class="sifter-step-label" style="margin-bottom:8px;">Will any pets be moving with you?</div>
+        <div class="sifter-toggle">
+          <button class="sifter-toggle-btn" id="petNone" onclick="petToggle('none')">No pets</button>
+          <button class="sifter-toggle-btn" id="petDog"  onclick="petToggle('dog')">Dog</button>
+          <button class="sifter-toggle-btn" id="petCat"  onclick="petToggle('cat')">Cat</button>
+          <button class="sifter-toggle-btn" id="petOther" onclick="petToggle('other')">Other</button>
+        </div>
+      </div>
+
+      <select class="sifter-select" id="s-employment">
+        <option value="" disabled selected>Employment status</option>
+        <option value="full-time">Full-time employed</option>
+        <option value="self-employed">Self-employed / Freelance</option>
+        <option value="student">Student</option>
+        <option value="other">Other</option>
+      </select>
+
+      <div style="margin-bottom:16px;">
+        <div class="sifter-step-label" style="margin-bottom:8px;">If approved, are you ready to cover move-in costs?</div>
+        <div class="sifter-toggle">
+          <button class="sifter-toggle-btn" id="mrYes"   onclick="moveReadyToggle('yes')">Yes — ready now</button>
+          <button class="sifter-toggle-btn" id="mrSoon"  onclick="moveReadyToggle('soon')">Within a few days</button>
+          <button class="sifter-toggle-btn" id="mrNotYet" onclick="moveReadyToggle('not-yet')">Not yet</button>
+        </div>
+      </div>
+
+      <button class="sifter-next" onclick="sifterNext(4)">Continue →</button>
+    </div>
+
+    <!-- STEP 5: Buying Power -->
+    <div class="sifter-step" id="step5">
+      <div class="sifter-step-label">Step 5 of 6</div>
+      <div class="sifter-step-q">A lot of our renters are closer to buying than they think. Want a free Buying Power review while we set up your search?</div>
+      <div class="sifter-toggle">
+        <button class="sifter-toggle-btn" id="buyYes" onclick="sifterToggle('yes')">Yes — show me</button>
+        <button class="sifter-toggle-btn" id="buyNo" onclick="sifterToggle('no')">No thanks</button>
+      </div>
+      <button class="sifter-next" onclick="sifterNext(5)">Continue →</button>
+    </div>
+
+    <!-- STEP 6: Contact + Agreement -->
+    <div class="sifter-step" id="step6">
+      <div class="sifter-step-label">Step 6 of 6</div>
+      <div class="sifter-step-q">Last step — how do we reach you?</div>
+      <form name="sifter-renter" method="POST" data-netlify="true" id="sifterForm">
+        <input type="hidden" name="form-name" value="sifter-renter">
+        <input type="hidden" name="subject" value="🔴 NEW RENTER — The Listing Side Registry">
+        <input type="hidden" name="neighborhood" id="h-neighborhood">
+        <input type="hidden" name="movein" id="h-movein">
+        <input type="hidden" name="income" id="h-income">
+        <input type="hidden" name="credit" id="h-credit">
+        <input type="hidden" name="target-rent" id="h-rent">
+        <input type="hidden" name="guarantor" id="h-guarantor">
+        <input type="hidden" name="buying-power" id="h-buying">
+        <input type="hidden" name="occupants" id="h-occupants">
+        <input type="hidden" name="pets" id="h-pets">
+        <input type="hidden" name="employment" id="h-employment">
+        <input type="hidden" name="move-in-ready" id="h-moveready">
+        <input type="hidden" name="status" id="h-status">
+        <input class="sifter-input" type="text" name="name" placeholder="Your name" required>
+        <input class="sifter-input" type="email" name="email" placeholder="Email address" required>
+        <input class="sifter-input" type="tel" name="phone" placeholder="Phone (optional)">
+        <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#555555;margin-bottom:16px;cursor:pointer;line-height:1.5;">
+          <input type="checkbox" name="agreement" required style="margin-top:3px;flex-shrink:0;accent-color:#C8102E;">
+          <span>I understand the fee for representation is capped at 7% (for rent under $10,000/mo) or 5% (for rent $10,000/mo and above). I acknowledge that any commission paid by the Owner is credited 1:1 to my balance — if the Owner pays 1.0 month or more, my fee is $0. I acknowledge the NYS Agency Disclosure and understand Christofer Holland represents my interests.</span>
+        </label>
+        <button class="sifter-next" type="submit">Submit — Request Representation</button>
+      </form>
+      <p class="sifter-note">Every submission is reviewed personally. Cleared renters get priority access to upcoming exclusive inventory.</p>
+    </div>
+
+    <!-- STEP 7: Success -->
+    <div class="sifter-step" id="step7">
+      <div style="text-align:center; padding: 20px 0;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:48px; color:#C8102E; margin-bottom:12px; line-height:1;">Data<br>Received.</div>
+        <p style="font-size:15px; color:#555555; line-height:1.7; margin-bottom:16px;">Christofer Holland is reviewing your file. To lock your capped rate, check your email to sign the required NYS Disclosures.</p>
+        <div style="background:#f4f4f4;border-left:3px solid #C8102E;padding:14px 16px;text-align:left;margin-bottom:16px;">
+          <p style="font-size:13px;color:#333333;line-height:1.7;margin:0;"><strong>Note:</strong> Your agreement includes a mandatory Owner-Credit clause — if the landlord pays a commission, it is credited to you, reducing your out-of-pocket fee to <strong>$0</strong>.</p>
+        </div>
+        <div id="stbPrompt" style="display:none; background:#f4f4f4; padding:20px; margin-top:12px; border-left: 3px solid #C8102E; text-align:left;">
+          <p style="font-size:13px; font-weight:600; color:#1A2744; margin-bottom:4px;">One more thing —</p>
+          <p style="font-size:13px; color:#555555;">Opening the Stop the Bleeding workshop for you now...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var buyingPower = '';
+  var guarantor = '';
+  var petChoice = '';
+  var moveReady = '';
+
+  function openSifter() {
+    document.getElementById('sifterOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSifter() {
+    document.getElementById('sifterOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('sifterClose').addEventListener('click', closeSifter);
+  document.getElementById('sifterOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeSifter();
+  });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeSifter(); });
+
+  function guarantorToggle(val) {
+    guarantor = val;
+    ['gYes','gNo','gMaybe'].forEach(function(id) {
+      document.getElementById(id).classList.remove('selected');
+    });
+    document.getElementById(val === 'yes' ? 'gYes' : val === 'no' ? 'gNo' : 'gMaybe').classList.add('selected');
+  }
+
+  function petToggle(val) {
+    petChoice = val;
+    ['petNone','petDog','petCat','petOther'].forEach(function(id) {
+      document.getElementById(id).classList.remove('selected');
+    });
+    var idMap = { none:'petNone', dog:'petDog', cat:'petCat', other:'petOther' };
+    document.getElementById(idMap[val]).classList.add('selected');
+  }
+
+  function moveReadyToggle(val) {
+    moveReady = val;
+    ['mrYes','mrSoon','mrNotYet'].forEach(function(id) {
+      document.getElementById(id).classList.remove('selected');
+    });
+    var idMap = { yes:'mrYes', soon:'mrSoon', 'not-yet':'mrNotYet' };
+    document.getElementById(idMap[val]).classList.add('selected');
+  }
+
+  function sifterToggle(val) {
+    buyingPower = val;
+    document.getElementById('buyYes').classList.toggle('selected', val === 'yes');
+    document.getElementById('buyNo').classList.toggle('selected', val === 'no');
+  }
+
+  // Income / rent warning logic
+  function showFeeCalc() {
+    var rent = parseInt(document.getElementById('s-rent').value) || 0;
+    var box = document.getElementById('feeCalc');
+    var label = document.getElementById('feeLabel');
+    if (!rent) { box.style.display = 'none'; return; }
+    var annual = rent * 12;
+    var rate = rent >= 10000 ? 0.05 : 0.07;
+    var fee = Math.round(annual * rate);
+    var ratePct = rent >= 10000 ? '5%' : '7%';
+    label.innerHTML = 'Fee ceiling: <strong>' + ratePct + ' of annual rent = $' + fee.toLocaleString() + '</strong>. If your landlord pays a full month\u2019s commission or more \u2014 you pay $0.';
+    box.style.display = 'block';
+  }
+
+  var incomeMap = { 'under-80k': 80000, '80-120k': 120000, '120-200k': 200000, '200k-plus': 300000 };
+  function checkQualification() {
+    var income = document.getElementById('s-income').value;
+    var credit = document.getElementById('s-credit').value;
+    var rent = parseInt(document.getElementById('s-rent').value) || 0;
+    document.getElementById('creditWarning').style.display = (credit === 'below-650') ? 'block' : 'none';
+    if (income && rent) {
+      var annualIncome = incomeMap[income] || 0;
+      var rentCeiling = annualIncome / 40;
+      document.getElementById('incomeWarning').style.display = (rent > rentCeiling) ? 'block' : 'none';
+    }
+  }
+  document.getElementById('s-income').addEventListener('change', checkQualification);
+  document.getElementById('s-credit').addEventListener('change', checkQualification);
+  document.getElementById('s-rent').addEventListener('input', checkQualification);
+
+  function sifterNext(step) {
+    if (step === 1) {
+      var n = document.getElementById('s-neighborhood').value;
+      if (!n) return;
+      document.getElementById('h-neighborhood').value = n;
+    }
+    if (step === 2) {
+      var m = document.getElementById('s-movein').value;
+      if (!m) return;
+      document.getElementById('h-movein').value = m;
+    }
+    if (step === 3) {
+      var income = document.getElementById('s-income').value;
+      var credit = document.getElementById('s-credit').value;
+      var rent = document.getElementById('s-rent').value;
+      if (!income || !credit || !rent) return;
+      document.getElementById('h-income').value = income;
+      document.getElementById('h-credit').value = credit;
+      document.getElementById('h-rent').value = rent;
+      document.getElementById('h-guarantor').value = guarantor || 'not-answered';
+      var annualIncome = incomeMap[income] || 0;
+      var rentCeiling = annualIncome / 40;
+      var needsConsultation = (credit === 'below-650') || (parseInt(rent) > rentCeiling);
+      document.getElementById('h-status').value = needsConsultation ? 'Consultation Required' : 'Pre-Cleared';
+    }
+    if (step === 4) {
+      var occ = document.getElementById('s-occupants').value;
+      var emp = document.getElementById('s-employment').value;
+      if (!occ || !emp) return;
+      document.getElementById('h-occupants').value = occ;
+      document.getElementById('h-pets').value = petChoice || 'not-answered';
+      document.getElementById('h-employment').value = emp;
+      document.getElementById('h-moveready').value = moveReady || 'not-answered';
+    }
+    if (step === 5) {
+      document.getElementById('h-buying').value = buyingPower || 'no-answer';
+    }
+    document.getElementById('step' + step).classList.remove('active');
+    document.getElementById('step' + (step + 1)).classList.add('active');
+    if (step + 1 <= 6) document.getElementById('pip' + (step + 1)).classList.add('done');
+  }
+
+  document.getElementById('sifterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var data = new FormData(this);
+    fetch('/', { method: 'POST', body: data }).finally(function() {
+      document.getElementById('step6').classList.remove('active');
+      document.getElementById('step7').classList.add('active');
+      if (buyingPower === 'yes') {
+        document.getElementById('stbPrompt').style.display = 'block';
+        setTimeout(function() {
+          window.open('https://christoferholland.com/workshops/stopthebleeding.html', '_blank');
+        }, 1500);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Relocating to NYC — The Listing Side | NY Living Solutions | Keller Williams NYC</title>
+<meta name="description" content="Relocating to New York City? Professional tenant and buyer representation at the best rate in NYC. 7% rental cap, 5% over $10k. Corporate relocation accounts welcome. Christofer Holland, NY Lic. #10401390448.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C8102E;
+    --navy: #1A2744;
+    --black: #111111;
+    --white: #ffffff;
+    --light: #f4f4f4;
+    --mid: #555555;
+    --border: #e0e0e0;
+    --gold: #C9A04C;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; color-scheme: light; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--black); -webkit-font-smoothing: antialiased; }
+
+  /* ── COMPLIANCE BAR ── */
+  .compliance-bar {
+    display: block !important;
+    background: #C8102E !important;
+    padding: 8px 24px;
+    margin: 0 !important;
+    border: none !important;
+    line-height: 1;
+    width: 100%;
+    text-align: center;
+  }
+  .compliance-links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .compliance-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: clamp(8px, 1.2vw, 10px);
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.9) !important;
+    text-decoration: none !important;
+    white-space: nowrap;
+    padding: 0 12px;
+    transition: color .2s;
+  }
+  .compliance-links a:hover { color: #ffffff !important; }
+  .compliance-sep { color: rgba(255,255,255,.4); font-size: 6px; flex-shrink: 0; }
+
+  #stickyHeader {
+    position: sticky;
+    top: 0;
+    z-index: 9001;
+    display: flex;
+    flex-direction: column;
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .utility-bar {
+    background: #f4f4f4;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .utility-bar a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #333333;
+    text-decoration: none;
+    padding: 11px 24px;
+    border-right: 1px solid #e0e0e0;
+    transition: color .15s;
+    white-space: nowrap;
+  }
+  .utility-bar a:last-child { border-right: none; }
+  .utility-bar a:hover { color: #C8102E; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--white);
+    border-top: 4px solid var(--red);
+    border-bottom: 1px solid var(--border);
+    padding: 80px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: 'NYC';
+    position: absolute;
+    right: -40px;
+    bottom: -60px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 320px;
+    color: rgba(200,16,46,.04);
+    line-height: 1;
+    pointer-events: none;
+    letter-spacing: -.02em;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 7vw, 84px);
+    line-height: .95;
+    color: var(--black);
+    margin-bottom: 20px;
+    letter-spacing: .02em;
+  }
+  .hero-title em { color: var(--red); font-style: normal; }
+  .hero-sub { font-size: 17px; color: var(--mid); line-height: 1.7; margin-bottom: 32px; max-width: 480px; }
+  .btn-primary {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .btn-primary:hover { background: #a50d26; }
+  .btn-ghost-dark {
+    display: inline-block;
+    border: 1.5px solid var(--black);
+    color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .btn-ghost-dark:hover { background: var(--black); color: var(--white); }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  /* Rate summary card */
+  .rate-summary {
+    border: 1.5px solid var(--black);
+    position: relative;
+  }
+  .rate-summary::before {
+    content: '';
+    position: absolute;
+    top: 6px; left: 6px;
+    right: -6px; bottom: -6px;
+    border: 1.5px solid var(--red);
+    z-index: -1;
+  }
+  .rate-summary-head {
+    background: var(--black);
+    padding: 14px 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #888;
+  }
+  .rate-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .rate-row:last-child { border-bottom: none; }
+  .rate-label { font-size: 14px; font-weight: 500; color: var(--black); }
+  .rate-sub { font-size: 12px; color: #888; margin-top: 2px; }
+  .rate-pct { font-family: 'Bebas Neue', sans-serif; font-size: 40px; color: var(--red); line-height: 1; }
+  .rate-note {
+    background: var(--light);
+    padding: 14px 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--mid);
+    line-height: 1.7;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── SECTIONS ── */
+  .page-section { padding-left: 48px; padding-right: 48px; }
+  .section { max-width: 1100px; margin: 0 auto; padding: 80px 0; }
+  .section-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 5vw, 58px); color: var(--black); line-height: 1; margin-bottom: 16px; }
+  .section-sub { font-size: 17px; color: var(--mid); max-width: 680px; line-height: 1.65; margin-bottom: 48px; }
+
+  /* ── HOW IT WORKS ── */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+  }
+  .step-card { padding: 36px 28px; border-right: 1px solid var(--border); background: var(--white); }
+  .step-card:last-child { border-right: none; }
+  .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 52px; color: var(--red); line-height: 1; margin-bottom: 12px; }
+  .step-title { font-size: 15px; font-weight: 600; color: var(--black); margin-bottom: 8px; }
+  .step-body { font-size: 13px; color: var(--mid); line-height: 1.65; }
+
+  /* ── PATH CARDS ── */
+  .path-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+  .path-card { background: var(--white); padding: 40px 36px; }
+  .path-card.dark { background: var(--black); }
+  .path-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+  .path-title { font-family: 'Bebas Neue', sans-serif; font-size: 40px; line-height: 1; margin-bottom: 14px; color: var(--black); }
+  .path-card.dark .path-title { color: var(--white); }
+  .path-body { font-size: 14px; color: var(--mid); line-height: 1.65; margin-bottom: 24px; }
+  .path-card.dark .path-body { color: #a0aabb; }
+  .path-list { list-style: none; margin-bottom: 24px; }
+  .path-list li { font-size: 13px; color: var(--mid); padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; align-items: center; }
+  .path-card.dark .path-list li { color: #c8d0e0; border-color: rgba(255,255,255,.08); }
+  .path-list li::before { content: ''; width: 5px; height: 5px; background: var(--red); flex-shrink: 0; }
+
+  /* ── CORPORATE SECTION ── */
+  .corp-section {
+    background: var(--navy);
+    padding: 80px 48px;
+    border-top: 4px solid var(--red);
+    border-bottom: 4px solid var(--red);
+  }
+  .corp-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .corp-eyebrow { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .corp-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 5vw, 58px); color: var(--white); line-height: 1; margin-bottom: 20px; }
+  .corp-body { font-size: 16px; color: #a0aabb; line-height: 1.7; margin-bottom: 16px; }
+  .corp-list { list-style: none; }
+  .corp-list li { font-size: 14px; color: #c8d0e0; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.08); display: flex; gap: 12px; align-items: flex-start; }
+  .corp-list li::before { content: ''; width: 6px; height: 6px; background: var(--red); flex-shrink: 0; margin-top: 6px; }
+  .relo-companies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .relo-company {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    padding: 16px 20px;
+  }
+  .relo-company-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--white); margin-bottom: 4px; }
+  .relo-company-sub { font-size: 12px; color: #6b7a99; }
+  .relo-note {
+    background: rgba(200,16,46,.1);
+    border-left: 3px solid var(--red);
+    padding: 16px 20px;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #c8d0e0;
+    line-height: 1.7;
+  }
+
+  /* ── INTAKE FORM ── */
+  .intake-section {
+    background: var(--white);
+    padding: 80px 48px;
+    border-bottom: 1px solid var(--border);
+  }
+  .intake-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .intake-form { background: var(--white); border: 1.5px solid var(--black); padding: 40px; }
+  .form-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--mid); margin-bottom: 20px; }
+  .form-section-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--red); display: block; margin: 18px 0 10px; border-top: 1px solid var(--border); padding-top: 14px; }
+  .form-input, .form-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--border);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--black);
+    background: var(--white);
+    margin-bottom: 10px;
+    outline: none;
+    appearance: none;
+  }
+  .form-input:focus, .form-select:focus { border-color: var(--red); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--mid);
+    margin-bottom: 14px;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .form-checkbox input { margin-top: 3px; flex-shrink: 0; accent-color: var(--red); }
+  .form-submit {
+    width: 100%;
+    padding: 18px;
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .2s;
+    margin-top: 6px;
+  }
+  .form-submit:hover { background: #a50d26; }
+  .form-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--mid); margin-top: 10px; line-height: 1.6; text-align: center; }
+  .form-success { display: none; text-align: center; padding: 40px 20px; }
+  .form-success-title { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--red); margin-bottom: 12px; }
+  .form-success-body { font-size: 15px; color: var(--mid); line-height: 1.7; }
+
+  /* ── INTERCEPTS ── */
+  .intercept { padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); padding: 64px 48px 48px; border-top: 4px solid var(--red); }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--white); letter-spacing: .04em; margin-bottom: 8px; }
+  .footer-brand span { color: var(--red); }
+  .footer-tag { font-size: 13px; color: var(--white); line-height: 1.6; }
+  .footer-col-title { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: #6b7a99; margin-bottom: 20px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a { font-size: 14px; color: #c8d0e0; text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-contact { font-size: 13px; color: #c8d0e0; line-height: 1.9; }
+  .footer-contact a { color: #c8d0e0; text-decoration: none; }
+  .footer-bottom { max-width: 1100px; margin: 32px auto 0; text-align: center; }
+  .footer-legal { font-family: 'DM Sans', sans-serif; font-size: 11px; color: #a0aabb; line-height: 1.7; }
+  .footer-legal a { color: #a0aabb; text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .hero { padding: 60px 24px; }
+    .hero-inner, .corp-inner, .intake-inner { grid-template-columns: 1fr; gap: 40px; }
+    .page-section { padding-left: 24px !important; padding-right: 24px !important; }
+    .section { padding: 60px 0; }
+    .steps-grid { grid-template-columns: 1fr 1fr; }
+    .step-card:nth-child(2) { border-right: none; }
+    .step-card:nth-child(3), .step-card:nth-child(4) { border-top: 1px solid var(--border); }
+    .step-card:nth-child(4) { border-right: none; }
+    .path-grid { grid-template-columns: 1fr; }
+    .relo-companies { grid-template-columns: 1fr; }
+    .corp-section { padding: 60px 24px; }
+    .intake-section { padding: 60px 24px; }
+    .intercept { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    footer { padding: 48px 24px; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero::after { font-size: 160px; }
+    .rate-summary::before { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="nav"></div>
+<script src="nav.js"></script>
+
+<!-- UTILITY BAR -->
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">Corporate & Individual Relocation — NYC</div>
+      <h1 class="hero-title">Relocating<br>To New<br>York City?<br><em>Best Rate.<br>Best Rep.</em></h1>
+      <p class="hero-sub">Whether you're moving for a new role or managing employee relocations, you need an agent who knows the market, moves fast, and doesn't pad the invoice. We provide professional representation at a capped rate — rental or purchase, individual or corporate account.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="document.getElementById('intake').scrollIntoView({behavior:'smooth'})">Start Your Relocation</button>
+        <button class="btn-ghost-dark" onclick="document.getElementById('corporate').scrollIntoView({behavior:'smooth'})">Corporate Accounts</button>
+      </div>
+    </div>
+    <div>
+      <div class="rate-summary">
+        <div class="rate-summary-head">Our Rate Structure — Relocation Clients</div>
+        <div class="rate-row">
+          <div>
+            <div class="rate-label">Rental — Under $10,000/mo</div>
+            <div class="rate-sub">Full market access · Income + credit verified · FARE Act compliant</div>
+          </div>
+          <div class="rate-pct">7%</div>
+        </div>
+        <div class="rate-row">
+          <div>
+            <div class="rate-label">Rental — $10,000/mo & Above</div>
+            <div class="rate-sub">Luxury + executive rental · Same transparent model</div>
+          </div>
+          <div class="rate-pct">5%</div>
+        </div>
+        <div class="rate-row">
+          <div>
+            <div class="rate-label">Purchase — Buyer Representation</div>
+            <div class="rate-sub">Co-op, condo, multi-family · REBNY agreement required before showings · Fee negotiable and not set by law</div>
+          </div>
+          <div class="rate-pct" style="font-size:20px;line-height:1.2;text-align:right;">Negotiable</div>
+        </div>
+        <div class="rate-row">
+          <div>
+            <div class="rate-label">Owner Pays Commission</div>
+            <div class="rate-sub">Any OP credited 1:1 — if landlord pays 1 month+, renter pays $0</div>
+          </div>
+          <div class="rate-pct" style="font-size:28px;color:#1D9E75;">$0</div>
+        </div>
+        <div class="rate-note">Rental fees capped as shown. Purchase buyer representation fee negotiable — not set by law. All fees disclosed upfront. Relocation management company referral fees honored per agreement.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="page-section" style="background:#ffffff;border-bottom:1px solid var(--border);">
+  <div class="section">
+    <div class="section-eyebrow">The Process</div>
+    <h2 class="section-title">Fast. Transparent.<br>Done Right.</h2>
+    <p class="section-sub">Relocation clients have hard start dates. We treat every file with urgency — same-day response, pre-vetted unit options, and representation agreements handled digitally before you land.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-title">Submit Your Profile</div>
+        <p class="step-body">Tell us your start date, budget, neighborhood preferences, and whether you're renting or buying. We respond within 24 hours — often same day.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-title">Agreement & Verification</div>
+        <p class="step-body">Representation agreement sent digitally. We verify income, credit, and pre-approval before your first showing. No wasted trips.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-title">Search & Present</div>
+        <p class="step-body">Full NYC market access — MLS, RLS, co-ops, condos, rentals, off-market. We present curated options matched to your criteria and commute.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-title">Signed & Ready</div>
+        <p class="step-body">From lease signing to board approval, we manage every step. You arrive in New York with keys in hand and a place ready to live.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDIVIDUAL + CORPORATE PATHS -->
+<section class="page-section" style="background:var(--light);border-bottom:1px solid var(--border);">
+  <div class="section">
+    <div class="section-eyebrow">Who This Is For</div>
+    <h2 class="section-title">Individual Moves.<br>Corporate Accounts.</h2>
+    <p class="section-sub">Whether you're moving yourself or managing relocations for a team, the model is the same — transparent rates, fast turnaround, professional representation.</p>
+    <div class="path-grid">
+      <div class="path-card">
+        <div class="path-eyebrow">Individual Relocation</div>
+        <div class="path-title">You're Moving<br>to New York.</div>
+        <p class="path-body">New job, new city, new life. You need a place to live and an agent who doesn't waste your time. We find it fast, handle the paperwork, and cap our fee.</p>
+        <ul class="path-list">
+          <li>Rental at 7% (under $10k) or 5% ($10k+)</li>
+          <li>Purchase — buyer representation fee negotiable and not set by law</li>
+          <li>Commute-based neighborhood matching available</li>
+          <li>Pre-approval and income verification handled upfront</li>
+          <li>Same-day response guaranteed on active files</li>
+        </ul>
+        <button class="btn-primary" onclick="document.getElementById('intake').scrollIntoView({behavior:'smooth'})">Start My Relocation</button>
+      </div>
+      <div class="path-card dark">
+        <div class="path-eyebrow">Corporate Account</div>
+        <div class="path-title">You Move<br>People Here.</div>
+        <p class="path-body">HR teams, relocation managers, and corporate mobility professionals — we work within your existing relocation structure and handle every employee file individually with full discretion.</p>
+        <ul class="path-list">
+          <li>Dedicated point of contact for your organization</li>
+          <li>Each employee handled as a separate client file</li>
+          <li>Rental and purchase paths both covered</li>
+          <li>Referral fee structure available for relocation management companies</li>
+          <li>Reporting and documentation for expense reimbursement</li>
+          <li>Volume relationships — ongoing pipeline</li>
+        </ul>
+        <button class="btn-primary" onclick="document.getElementById('corporate').scrollIntoView({behavior:'smooth'})">Set Up a Corporate Account</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORPORATE / RELO COMPANY SECTION -->
+<section class="corp-section" id="corporate">
+  <div class="corp-inner">
+    <div>
+      <div class="corp-eyebrow">For Relocation Management Companies</div>
+      <h2 class="corp-title">We Work<br>Within Your<br>Network.</h2>
+      <p class="corp-body">Relocation management companies (RMCs) send employees to NYC every day. We are available to serve as your receiving broker — handling every client you send with professional representation at institutional rates.</p>
+      <p class="corp-body">We honor your standard referral fee structure. We provide full documentation for your files. Every client gets the same transparent, capped-rate representation regardless of budget.</p>
+      <ul class="corp-list">
+        <li>Available for RMC partnership and approved broker network registration</li>
+        <li>Referral fees honored per your standard agreement (typically 25–35% of earned commission)</li>
+        <li>Full documentation provided for each closed transaction</li>
+        <li>Rental and purchase both covered — one relationship, both transaction types</li>
+        <li>KW NYC brokerage backing — fully licensed, REBNY compliant</li>
+        <li>Contact us to discuss RMC registration and referral agreement</li>
+      </ul>
+    </div>
+    <div>
+      <div class="corp-eyebrow" style="color:#6b7a99;">Major Relocation Management Companies</div>
+      <div class="relo-companies">
+        <div class="relo-company">
+          <div class="relo-company-name">Cartus</div>
+          <div class="relo-company-sub">Global relocation management</div>
+        </div>
+        <div class="relo-company">
+          <div class="relo-company-name">SIRVA</div>
+          <div class="relo-company-sub">Corporate mobility services</div>
+        </div>
+        <div class="relo-company">
+          <div class="relo-company-name">Aires</div>
+          <div class="relo-company-sub">Global relocation & moving</div>
+        </div>
+        <div class="relo-company">
+          <div class="relo-company-name">Weichert</div>
+          <div class="relo-company-sub">Workforce mobility</div>
+        </div>
+        <div class="relo-company">
+          <div class="relo-company-name">Graebel</div>
+          <div class="relo-company-sub">Employee relocation services</div>
+        </div>
+        <div class="relo-company">
+          <div class="relo-company-name">NEI Global</div>
+          <div class="relo-company-sub">Relocation management</div>
+        </div>
+      </div>
+      <div class="relo-note">
+        <strong>Already working with a relocation company?</strong> Let us know in the intake form and we will coordinate directly with your assigned counselor.
+      </div>
+      <div style="margin-top:24px;">
+        <button class="btn-primary" onclick="document.getElementById('intake').scrollIntoView({behavior:'smooth'})">Contact Us About RMC Partnership</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTAKE FORM -->
+<section class="intake-section" id="intake">
+  <div class="intake-inner">
+    <div>
+      <div class="section-eyebrow">Relocation Intake</div>
+      <h2 class="section-title">Tell Us<br>About Your<br>Move.</h2>
+      <p style="font-size:16px;color:var(--mid);line-height:1.7;margin-bottom:24px;">Individual or corporate — we handle every relocation file with urgency and discretion. Fill out the form and we respond within 24 hours. Active files get same-day response.</p>
+      <div style="padding:20px 24px;background:var(--light);border-left:3px solid var(--red);font-size:13px;color:#444;line-height:1.7;margin-bottom:16px;">
+        <strong>Rental rates:</strong> 7% (under $10k/mo) · 5% ($10k+/mo)<br>
+        <strong>Purchase rate:</strong> 2.5% buyer representation<br>
+        <strong>If owner pays a full commission:</strong> you pay us $0
+      </div>
+      <div style="padding:20px 24px;background:var(--light);border-left:3px solid #111;font-size:13px;color:#444;line-height:1.7;">
+        <strong>Working with a relocation company?</strong> Tell us which one in the form and we'll coordinate with your counselor directly. Referral fee structures honored per agreement.
+      </div>
+    </div>
+    <div>
+      <div class="intake-form">
+        <div class="form-eyebrow">Relocation Client Intake</div>
+        <form name="relocation-intake" method="POST" data-netlify="true" id="reloForm">
+          <input type="hidden" name="form-name" value="relocation-intake">
+          <input type="hidden" name="subject" value="✈️ NEW RELOCATION CLIENT — The Listing Side">
+
+          <span class="form-section-label" style="border-top:none;margin-top:0;padding-top:0;">Contact</span>
+          <div class="form-row">
+            <input class="form-input" type="text" name="name" placeholder="Your name" required>
+            <input class="form-input" type="email" name="email" placeholder="Email address" required>
+          </div>
+          <input class="form-input" type="tel" name="phone" placeholder="Phone number" required>
+          <input class="form-input" type="text" name="company" placeholder="Company / employer (if applicable)">
+
+          <span class="form-section-label">Relocation Details</span>
+          <div class="form-row">
+            <input class="form-input" type="date" name="start-date" placeholder="Target start date / move-in date" required>
+            <select class="form-select" name="need" required>
+              <option value="" disabled selected>What do you need?</option>
+              <option value="rental">Rental only</option>
+              <option value="purchase">Purchase only</option>
+              <option value="rental-then-purchase">Rental now, purchase later</option>
+              <option value="both">Both simultaneously</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <input class="form-input" type="number" name="budget" placeholder="Monthly budget (rental $)" >
+            <input class="form-input" type="number" name="purchase-budget" placeholder="Purchase budget ($)" >
+          </div>
+          <div class="form-row">
+            <select class="form-select" name="bedrooms" required>
+              <option value="" disabled selected>Bedrooms needed</option>
+              <option value="studio">Studio</option>
+              <option value="1">1 Bedroom</option>
+              <option value="2">2 Bedrooms</option>
+              <option value="3">3 Bedrooms</option>
+              <option value="4-plus">4+ Bedrooms</option>
+            </select>
+            <input class="form-input" type="number" name="occupants" placeholder="Number of occupants">
+          </div>
+          <input class="form-input" type="text" name="neighborhoods" placeholder="Neighborhood preferences (or office address for commute match)">
+
+          <span class="form-section-label">Financials</span>
+          <div class="form-row">
+            <select class="form-select" name="annual-income">
+              <option value="" disabled selected>Annual household income</option>
+              <option value="under-100k">Under $100,000</option>
+              <option value="100-150k">$100,000 – $150,000</option>
+              <option value="150-200k">$150,000 – $200,000</option>
+              <option value="200-300k">$200,000 – $300,000</option>
+              <option value="300-500k">$300,000 – $500,000</option>
+              <option value="500k-plus">$500,000+</option>
+            </select>
+            <select class="form-select" name="credit-score">
+              <option value="" disabled selected>Credit score</option>
+              <option value="750-plus">750+</option>
+              <option value="700-749">700–749</option>
+              <option value="650-699">650–699</option>
+              <option value="below-650">Below 650</option>
+              <option value="unsure">Not sure</option>
+            </select>
+          </div>
+          <select class="form-select" name="pre-approval">
+            <option value="" disabled selected>Pre-approval status (if purchasing)</option>
+            <option value="yes">Yes — pre-approved</option>
+            <option value="in-progress">In progress</option>
+            <option value="no">Not yet</option>
+            <option value="na">Not purchasing</option>
+          </select>
+
+          <span class="form-section-label">Relocation Company (if applicable)</span>
+          <select class="form-select" name="relo-company">
+            <option value="" disabled selected>Relocation management company</option>
+            <option value="cartus">Cartus</option>
+            <option value="sirva">SIRVA</option>
+            <option value="aires">Aires</option>
+            <option value="weichert">Weichert Workforce Mobility</option>
+            <option value="graebel">Graebel</option>
+            <option value="nei">NEI Global Relocation</option>
+            <option value="other">Other — specify below</option>
+            <option value="none">No relocation company</option>
+          </select>
+          <input class="form-input" type="text" name="relo-counselor" placeholder="Relocation counselor name (if applicable)">
+          <input class="form-input" type="text" name="relo-company-other" placeholder="If 'Other' — company name">
+
+          <span class="form-section-label">Agreement</span>
+          <label class="form-checkbox">
+            <input type="checkbox" name="agreement" required>
+            <span>I understand representation fees are capped at 7% (rental under $10k/mo) or 5% ($10k+/mo), and 2.5% for purchase. If the owner pays a commission, it is credited to my balance. All fees are negotiable and not set by law. I acknowledge the NYS Agency Disclosure.</span>
+          </label>
+          <button class="form-submit" type="submit">Submit — Start My Relocation</button>
+        </form>
+        <div class="form-success" id="reloSuccess">
+          <div class="form-success-title">Received.</div>
+          <p class="form-success-body">Christofer Holland is reviewing your relocation file. You'll hear back within 24 hours — active files with hard start dates get same-day response.</p>
+        </div>
+        <p class="form-note">Every file reviewed personally. Christofer Holland, Director of Operations — The Listing Side</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERCEPTS -->
+<div class="intercept" style="background:#111111;border-top:1px solid #222;">
+  <div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:8px;">Planning to Buy?</div>
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#ffffff;line-height:1;">From rental to ownership.</div>
+    <p style="font-size:14px;color:#a0aabb;line-height:1.6;margin-top:8px;max-width:480px;">Many relocation clients start with a rental and purchase within 12–24 months. When you're ready, you're already in our system. Join the Tuesday workshop to understand your buying power now.</p>
+  </div>
+  <a href="https://christoferholland.com/workshops/stopthebleeding.html" style="display:inline-block;background:#C8102E;color:#ffffff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:16px 36px;text-decoration:none;white-space:nowrap;flex-shrink:0;">Stop The Bleeding Workshop →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">The Listing <span>Side</span></div>
+      <p class="footer-tag">Clear Rates.<br>Faster Closings.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">The Listing Side System</div>
+      <ul class="footer-links">
+        <li><a href="relocation.html">Relocation — NYC</a></li>
+        <li><a href="renters.html">Renters — Get Representation</a></li>
+        <li><a href="landlord.html">Owners — Rent Your Unit</a></li>
+        <li><a href="sales.html">Sales — Buy or Sell</a></li>
+        <li><a href="lease-break.html">Exit a Lease</a></li>
+        <li><a href="https://christoferholland.com/workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
+        <li><a href="../index.html">christoferholland.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact">
+        Christofer Holland<br>
+        Director of Operations — The Listing Side<br>
+        Licensed Real Estate Salesperson<br>
+        NY Lic. #10401390448<br><br>
+        NY Living Solutions | Keller Williams NYC<br>
+        90 John Street, Storefront<br>
+        New York, NY 10038<br><br>
+        <a href="tel:9172071414">917-207-1414</a><br>
+        <a href="mailto:Info@thelistingside.com">Info@thelistingside.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      © 2026 The Listing Side | NY Living Solutions | Keller Williams NYC<br>
+      Christofer Holland, Licensed Real Estate Salesperson, NY Lic. #10401390448<br>
+      All commission rates are negotiable and not set by law or any Realtor® association.<br>
+      All transactions subject to Fair Housing laws. REBNY compliant.<br>
+      <span style="margin-top:8px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;">
+        <a href="https://d1e1jt2fj4r8r.cloudfront.net/documents/fairhousingnotice.pdf" target="_blank" rel="noopener">Fair Housing Notice</a>
+        <a href="https://d1e1jt2fj4r8r.cloudfront.net/d36fff22-1ea6-464a-8fbd-aee2a2b71bb2/-jHhTwrOg/sop.pdf" target="_blank" rel="noopener">Standard Operating Procedures</a>
+        <a href="https://kwnyc.com/ada-disclosure" target="_blank" rel="noopener">Reasonable Accommodation</a>
+        <a href="https://image.info.rebny.com/lib/fe35157075640479701d77/m/1/68142058-8e73-4146-b9d6-54fc56484a07.pdf?utm_source=sfmc&utm_medium=email&utm_campaign=FARE+Act+Updated+Compliance&utm_term=Flyer&utm_id=1811434&sfmc_id=628153611" target="_blank" rel="noopener">Agency Disclosure</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('reloForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    fetch('/', { method: 'POST', body: new FormData(this) }).finally(function() {
+      document.getElementById('reloForm').style.display = 'none';
+      document.getElementById('reloSuccess').style.display = 'block';
+    });
+  });
+</script>
+
+</body>
+</html>

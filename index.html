@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<title>The Listing Side | NY Living Solutions | Keller Williams NYC</title>
+<meta name="description" content="Clear rates. Pre-vetted tenants. Faster closings. The Listing Side is a direct match rental Registry for NYC landlords, owners, and developers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --red:#C8102E; --navy:#1A2744; --black:#111111; --white:#ffffff; --light:#f4f4f4; --mid:#555555; --border:#e0e0e0; --gold:#C9A04C; }
+  *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+  html { color-scheme:light; }
+  body { font-family:'DM Sans',sans-serif; background:#ffffff; color:#111111; -webkit-font-smoothing:antialiased; }
+
+  /* Compliance bar */
+  .compliance-bar { display:block !important; background:#C8102E !important; padding:8px 24px; margin:0 !important; border:none !important; line-height:1; width:100%; text-align:center; }
+  .compliance-links { display:inline-flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:0; max-width:1100px; margin:0 auto; }
+  .compliance-links a { font-family:'DM Mono',monospace; font-size:clamp(8px,1.2vw,10px); letter-spacing:.09em; text-transform:uppercase; color:rgba(255,255,255,.9) !important; text-decoration:none !important; white-space:nowrap; padding:0 12px; transition:color .2s; }
+  .compliance-links a:hover { color:#ffffff !important; }
+  .compliance-sep { color:rgba(255,255,255,.4); font-size:6px; flex-shrink:0; }
+
+  /* Sticky header */
+  #stickyHeader { position:sticky; top:0; z-index:9001; display:flex; flex-direction:column; padding-top:env(safe-area-inset-top); }
+
+  /* Utility bar */
+  .utility-bar { background:#f4f4f4; border-bottom:1px solid #e0e0e0; width:100%; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; }
+  .utility-bar a { font-family:'DM Mono',monospace; font-size:10px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:#333; text-decoration:none; padding:11px 24px; border-right:1px solid #e0e0e0; transition:color .15s; white-space:nowrap; }
+  .utility-bar a:last-child { border-right:none; }
+  .utility-bar a:hover { color:#C8102E; }
+
+  /* Page section */
+  .page-section { padding-left:48px; padding-right:48px; }
+
+  /* Footer */
+  footer { background:#1A2744; padding:64px 48px 48px; border-top:4px solid #C8102E; }
+  .footer-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr; gap:48px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,.1); }
+  .footer-brand { font-family:'Bebas Neue',sans-serif; font-size:28px; color:#ffffff; letter-spacing:.04em; margin-bottom:8px; }
+  .footer-brand span { color:#C8102E; }
+  .footer-tag { font-size:13px; color:#ffffff; line-height:1.6; }
+  .footer-social { display:flex; gap:16px; margin-top:20px; }
+  .footer-social a { color:#ffffff; transition:color .2s; }
+  .footer-social a:hover { color:#C8102E; }
+  .footer-col-title { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#99aac0; margin-bottom:20px; }
+  .footer-links { list-style:none; display:flex; flex-direction:column; gap:12px; }
+  .footer-links a { font-size:14px; color:#ffffff; text-decoration:none; transition:color .2s; }
+  .footer-links a:hover { color:#ffffff; }
+  .footer-contact { font-size:13px; color:#d8dfe8; line-height:1.9; }
+  .footer-contact a { color:#c8d0e0; text-decoration:none; }
+  .footer-bottom { max-width:1100px; margin:32px auto 0; text-align:center; }
+  .footer-legal { font-size:11px; color:#c8d4e4; line-height:1.7; }
+  .footer-legal a { color:#c8d4e4; text-decoration:none; }
+  .footer-legal-links { margin-top:8px; display:flex; flex-wrap:wrap; justify-content:center; gap:8px 20px; }
+
+  /* Modal Overlay (The Sifter) */
+  .modal-overlay {
+    display: none; /* Crucial: ensure it's hidden by default */
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .modal-overlay.open {
+    display: flex;
+    opacity: 1;
+  }
+  .modal-box {
+    background: #ffffff;
+    max-width: 560px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 40px;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.2);
+  }
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    line-height: 1;
+  }
+  .modal-close:hover {
+    color: #C8102E;
+  }
+
+  /* Form and Button Styles within Modal */
+  .sifter-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #C8102E;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+  }
+  .sifter-btn:hover {
+    background-color: #a50d26;
+  }
+
+
+
+  /* Path cards - hard-coded classes so live hosting cannot fall back to blue/default links */
+  .path-grid {
+    display:grid;
+    grid-template-columns:1fr 1.06fr 1fr;
+    gap:2px;
+    background:#e0e0e0;
+    border:1px solid #e0e0e0;
+    align-items:stretch;
+  }
+  .path-card {
+    padding:40px 32px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .path-card.white { background:#ffffff; border-left:4px solid #C8102E; }
+  .path-card.black { background:#111111; }
+  .path-card.navy { background:#1A2744; }
+  .path-eyebrow {
+    font-family:'DM Mono',monospace;
+    font-size:10px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  .path-title {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:44px;
+    line-height:.95;
+    margin-bottom:24px;
+  }
+  .path-links { display:flex; flex-direction:column; gap:0; }
+  .path-link {
+    font-family:'DM Sans',sans-serif !important;
+    font-size:14px !important;
+    font-weight:500 !important;
+    text-decoration:none !important;
+    padding:10px 0 !important;
+    display:flex !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+    transition:color .15s !important;
+  }
+  .path-link.light { color:#222 !important; border-bottom:1px solid #e8e8e8; }
+  .path-link.dark { color:#dddddd !important; border-bottom:1px solid rgba(255,255,255,.12); }
+  .path-link.navy-link { color:#d0d6e0 !important; border-bottom:1px solid rgba(255,255,255,.1); }
+  .path-link:last-child { border-bottom:none !important; }
+  .path-link.light:hover { color:#C8102E !important; }
+  .path-link.dark:hover,
+  .path-link.navy-link:hover { color:#ffffff !important; }
+  .path-link .arrow { color:#C8102E !important; }
+  .path-note { margin-top:24px; padding-top:16px; }
+  .path-note.light { border-top:1px solid #e0e0e0; }
+  .path-note.dark { border-top:1px solid rgba(255,255,255,.12); }
+  .path-note.navy-note { border-top:1px solid rgba(255,255,255,.1); }
+  .path-note-text { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.08em; }
+
+  /* Form fields used in the modal */
+  .form-label { display:block; font-size:13px; font-weight:600; margin:18px 0 8px; color:#111111; }
+  .form-input, .form-select { width:100%; padding:12px 14px; border:1px solid #d8d8d8; border-radius:3px; font-family:'DM Sans',sans-serif; font-size:14px; margin-bottom:10px; background:#ffffff; color:#111111; }
+  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .form-checkbox { display:flex; gap:10px; align-items:flex-start; font-size:13px; line-height:1.4; margin:12px 0; color:#111111; }
+
+  @media (max-width:900px) {
+    .page-section { padding-left:24px !important; padding-right:24px !important; }
+    footer { padding:48px 24px; }
+    .footer-inner { grid-template-columns:1fr; gap:32px; }
+    .form-row { grid-template-columns:1fr; }
+    .path-grid { grid-template-columns:1fr; }
+    .path-card { padding:32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sticky-header" id="stickyHeader">
+<div class="compliance-bar">
+  <div class="compliance-links">
+    <a href="https://d1e1jt2fj4r8r.cloudfront.net/documents/fairhousingnotice.pdf" target="_blank" rel="noopener">Fair Housing Notice</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://d1e1jt2fj4r8r.cloudfront.net/d36fff22-1ea6-464a-8fbd-aee2a2b71bb2/-jHhTwrOg/sop.pdf" target="_blank" rel="noopener">Standard Operating Procedures</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://kwnyc.com/ada-disclosure" target="_blank" rel="noopener">Reasonable Accommodation</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://image.info.rebny.com/lib/fe35157075640479701d77/m/1/68142058-8e73-4146-b9d6-54fc56484a07.pdf?utm_source=sfmc&utm_medium=email&utm_campaign=FARE+Act+Updated+Compliance&utm_term=Flyer&utm_id=1811434&sfmc_id=628153611" target="_blank" rel="noopener">Agency Disclosure</a>
+  </div>
+</div>
+</div><script src="../nav.js"></script>
+
+<div class="utility-bar">
+  <a href="../thelistingside/renters.html">I Am a Renter</a>
+  <a href="../thelistingside/lease-break.html">I Need to Break a Lease</a>
+</div>
+
+<section class="page-section" style="border-top:4px solid #C8102E;background:#ffffff;">
+  <div style="max-width:1100px;margin:0 auto;padding:64px 0 64px;">
+
+    <div style="text-align:center;margin-bottom:48px;">
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C8102E;margin-bottom:12px;">The Listing Side — NYC</div>
+      <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,6vw,72px);line-height:.95;color:#111111;">Choose Your Path.</h1>
+    </div>
+
+    <div class="path-grid">
+
+      <div class="path-card white">
+        <div>
+          <div class="path-eyebrow" style="color:#C8102E;">Rentals</div>
+          <div class="path-title" style="color:#111111;">Find It.<br>Exit Your Lease.<br>List Your Unit.</div>
+          <div class="path-links">
+            <a href="../thelistingside/renters.html" class="path-link light">I Am a Renter <span class="arrow">→</span></a>
+            <a href="../thelistingside/lease-break.html" class="path-link light">Exit a Lease <span class="arrow">→</span></a>
+            <a href="../thelistingside/landlord.html" class="path-link light">I Am a Landlord <span class="arrow">→</span></a>
+            <a href="../thelistingside/listings.html#rentals" class="path-link light">View Current Listings <span class="arrow">→</span></a>
+          </div>
+        </div>
+        <div class="path-note light">
+          <div class="path-note-text" style="color:#C8102E;">7% Under $10k · 5% At $10k+</div>
+        </div>
+      </div>
+
+      <div class="path-card black">
+        <div>
+          <div class="path-eyebrow" style="color:#C8102E;">Sales</div>
+          <div class="path-title" style="color:#ffffff;">Buy Smart.<br>Sell Clean.</div>
+          <div class="path-links">
+            <a href="../thelistingside/sales.html#buyer" class="path-link dark">I Want to Buy <span class="arrow">→</span></a>
+            <a href="../thelistingside/sales.html#seller" class="path-link dark">I Want to Sell <span class="arrow">→</span></a>
+            <a href="../thelistingside/listings.html#sales" class="path-link dark">View Current Listings <span class="arrow">→</span></a>
+          </div>
+        </div>
+        <div class="path-note dark">
+          <div class="path-note-text" style="color:#cccccc;">All Fees Negotiable · Not Set by Law</div>
+        </div>
+      </div>
+
+      <div class="path-card navy">
+        <div>
+          <div class="path-eyebrow" style="color:#C9A04C;">Relocation</div>
+          <div class="path-title" style="color:#ffffff;">Moving<br>to NYC?</div>
+          <div class="path-links">
+            <a href="../thelistingside/relocation.html#individual" class="path-link navy-link">Individual Move <span class="arrow">→</span></a>
+            <a href="../thelistingside/relocation.html#corporate" class="path-link navy-link">Corporate Account <span class="arrow">→</span></a>
+            <a href="../thelistingside/relocation.html" class="path-link navy-link">Start My Relocation <span class="arrow">→</span></a>
+          </div>
+        </div>
+        <div class="path-note navy-note">
+          <div class="path-note-text" style="color:#e8c97a;">Rental · Purchase · RMC Accounts</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">The Listing <span>Side</span></div>
+      <p class="footer-tag">Clear Rates.<br>Faster Closings.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/christofer.holland" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/christoferholland" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8.5"/><path d="M12 16v-5m4 5v-3a2 2 0 0 0-4 0"/></svg>
+        </a>
+        <a href="https://facebook.com/christoferhollandrealestate" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">The Listing Side System</div>
+      <ul class="footer-links">
+        <li><a href="../thelistingside/landlord.html">Landlords — Rent Your Unit</a></li>
+        <li><a href="../thelistingside/renters.html">Renters — Get Pre-Cleared</a></li>
+        <li><a href="../thelistingside/lease-break.html">Exit a Lease — Resolve Your Liability</a></li>
+        <li><a href="../workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
+        <li><a href="../index.html">christoferholland.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact">
+        Christofer Holland<br>
+        Licensed Real Estate Salesperson<br>
+        NY Lic. #10401390448<br><br>
+        NY Living Solutions | Keller Williams NYC<br>
+        90 John Street, Storefront<br>
+        New York, NY 10038<br><br>
+        <a href="tel:9172071414">917-207-1414</a><br>
+        <a href="mailto:christofer@kw.com">christofer@kw.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      © 2026 The Listing Side | NY Living Solutions | Keller Williams NYC<br>
+      Christofer Holland, Licensed Real Estate Salesperson, NY Lic. #10401390448<br>
+      All fees are those of this firm. FARE Act compliant (Local Law 119 of 2024). All transactions subject to Fair Housing laws.<br>
+      <span style="margin-top:8px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;">
+        <a href="https://d1e1jt2fj4r8r.cloudfront.net/documents/fairhousingnotice.pdf" target="_blank" rel="noopener" style="color:#c8d4e4;text-decoration:none;margin-right:16px;">Fair Housing Notice</a>
+        <a href="https://d1e1jt2fj4r8r.cloudfront.net/d36fff22-1ea6-464a-8fbd-aee2a2b71bb2/-jHhTwrOg/sop.pdf" target="_blank" rel="noopener" style="color:#c8d4e4;text-decoration:none;margin-right:16px;">Standard Operating Procedures</a>
+        <a href="https://kwnyc.com/ada-disclosure" target="_blank" rel="noopener" style="color:#c8d4e4;text-decoration:none;margin-right:16px;">Reasonable Accommodation</a>
+        <a href="https://image.info.rebny.com/lib/fe35157075640479701d77/m/1/68142058-8e73-4146-b9d6-54fc56484a07.pdf?utm_source=sfmc&utm_medium=email&utm_campaign=FARE+Act+Updated+Compliance&utm_term=Flyer&utm_id=1811434&sfmc_id=628153611" target="_blank" rel="noopener" style="color:#c8d4e4;text-decoration:none;">Agency Disclosure</a>
+      </span>
+    </div>
+    <div class="footer-eho" style="color:#ffffff; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 16px;">Equal Housing Opportunity</div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="sifterModal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeSifter">✕</button>
+    <div style="font-family:'DM Mono',monospace; font-size:12px; color:#C8102E; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">The Sifter — Owner Intake</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif; font-size:40px; color:#111111; line-height:1; margin-bottom:24px;">List Your Unit.</h2>
+    
+    <form name="sifter-owner" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="sifter-owner">
+      
+      <label class="form-label">Step 1: Where is your unit located?</label>
+      <select class="form-select" name="neighborhood" required>
+        <option value="" disabled selected>Select a neighborhood</option>
+        <option value="Manhattan">Manhattan</option>
+        <option value="Brooklyn">Brooklyn</option>
+        <option value="Queens">Queens</option>
+        <option value="The Bronx">The Bronx</option>
+      </select>
+
+      <label class="form-label">Step 2: Tell us about your vacancy.</label>
+      <div class="form-row">
+        <input class="form-input" type="text" name="beds" placeholder="Beds (e.g., 2)" required>
+        <input class="form-input" type="text" name="baths" placeholder="Baths (e.g., 1.5)" required>
+      </div>
+      <input class="form-input" type="number" name="rent" placeholder="Asking monthly rent (e.g., 4500)" required>
+
+      <label class="form-checkbox">
+        <input type="checkbox" name="professional-photography" required>
+        <span>I have professional media ready or am willing to obtain it.</span>
+      </label>
+
+      <label class="form-label">Step 3: Two quick questions.</label>
+      <select class="form-select" name="paying-op" required>
+        <option value="" disabled selected>Paying an OP (Owner-Paid) to outside brokers?</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Not Sure">Not sure</option>
+      </select>
+      <select class="form-select" name="fare-act-compliant" required>
+        <option value="" disabled selected>Compliant with NYC FARE Act?</option>
+        <option value="Yes">Yes — compliant</option>
+        <option value="No">No — need guidance</option>
+        <option value="Not Sure">Not sure</option>
+      </select>
+
+      <label class="form-label">Step 4: Contact Info.</label>
+      <input class="form-input" type="text" name="name" placeholder="Your name" required>
+      <input class="form-input" type="email" name="email" placeholder="Email address" required>
+      <input class="form-input" type="tel" name="phone" placeholder="Phone number" required>
+
+      <button class="sifter-btn" type="submit">Submit — List My Unit</button>
+    </form>
+    
+  </div>
+</div>
+
+<script>
+  // Functions for Sifter Modal
+  function openSifter() {
+    document.getElementById('sifterModal').classList.add('open');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+  function closeSifter() {
+    document.getElementById('sifterModal').classList.remove('open');
+    document.body.style.overflow = ''; // Restore background scrolling
+  }
+
+  // Event Listeners for Closing
+  document.getElementById('closeSifter').addEventListener('click', closeSifter);
+  document.getElementById('sifterModal').addEventListener('click', function(e) {
+    if (e.target === this) closeSifter(); // Close if clicking overlay outside modal
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSifter(); // Close on ESC key
+  });
+
+  // Wiring "List Your Unit" buttons/links to open the modal
+  // This will catch any existing primary buttons named 'List Your Unit'.
+  document.querySelectorAll('.btn-primary').forEach(function(btn) {
+    if (btn.textContent.trim() === 'List Your Unit') {
+      btn.addEventListener('click', function(e) { e.preventDefault(); openSifter(); });
+    }
+  });
+
+  // Example wire: if you wanted a footer link to open it, you could target it.
+  // document.querySelector('a[href="../thelistingside/landlord.html"]').addEventListener('click', function(e) {
+  //   e.preventDefault(); openSifter();
+  // });
+</script>
+
+</body>
+</html>
