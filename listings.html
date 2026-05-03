@@ -360,7 +360,7 @@
 <script>
   document.getElementById('alertForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    fetch('/', { method:'POST', body:new FormData(this) }).finally(function() {
+    fetch('https://formspree.io/f/xqeneqak', { method:'POST', body:new FormData(this), headers:{ 'Accept':'application/json' } }).finally(function() {
       document.getElementById('alertForm').style.display = 'none';
       document.getElementById('alertSuccess').style.display = 'block';
     });

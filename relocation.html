@@ -779,7 +779,7 @@
 <script>
   document.getElementById('reloForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    fetch('/', { method: 'POST', body: new FormData(this) }).finally(function() {
+    fetch('https://formspree.io/f/xkoyojkk', { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } }).finally(function() {
       document.getElementById('reloForm').style.display = 'none';
       document.getElementById('reloSuccess').style.display = 'block';
     });

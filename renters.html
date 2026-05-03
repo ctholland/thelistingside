@@ -1531,7 +1531,7 @@
   document.getElementById('sifterForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var data = new FormData(this);
-    fetch('/', { method: 'POST', body: data }).finally(function() {
+    fetch('https://formspree.io/f/mdabaeyo', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } }).finally(function() {
       document.getElementById('step6').classList.remove('active');
       document.getElementById('step7').classList.add('active');
       if (buyingPower === 'yes') {

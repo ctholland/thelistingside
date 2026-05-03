@@ -906,7 +906,7 @@
   // Seller form
   document.getElementById('sellerForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    fetch('/', { method: 'POST', body: new FormData(this) }).finally(function() {
+    fetch('https://formspree.io/f/xykokwgk', { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } }).finally(function() {
       document.getElementById('sellerForm').style.display = 'none';
       document.getElementById('sellerSuccess').style.display = 'block';
     });
@@ -915,7 +915,7 @@
   // Buyer form
   document.getElementById('buyerForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    fetch('/', { method: 'POST', body: new FormData(this) }).finally(function() {
+    fetch('https://formspree.io/f/xeenegjg', { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } }).finally(function() {
       document.getElementById('buyerForm').style.display = 'none';
       document.getElementById('buyerSuccess').style.display = 'block';
     });

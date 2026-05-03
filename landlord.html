@@ -796,7 +796,7 @@
   document.getElementById('landlordForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var data = new FormData(this);
-    fetch('/', { method: 'POST', body: data }).finally(function() {
+    fetch('https://formspree.io/f/mykokebp', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } }).then(function(r) {
       document.getElementById('landlordForm').style.display = 'none';
       document.getElementById('formSuccess').style.display = 'block';
     });
