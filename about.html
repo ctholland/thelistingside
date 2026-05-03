@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christofer Holland — The Listing Side | NY Living Solutions | Keller Williams NYC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C8102E;
+    --navy: #0f1c35;
+    --white: #ffffff;
+    --light: #f0f3f8;
+    --mid: #556070;
+    --border: #d8dde6;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--navy); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+  .top-bar { background: var(--red); padding: 10px 64px; display: flex; align-items: center; justify-content: space-between; }
+  .top-brand { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: var(--white); letter-spacing: .08em; }
+  .top-kw { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.9); }
+
+  /* MAGAZINE SPREAD */
+  .spread { padding: 72px 64px 80px; max-width: 1200px; margin: 0 auto; }
+
+  .photo-float {
+    float: right;
+    width: 400px;
+    margin: 0 0 48px 64px;
+    position: relative;
+  }
+  .photo-float::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--red);
+  }
+  .photo-float img { width: 100%; display: block; }
+
+  .spread-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; display: block; }
+
+  .spread-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(80px, 10vw, 130px); line-height: .88; color: var(--navy); letter-spacing: .02em; margin-bottom: 8px; }
+  .spread-name em { color: var(--red); font-style: normal; display: block; }
+
+  .title-block { border-left: 3px solid var(--red); padding-left: 18px; margin: 28px 0 32px; }
+  .title-line { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--mid); line-height: 2.1; }
+
+  .pull-quote { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 2.8vw, 32px); font-style: italic; color: var(--navy); line-height: 1.45; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 2px solid var(--navy); }
+
+  .spread-body { font-size: 16px; line-height: 1.9; color: #445060; margin-bottom: 32px; }
+  .spread-body p { margin-bottom: 16px; }
+  .spread-body p:last-child { margin-bottom: 0; }
+
+  .cred-list { list-style: none; margin-bottom: 40px; display: flex; flex-direction: column; gap: 12px; }
+  .cred-list li { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .08em; color: var(--mid); padding-left: 20px; position: relative; line-height: 1.6; }
+  .cred-list li::before { content: '—'; position: absolute; left: 0; color: var(--red); }
+  .cred-list li strong { color: var(--navy); }
+
+  .spread::after { content: ''; display: table; clear: both; }
+
+  /* STATS */
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 3px solid var(--navy); border-bottom: 3px solid var(--navy); }
+  .stat-cell { padding: 36px 40px; border-right: 1px solid var(--border); }
+  .stat-cell:last-child { border-right: none; }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 60px; color: var(--red); line-height: 1; margin-bottom: 6px; }
+  .stat-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--mid); line-height: 1.5; }
+
+  /* SERVICES */
+  .services-wrap { background: var(--light); padding: 72px 64px; border-bottom: 1px solid var(--border); }
+  .services-inner { max-width: 1200px; margin: 0 auto; }
+  .section-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 5vw, 64px); line-height: 1; color: var(--navy); margin-bottom: 40px; letter-spacing: .02em; }
+  .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--border); background: var(--white); }
+  .service-block { padding: 36px 28px; border-right: 1px solid var(--border); }
+  .service-block:last-child { border-right: none; }
+  .service-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+  .service-title { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--navy); line-height: 1; margin-bottom: 12px; }
+  .service-body { font-size: 13px; color: var(--mid); line-height: 1.75; }
+
+  /* RATES */
+  .rates-wrap { background: var(--navy); padding: 72px 64px; }
+  .rates-inner { max-width: 1200px; margin: 0 auto; }
+  .rates-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+  .rates-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 5vw, 64px); color: var(--white); line-height: 1; margin-bottom: 40px; }
+  .rates-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border: 1px solid rgba(255,255,255,.12); }
+  .rate-block { padding: 36px 32px; border-right: 1px solid rgba(255,255,255,.12); }
+  .rate-block:last-child { border-right: none; }
+  .rate-pct { font-family: 'Bebas Neue', sans-serif; font-size: 60px; color: var(--red); line-height: 1; margin-bottom: 6px; }
+  .rate-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 14px; }
+  .rate-detail { font-size: 13px; color: rgba(255,255,255,.65); line-height: 1.7; }
+  .rates-note { font-family: 'DM Mono', monospace; font-size: 9.5px; color: rgba(255,255,255,.3); margin-top: 20px; line-height: 1.7; }
+
+  /* CTA */
+  .cta-wrap { background: var(--white); padding: 80px 64px; border-top: 4px solid var(--red); }
+  .cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 80px; }
+  .cta-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 6vw, 80px); line-height: .95; color: var(--navy); }
+  .cta-title em { color: var(--red); font-style: normal; }
+  .cta-sub { font-size: 15px; color: var(--mid); line-height: 1.75; margin-top: 18px; max-width: 480px; }
+  .cta-buttons { display: flex; flex-direction: column; gap: 14px; flex-shrink: 0; }
+  .btn-primary { display: inline-block; background: var(--red); color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 20px 48px; text-decoration: none; white-space: nowrap; text-align: center; }
+  .btn-ghost { display: inline-block; border: 1.5px solid var(--navy); color: var(--navy); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 20px 48px; text-decoration: none; white-space: nowrap; text-align: center; }
+
+  footer { background: var(--navy); padding: 40px 64px; border-top: 3px solid var(--red); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+  .footer-legal { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .07em; color: rgba(255,255,255,.4); line-height: 1.9; }
+  .footer-legal a { color: rgba(255,255,255,.4); text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .photo-float { float: none; width: 100%; margin: 0 0 40px 0; }
+    .photo-float::before { display: none; }
+    .stats-row, .services-grid { grid-template-columns: 1fr 1fr; }
+    .stat-cell:nth-child(2n), .service-block:nth-child(2n) { border-right: none; }
+    .rates-grid { grid-template-columns: 1fr; }
+    .rate-block { border-right: none; border-bottom: 1px solid rgba(255,255,255,.12); }
+    .cta-inner { grid-template-columns: 1fr; }
+    .spread, .services-wrap, .rates-wrap, .cta-wrap, footer, .top-bar { padding-left: 28px; padding-right: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-brand">The Listing Side</div>
+  <div class="top-kw">NY Living Solutions | Keller Williams NYC</div>
+</div>
+
+<div class="spread">
+
+  <div class="photo-float">
+    <img src="images/christoferholland.png" alt="Christofer Holland">
+  </div>
+
+  <span class="spread-eyebrow">The Listing Side &nbsp;·&nbsp; NYC Real Estate</span>
+
+  <h1 class="spread-name">Christofer<br><em>Holland</em></h1>
+
+  <div class="title-block">
+    <div class="title-line">Licensed Real Estate Salesperson</div>
+    <div class="title-line">NY Living Solutions | Keller Williams NYC</div>
+    <div class="title-line">NY Lic. #10401390448</div>
+  </div>
+
+  <p class="pull-quote">"I know this city the way you know your own block — thirty years of living in it."</p>
+
+  <div class="spread-body">
+    <p>I moved to Manhattan and never left. Gramercy. Kips Bay. Murray Hill. Thirty years of paying rent, watching neighborhoods shift, and learning the difference between a good building and a great deal.</p>
+    <p>I work with landlords who need their units filled, renters who need real representation, buyers who want an honest read before they fall in love with a co-op, and sellers who need clean execution. No conflicts, no divided loyalties — just straight talk and a market you can actually navigate.</p>
+    <p>If it stops making sense for you, we stop. My circumstances never become pressure on yours.</p>
+  </div>
+
+  <ul class="cred-list">
+    <li><strong>Gramercy, Kips Bay &amp; Murray Hill</strong> — 30+ years as a Manhattan resident</li>
+    <li><strong>Columbia College Chicago</strong> — Communications</li>
+    <li>Landlord representation · Rentals · Buyers · Sellers · Relocation</li>
+    <li>Rental fees negotiable · Not set by law · FARE Act compliant (Local Law 119 of 2024)</li>
+    <li>Purchase &amp; sales representation fees negotiable · Not set by law</li>
+    <li>917-207-1414 &nbsp;·&nbsp; info@thelistingside.com &nbsp;·&nbsp; thelistingside.com</li>
+  </ul>
+
+  <img src="images/NYLS_KW_NYC_White_Red_copy.png" alt="NY Living Solutions | Keller Williams NYC" style="height:44px;width:auto;display:block;">
+
+</div>
+
+<div class="stats-row">
+  <div class="stat-cell"><div class="stat-num">30+</div><div class="stat-label">Years as a Manhattan resident</div></div>
+  <div class="stat-cell"><div class="stat-num">7%</div><div class="stat-label">Rental listing fee under $10K/mo</div></div>
+  <div class="stat-cell"><div class="stat-num">5%</div><div class="stat-label">Rental listing fee $10K+/mo</div></div>
+  <div class="stat-cell"><div class="stat-num">4</div><div class="stat-label">Sides of the deal covered</div></div>
+</div>
+
+<div class="services-wrap">
+  <div class="services-inner">
+    <div class="section-eyebrow">What I Do</div>
+    <h2 class="section-title">Every Side of the Deal.</h2>
+    <div class="services-grid">
+      <div class="service-block">
+        <div class="service-eyebrow">Landlords</div>
+        <div class="service-title">List It.<br>Fill It.</div>
+        <p class="service-body">7% under $10K/mo. 5% at $10K+. Leaner model, full execution. Tenant placement, lease review, deal close. You cover platform costs.</p>
+      </div>
+      <div class="service-block">
+        <div class="service-eyebrow">Renters</div>
+        <div class="service-title">Find It.<br>Move In.</div>
+        <p class="service-body">No-fee luxury rentals from $4K/mo and up. Full representation — showings, applications, lease review. FARE Act compliant. Fees negotiable, not set by law.</p>
+      </div>
+      <div class="service-block">
+        <div class="service-eyebrow">Buyers</div>
+        <div class="service-title">Buy Smart.<br>Build Equity.</div>
+        <p class="service-body">First-time to move-up buyers. Co-ops, condos, all of Manhattan. Prepped before you fall in love with a unit. Purchase fees negotiable — not set by law.</p>
+      </div>
+      <div class="service-block">
+        <div class="service-eyebrow">Sellers</div>
+        <div class="service-title">Sell Clean.<br>Move On.</div>
+        <p class="service-body">Pricing strategy, market positioning, full execution. All fees negotiable and not set by law. No pressure — if the timing isn't right, we wait.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="rates-wrap">
+  <div class="rates-inner">
+    <div class="rates-eyebrow">The Listing Side — Rental Fee Structure</div>
+    <h2 class="rates-title">Clear Rates.<br>No Surprises.</h2>
+    <div class="rates-grid">
+      <div class="rate-block"><div class="rate-pct">7%</div><div class="rate-label">Rental listing under $10K/mo</div><p class="rate-detail">Full representation — listing, showings, tenant placement, lease execution. Owner covers platform fees directly.</p></div>
+      <div class="rate-block"><div class="rate-pct">5%</div><div class="rate-label">Rental listing $10K+/mo</div><p class="rate-detail">Luxury rental representation at a leaner rate. Same execution, same standards.</p></div>
+      <div class="rate-block"><div class="rate-pct">1 Mo.</div><div class="rate-label">New Development</div><p class="rate-detail">One month fee for new development placements. Paid at signing. FARE Act aligned.</p></div>
+    </div>
+    <p class="rates-note">* All rental fees negotiable and not set by law. FARE Act compliant (Local Law 119 of 2024). Purchase and sales representation fees also negotiable and not set by law. Owner covers listing platform fees (StreetEasy, Zillow, RentHop).</p>
+  </div>
+</div>
+
+<div class="cta-wrap">
+  <div class="cta-inner">
+    <div>
+      <h2 class="cta-title">Let's Talk<br>Before You<br><em>Move.</em></h2>
+      <p class="cta-sub">Whether you're listing a unit, looking for one, buying, or selling — twenty minutes gets us both a clear picture of whether we're a fit.</p>
+    </div>
+    <div class="cta-buttons">
+      <a href="landlord.html" class="btn-primary">Submit a Vacancy</a>
+      <a href="renters.html" class="btn-ghost">I'm Looking to Rent</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-legal">
+      Christofer Holland · Licensed Real Estate Salesperson · NY Lic. #10401390448<br>
+      NY Living Solutions | Keller Williams NYC · 90 John Street, New York, NY 10038<br>
+      All fees negotiable and not set by law · FARE Act compliant (Local Law 119 of 2024) · Fair Housing laws apply<br>
+      <a href="https://d1e1jt2fj4r8r.cloudfront.net/documents/fairhousingnotice.pdf" target="_blank">Fair Housing Notice</a> ·
+      <a href="https://d1e1jt2fj4r8r.cloudfront.net/d36fff22-1ea6-464a-8fbd-aee2a2b71bb2/-jHhTwrOg/sop.pdf" target="_blank">Standard Operating Procedures</a> ·
+      <a href="https://kwnyc.com/ada-disclosure" target="_blank">Reasonable Accommodation</a>
+    </div>
+    <img src="images/NYLS_KW_NYC_White_Red_copy.png" alt="NY Living Solutions | Keller Williams NYC" style="height:36px;width:auto;opacity:.55;">
+  </div>
+</footer>
+
+</body>
+</html>

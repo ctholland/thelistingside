@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
 <title>Rent Your Unit — The Listing Side | NY Living Solutions | Keller Williams NYC</title>
-<meta name="description" content="Rental representation for NYC property owners — individual condo and co-op owners, landlords, and building owners. Capped commissions, pre-vetted tenants. FARE Act compliant.">
+<meta name="description" content="Institutional rental representation for NYC landlords and building owners. Capped commissions at 7% (under $10k/mo) or 5% ($10k+/mo). Pre-vetted, income-qualified tenants. FARE Act compliant.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -201,7 +201,7 @@
     font-size: 10px;
     letter-spacing: .14em;
     text-transform: uppercase;
-    color: rgba(255,255,255,.75);
+    color: #555;
     margin-bottom: 20px;
   }
   .rate-row {
@@ -214,8 +214,8 @@
   .rate-row:last-of-type { border-bottom: none; }
   .rate-row-left { flex: 1; }
   .rate-row-label { font-size: 14px; color: var(--white); font-weight: 500; margin-bottom: 4px; }
-  .rate-row-sub { font-size: 12px; color: rgba(255,255,255,.65); }
-  .rate-row-sub.mkt { color: rgba(255,255,255,.4); text-decoration: line-through; font-family: 'DM Mono', monospace; }
+  .rate-row-sub { font-size: 12px; color: #6b7a99; }
+  .rate-row-sub.mkt { color: #555; text-decoration: line-through; font-family: 'DM Mono', monospace; }
   .rate-row-pct {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 44px;
@@ -225,7 +225,7 @@
   .rate-card-note {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
-    color: rgba(255,255,255,.65);
+    color: #444f6a;
     margin-top: 20px;
     border-top: 1px solid rgba(255,255,255,.06);
     padding-top: 16px;
@@ -484,27 +484,38 @@
     .rate-card::before { display: none; }
   }
 </style>
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://christoferholland.com/thelistingside/images/og-listing-side.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="The Listing Side">
-  <meta property="og:title" content="Landlords — List Your Vacancy | The Listing Side">
-  <meta property="og:url" content="https://christoferholland.com/thelistingside/landlord.html">
 </head>
 <body>
 
-<div id="nav"></div>
-<script src="nav.js"></script>
+<!-- STICKY HEADER -->
+<div id="stickyHeader">
+<div class="compliance-bar">
+  <div class="compliance-links">
+    <a href="https://d1e1jt2fj4r8r.cloudfront.net/documents/fairhousingnotice.pdf" target="_blank" rel="noopener">Fair Housing Notice</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://d1e1jt2fj4r8r.cloudfront.net/d36fff22-1ea6-464a-8fbd-aee2a2b71bb2/-jHhTwrOg/sop.pdf" target="_blank" rel="noopener">Standard Operating Procedures</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://kwnyc.com/ada-disclosure" target="_blank" rel="noopener">Reasonable Accommodation</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://image.info.rebny.com/lib/fe35157075640479701d77/m/1/68142058-8e73-4146-b9d6-54fc56484a07.pdf?utm_source=sfmc&utm_medium=email&utm_campaign=FARE+Act+Updated+Compliance&utm_term=Flyer&utm_id=1811434&sfmc_id=628153611" target="_blank" rel="noopener">Agency Disclosure</a>
+  </div>
+</div>
+</div>
+
+<!-- NAV -->
+<script src="../nav.js"></script>
 
 <!-- UTILITY BAR -->
+<div class="utility-bar">
+  <a href="renters.html">I Am a Renter</a>
+  <a href="lease-break.html">I Need to Break a Lease</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-eyebrow">For NYC Property Owners</div>
+      <div class="hero-eyebrow">For NYC Landlords & Building Owners</div>
       <h1 class="hero-title">Rent Your<br>Unit(s).<br><em>Protect Your<br>Margin.</em></h1>
       <p class="hero-sub">Traditional NYC commissions are inflated to cover brokerage overhead and administration. We've cut the friction. Capped commissions at 7% (under $10k/mo) or 5% ($10k+/mo) — you pay for representation, not desk fees. FARE Act compliant.</p>
       <div class="hero-ctas">
@@ -551,8 +562,8 @@
 <section class="page-section" style="background:#ffffff;border-bottom:1px solid var(--border);">
   <div class="section">
     <div class="section-eyebrow">Why The Listing Side</div>
-    <h2 class="section-title">Capped Rates.<br>Zero Bloat.</h2>
-    <p class="section-sub">Whether you own one unit or an entire building, traditional brokerages inflate their commissions with overhead and administration costs you never see itemized. We cut that out. You pay for representation — not desk fees.</p>
+    <h2 class="section-title">Institutional Rates.<br>Zero Bloat.</h2>
+    <p class="section-sub">You adjusted your rents after the FARE Act. Now protect that margin. Traditional brokerages tax your commission with overhead and administration costs you never see itemized. We pass the efficiency directly to your bottom line.</p>
     <div class="why-grid">
       <div class="why-card">
         <div class="why-num">01</div>
@@ -561,13 +572,13 @@
       </div>
       <div class="why-card">
         <div class="why-num">02</div>
-        <div class="why-title">Screened Demand</div>
-        <p class="why-body">Every renter inquiry is run through income qualification and credit review before they reach you. Your vacancy gets a screened applicant — not an open inquiry. As our renter pipeline grows, pre-cleared applicants in your zip code get matched to your unit first.</p>
+        <div class="why-title">Pre-Vetted Demand</div>
+        <p class="why-body">Income-qualified, credit-reviewed renters organized by neighborhood and zip code. Your vacancy gets a screened applicant — not an inquiry. The first showing is already a serious prospect.</p>
       </div>
       <div class="why-card">
         <div class="why-num">03</div>
         <div class="why-title">You Own the Assets</div>
-        <p class="why-body">Professional-grade photography and floor plans are part of every listing. If you don’t have them, we can arrange it. You own the assets permanently. Direct listing costs (StreetEasy, etc.) are covered by you at cost — no markup.</p>
+        <p class="why-body">To maintain institutional rates, owners provide professional-grade photography and floor plans and cover direct listing pass-throughs (StreetEasy, Zillow, RentHop). You own those assets permanently.</p>
       </div>
       <div class="why-card">
         <div class="why-num">04</div>
@@ -577,12 +588,12 @@
       <div class="why-card">
         <div class="why-num">05</div>
         <div class="why-title">Professional Media Standard</div>
-        <p class="why-body">Professional-grade photography and floor plans are part of every listing. If your unit isn’t media-ready, we can arrange it. No amateur photos on your listing. Ever.</p>
+        <p class="why-body">The Listing Side only represents units with professional-grade photography and floor plans. No amateur media. If your assets aren't ready, we tell you before we list and connect you with a referral.</p>
       </div>
       <div class="why-card">
         <div class="why-num">06</div>
         <div class="why-title">Lease Resolution</div>
-        <p class="why-body">When your tenant needs to exit early, they engage us to find a qualified replacement. They pay the fee — not you. You get a screened replacement, your unit stays occupied, and liability under NY § 227-e is resolved. Zero cost to the owner.</p>
+        <p class="why-body">Have a tenant who needs to exit early? We find their qualified replacement, handle the assignment, and keep your unit occupied. Under NY § 227-e, you're covered. We stop the clock on vacancy.</p>
       </div>
     </div>
   </div>
@@ -594,15 +605,16 @@
     <div>
       <div class="section-eyebrow">The Asset Requirement</div>
       <h2 class="section-title">How We Keep<br>Your Rate Low.</h2>
-      <p style="font-size:16px;color:var(--mid);line-height:1.7;margin-bottom:20px;">Our reduced-commission model is built on efficiency. Our listings run lean by design. You cover direct listing costs at cost — no markup. You’re not paying us to manage a marketing budget — you’re paying us for representation.</p>
+      <p style="font-size:16px;color:var(--mid);line-height:1.7;margin-bottom:20px;">Our reduced-commission model is built on efficiency. To maintain the 7%/5% rate, owners provide the assets and cover the direct costs of listing. You're not paying us to manage a marketing budget — you're paying us for representation.</p>
       <p style="font-size:16px;color:var(--mid);line-height:1.7;">The math is straightforward: you save 1.33% to 3.33% on every closing compared to a standard 1-month fee. That savings covers the asset costs many times over.</p>
-      
+      <a href="https://streeteasy.com/blog/how-commissions-work-nyc-rental-agents/" target="_blank" rel="noopener" style="display:inline-block;margin-top:24px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#C8102E;text-decoration:none;border-bottom:1px solid #C8102E;padding-bottom:2px;">How commissions work in NYC →</a>
     </div>
     <div>
       <div class="asset-note">
-        <strong>How We Keep Your Rate Low:</strong><br><br>
-        ✓ You provide professional-grade photography and floor plan<br>
-        ✓ You cover direct listing costs at cost — no markup:
+        <strong>Owner Responsibility — Required to List:</strong><br><br>
+        ✓ Professional-grade photography (high-resolution, well-lit)<br>
+        ✓ Floor plan (preferred)<br>
+        ✓ Direct listing pass-throughs paid by owner:
         <div class="asset-platforms">
           <span class="platform-tag">StreetEasy</span>
           <span class="platform-tag">Zillow</span>
@@ -610,7 +622,7 @@
         </div>
       </div>
       <div style="margin-top:16px;padding:20px 24px;background:#fff8f8;border-left:3px solid #111111;font-size:13px;color:#444;line-height:1.7;">
-        <strong>Photography available.</strong> If your unit isn't media-ready, we can arrange it before the listing goes live.
+        <strong>Photography referrals available.</strong> If your unit doesn't have professional media, we connect you with a local photographer before the listing goes live. Their invoice is paid directly by you.
       </div>
     </div>
   </div>
@@ -625,12 +637,12 @@
       <div class="step-card">
         <div class="step-num">01</div>
         <div class="step-title">Submit Your Vacancy</div>
-        <p class="step-body">Tell us the address, asking rent, and availability. We review every submission within 24 hours and follow up to discuss the listing agreement.</p>
+        <p class="step-body">Tell us the address, asking rent, and availability. We confirm professional photography is in place. If assets aren't ready, we connect you with a referral before we proceed.</p>
       </div>
       <div class="step-card">
         <div class="step-num">02</div>
-        <div class="step-title">Market + Pipeline</div>
-        <p class="step-body">We list on StreetEasy and the open market. Every inquiry is screened against our qualification criteria. As our renter pipeline grows, pre-cleared applicants in your zip code get matched to your unit first.</p>
+        <div class="step-title">Tenant Matching</div>
+        <p class="step-body">We match your unit against our pool of income-qualified, credit-reviewed renters organized by zip code. You get a screened applicant — not an open inquiry.</p>
       </div>
       <div class="step-card">
         <div class="step-num">03</div>
@@ -658,7 +670,7 @@
         <li>5% commission for units $10,000/mo and above</li>
         <li>1 month minimum for new development</li>
         <li>Pre-vetted, income-qualified tenants</li>
-        <li>Professional photography and floor plans arranged if needed</li>
+        <li>Professional photography required to list</li>
         <li>FARE Act compliant — all fees disclosed upfront</li>
         <li>Fee paid by owner at signing</li>
       </ul>
@@ -666,7 +678,7 @@
     <div>
       <div class="intake-form">
         <div class="form-eyebrow">Owner / Landlord Intake</div>
-        <form action="https://formspree.io/f/mykokebp" method="POST" id="landlordForm">
+        <form name="landlord-intake" method="POST" data-netlify="true" id="landlordForm">
           <input type="hidden" name="form-name" value="landlord-intake">
           <input type="hidden" name="subject" value="🏢 NEW OWNER VACANCY — The Listing Side">
           <div class="form-row">
@@ -697,26 +709,26 @@
             <select class="form-select" name="photography" style="margin-bottom:0;">
               <option value="" disabled selected>Select</option>
               <option value="yes">Yes — ready to list</option>
-              <option value="no">No — please arrange it</option>
+              <option value="no">No — I need a referral</option>
               <option value="scheduled">Scheduled / in progress</option>
             </select>
           </div>
           <select class="form-select" name="op-status">
-            <option value="" disabled selected>Are you currently listed with another broker?</option>
-            <option value="no">No — exclusive available</option>
-            <option value="yes">Yes — co-listed</option>
-            <option value="open">No — but open to discussing terms</option>
+            <option value="" disabled selected>Are you currently offering OP to outside brokers?</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="open">Open to discussing</option>
           </select>
           <label class="form-checkbox">
             <input type="checkbox" name="agreement" required>
-            <span>I understand the fee is capped at 7% (under $10k/mo) or 5% ($10k+/mo), paid by me at signing. I acknowledge that direct listing costs (StreetEasy, Zillow, RentHop) are covered by me at cost.</span>
+            <span>I understand the fee is capped at 7% (under $10k/mo) or 5% ($10k+/mo), paid by me at signing. I acknowledge that to maintain this rate, I am responsible for providing professional media and covering direct listing fees (StreetEasy, Zillow, RentHop) directly.</span>
           </label>
           <button class="form-submit" type="submit">Submit My Vacancy</button>
         </form>
         <div class="form-success" id="formSuccess">
           <div class="form-success-title">Received.</div>
           <p class="form-success-body">We'll review your listing details and reach out within 24 hours to discuss the exclusive agreement.</p>
-          <p style="font-size:12px;color:#888;margin-top:12px;line-height:1.6;">If your unit needs photography before going live, we’ll sort it out when we follow up.</p>
+          <p style="font-size:12px;color:#888;margin-top:12px;line-height:1.6;">All listings must meet the TLS visual fidelity standard. Professional photography referrals available upon request.</p>
         </div>
         <p class="form-note">Every submission reviewed personally. Christofer Holland, Director of Operations.</p>
       </div>
@@ -725,13 +737,13 @@
 </section>
 
 <!-- INTERCEPT: LEASE EXIT -->
-<div class="intercept" style="background:#111111;border-top:4px solid #C8102E;">
+<div class="intercept" style="background:#111111;border-top:1px solid #222;">
   <div>
-    <div style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:8px;">Have a Tenant Who Needs Out?</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:8px;">Have a Tenant Who Needs Out?</div>
     <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#ffffff;line-height:1;">Don't let the unit go dark.</div>
     <p style="font-size:14px;color:#a0aabb;line-height:1.6;margin-top:8px;max-width:480px;">Send them to the Exit service. We find their qualified replacement, handle the assignment, and keep your unit occupied without a vacancy gap.</p>
   </div>
-  
+  <a href="lease-break.html" style="display:inline-block;background:#C8102E;color:#ffffff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:16px 36px;text-decoration:none;white-space:nowrap;flex-shrink:0;">Send to Exit Service →</a>
 </div>
 
 <!-- FOOTER -->
@@ -740,25 +752,22 @@
     <div>
       <div class="footer-brand">The Listing <span>Side</span></div>
       <p class="footer-tag">Clear Rates.<br>Faster Closings.</p>
-            <div class="footer-social">
+      <div class="footer-social">
         <a href="https://instagram.com/christofer.holland" target="_blank" rel="noopener" aria-label="Instagram">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/christoferholland/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <a href="https://linkedin.com/in/christoferholland" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8.5"/><path d="M12 16v-5m4 5v-3a2 2 0 0 0-4 0"/></svg>
         </a>
-        <a href="https://facebook.com/christoferhollandrealestate" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
       </div>
-</div>
+    </div>
     <div>
       <div class="footer-col-title">The Listing Side System</div>
       <ul class="footer-links">
         <li><a href="landlord.html">Owners — Rent Your Unit</a></li>
         <li><a href="renters.html">Renters — Get Representation</a></li>
-        <li></li>
-        <li><a href="https://christoferholland.com/workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
+        <li><a href="lease-break.html">Exit a Lease — Resolve Liability</a></li>
+        <li><a href="../workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
         <li><a href="../index.html">christoferholland.com</a></li>
       </ul>
     </div>
@@ -796,7 +805,7 @@
   document.getElementById('landlordForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var data = new FormData(this);
-    fetch('https://formspree.io/f/mykokebp', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } }).then(function(r) {
+    fetch('/', { method: 'POST', body: data }).finally(function() {
       document.getElementById('landlordForm').style.display = 'none';
       document.getElementById('formSuccess').style.display = 'block';
     });

@@ -409,7 +409,6 @@
     margin-bottom: 8px;
     position: relative;
     z-index: 1;
-    padding-right: 72px;
   }
 
   .benefit-body {
@@ -478,7 +477,7 @@
     font-weight: 600;
     letter-spacing: .05em;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #cccccc;
   }
 
   .math-table-head span:last-child,
@@ -918,24 +917,31 @@
   }
 
 </style>
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://christoferholland.com/thelistingside/images/og-listing-side.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="The Listing Side">
-  <meta property="og:title" content="Renters — Get Representation At The Best Rate In NYC">
-  <meta property="og:url" content="https://christoferholland.com/thelistingside/renters.html">
 </head>
 <body style="background-color:#ffffff;color:#111111;">
 
-<!-- NAV — injected by nav.js -->
-<div id="nav"></div>
-<script src="nav.js"></script>
+<!-- COMPLIANCE BAR — sits at very top, nav.js inserts below it -->
+<div class="sticky-header" id="stickyHeader">
+<div class="compliance-bar">
+  <div class="compliance-links">
+    <a href="https://d1e1jt2fj4r8r.cloudfront.net/documents/fairhousingnotice.pdf" target="_blank" rel="noopener">Fair Housing Notice</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://d1e1jt2fj4r8r.cloudfront.net/d36fff22-1ea6-464a-8fbd-aee2a2b71bb2/-jHhTwrOg/sop.pdf" target="_blank" rel="noopener">Standard Operating Procedures</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://kwnyc.com/ada-disclosure" target="_blank" rel="noopener">Reasonable Accommodation</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://image.info.rebny.com/lib/fe35157075640479701d77/m/1/68142058-8e73-4146-b9d6-54fc56484a07.pdf?utm_source=sfmc&utm_medium=email&utm_campaign=FARE+Act+Updated+Compliance&utm_term=Flyer&utm_id=1811434&sfmc_id=628153611" target="_blank" rel="noopener">Agency Disclosure</a>
+  </div>
+</div>
+</div><!-- /sticky-header -->
+
+<!-- NAV — injected below compliance bar via nav.js -->
+<script src="../nav.js"></script>
 
 <div class="utility-bar">
   <a href="index.html">I Am a Landlord</a>
-  </div>
+  <a href="lease-break.html">I Need to Break a Lease</a>
+</div>
 
 <!-- HERO -->
 <section class="hero page-section" style="background-color:#ffffff;">
@@ -1044,30 +1050,67 @@
   </div>
 </section>
 
-<!-- INTERSTITIAL BREAK -->
-<div style="background:#1A2744;padding:48px 40px;text-align:center;border-top:3px solid #C8102E;border-bottom:3px solid #C8102E;">
-  <div style="max-width:860px;margin:0 auto;">
-    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:18px;">How Representation Works Here</div>
-    <div style="display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;">
-      <div style="padding:0 32px;border-right:1px solid rgba(255,255,255,.12);">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#C8102E;line-height:1;">7%</div>
-        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(255,255,255,.85);text-transform:uppercase;margin-top:4px;">Under $10k/mo</div>
-      </div>
-      <div style="padding:0 32px;border-right:1px solid rgba(255,255,255,.12);">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#C8102E;line-height:1;">5%</div>
-        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(255,255,255,.85);text-transform:uppercase;margin-top:4px;">$10k/mo &amp; Above</div>
-      </div>
-      <div style="padding:0 32px;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#ffffff;line-height:1;">$0</div>
-        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;color:rgba(255,255,255,.85);text-transform:uppercase;margin-top:4px;">If Owner Pays</div>
-      </div>
+<!-- THE MATH -->
+<div class="math-section page-section">
+  <div class="math-inner">
+    <div>
+      <div class="math-eyebrow">The Numbers</div>
+      <h2 class="math-title">The Perpetual Rent Tax</h2>
+      <p class="math-body">When the FARE Act passed, landlords raised rents across the board to cover the coming broker fees. That adjustment is already baked into every "no-fee" apartment. You aren't avoiding a broker fee — you're paying it monthly, forever. We charge you once — 7% (or 5% for units over $10k) — and represent your interests so you aren't paying a hidden markup every single month for years. The math favors the renter. The math is below.</p>
     </div>
-    <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(255,255,255,.9);margin-top:22px;line-height:1.6;">One-time. Capped. Credited 1:1 against any commission the owner pays. Most agents charge one month — 8.33%. Here's the process.</p>
+    <div>
+      <div class="math-table">
+        <div class="math-table-head" style="grid-template-columns:1fr 1fr;">
+          <span style="color:#999;">The "No-Fee" Trap<br><span style="font-size:9px;opacity:.7;">Inflated Rent — Cost Hidden in Your Lease</span></span>
+          <span style="color:#C8102E;">The Listing Side<br><span style="font-size:9px;opacity:.7;">Market Rate + One-Time Capped Fee</span></span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;background:#f9f9f9;">
+          <span style="color:#888;font-size:12px;font-weight:600;"><span style="color:#C8102E;">Inflated</span> Monthly Rent</span>
+          <span style="color:#C8102E;font-size:12px;font-weight:600;">True Market Rent</span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;">
+          <span style="color:#888;font-weight:700;font-size:22px;">$5,250 <span style="font-size:12px;font-weight:400;">/mo</span></span>
+          <span style="color:#C8102E;font-weight:700;font-size:22px;">$5,000 <span style="font-size:12px;font-weight:400;color:#555;">/mo</span></span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;background:#f9f9f9;">
+          <span style="color:#888;font-size:12px;">Year 1 Total Cost</span>
+          <span style="color:#555;font-size:12px;">Year 1 Total Cost (incl. 7% fee)</span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;">
+          <span style="color:#888;font-weight:600;font-size:18px;">$63,000</span>
+          <span style="color:#555;font-weight:600;font-size:18px;">$64,200</span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;background:#f9f9f9;">
+          <span style="color:#888;font-size:12px;">Year 3 Total Cost</span>
+          <span style="color:#555;font-size:12px;">Year 3 Total Cost</span>
+        </div>
+        <div class="math-row-data" style="grid-template-columns:1fr 1fr;border-bottom:none;">
+          <span style="color:#C8102E;font-weight:700;font-size:20px;">$189,000</span>
+          <span style="color:#C8102E;font-weight:700;font-size:20px;">$184,200</span>
+        </div>
+      </div>
+      <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#333;margin-top:16px;line-height:1.6;font-weight:600;">By Year 3, the "no-fee" apartment has cost you <span style="color:#C8102E;">$4,800 more</span> than our represented model. Every year after that is pure loss.</p>
+    </div>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;padding:48px 0 0;border-top:1px solid #e0e0e0;margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+    <div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:12px;">About the Model</div>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#111111;line-height:1.05;margin-bottom:16px;">Professional Representation. Open Market.</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;margin-bottom:16px;">The Listing Side represents your interests on the open market. Our job is to provide professional advocacy, cap your fee at 7% (5% for units $10k+), and ensure the math of your lease is transparent.</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;margin-bottom:16px;"></p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;">Right now, we work the open market. The direct-to-owner inventory pipeline is coming. Get in now.</p>
+    </div>
+    <div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:12px;">The Long Game</div>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#111111;line-height:1.05;margin-bottom:16px;">Your Rental is the Beginning.</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:#444444;line-height:1.75;margin-bottom:16px;">The path to ownership isn't a side note — it's the long-term operational goal of this platform. We are building a database of financially qualified New Yorkers. When you're ready to buy, you're already in the system.</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:13px;color:#888888;font-style:italic;line-height:1.6;margin-bottom:48px;padding-bottom:8px;">Christofer Holland, Director of Operations — The Listing Side<br><span style="font-size:11px;">Licensed Real Estate Salesperson, NY Lic. #10401390448 | NY Living Solutions | Keller Williams NYC</span></p>
+    </div>
   </div>
 </div>
 
 <!-- HOW IT WORKS -->
-<section id="how-it-works" class="page-section" style="background-color:#f4f4f4;">
+<section id="how-it-works" class="page-section" style="background-color:#ffffff;">
   <div class="section">
     <div class="section-eyebrow">The Process</div>
     <h2 class="section-title">The Clearing<br>Process.</h2>
@@ -1075,7 +1118,7 @@
       <div class="step-card">
         <div class="step-num">01</div>
         <div class="step-title">01 — Targeting</div>
-        <p class="step-body">Select your target neighborhoods by borough and zip cluster. We use this to search the open market for units that fit your criteria — and as our direct-to-owner inventory grows, you'll be matched there first.</p>
+        <p class="step-body">Select your target neighborhoods by borough and zip cluster. We use this to match you against active and upcoming inventory in our Registry.</p>
       </div>
       <div class="step-card">
         <div class="step-num">02</div>
@@ -1090,7 +1133,7 @@
       <div class="step-card">
         <div class="step-num">04</div>
         <div class="step-title">04 — Final Verification</div>
-        <p class="step-body">Submit your contact info to receive your Representation Agreement package via DocuSign. The package includes your Representation Agreement, NYS Agency Disclosure, and applicable fee disclosure. Fee capped at 7% under $10,000/mo, 5% above. If the landlord pays, you pay $0. Once signed, you're cleared and we go to work.</p>
+        <p class="step-body">Submit your contact info to receive your digital Representation Agreement. Fee capped at 7% for units under $10,000 and 5% for units above. If the landlord pays the fee, the tenant pays $0. Owner-paid commissions credited 1:1.</p>
       </div>
     </div>
     <div style="margin-top: 40px; text-align: center;">
@@ -1113,7 +1156,7 @@
         <div class="stb-card-eyebrow">Every Tuesday — 7–8 PM ET — Free</div>
         <div class="stb-card-title">Stop The<br>Bleeding.</div>
         <p class="stb-card-body">One hour. The real cost of renting vs. owning in NYC. Bring your numbers — rent, savings, income. We do the math live. No sales pitch. Just the truth.</p>
-        <a href="https://christoferholland.com/workshops/stopthebleeding.html" class="btn-primary-light">Reserve Your Seat</a>
+        <a href="../workshops/stopthebleeding.html" class="btn-primary-light">Reserve Your Seat</a>
         <a href="../buyer-orientation.html" class="stb-card-sub" style="color:#c8d0e0;font-size:12px;font-weight:500;margin-top:4px;">Or book a free Buyer Orientation Call →</a>
       </div>
     </div>
@@ -1131,7 +1174,7 @@
         <a href="https://instagram.com/christofer.holland" target="_blank" rel="noopener" aria-label="Instagram">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/christoferholland/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <a href="https://linkedin.com/in/christoferholland" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8.5"/><path d="M12 16v-5m4 5v-3a2 2 0 0 0-4 0"/></svg>
         </a>
         <a href="https://facebook.com/christoferhollandrealestate" target="_blank" rel="noopener" aria-label="Facebook">
@@ -1144,9 +1187,9 @@
       <ul class="footer-links">
         <li><a href="landlord.html">Owners — Rent Your Unit</a></li>
         <li><a href="renters.html">Renters — Get Pre-Cleared</a></li>
-        <li></li>
-        <li><a href="https://christoferholland.com/workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
-        <li><a href="https://christoferholland.com" target="_blank" rel="noopener">christoferholland.com</a></li>
+        <li><a href="lease-break.html">Exit a Lease — Resolve the Lease Liability</a></li>
+        <li><a href="../workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
+        <li><a href="../index.html">christoferholland.com</a></li>
       </ul>
     </div>
     <div>
@@ -1318,8 +1361,8 @@
         <option value="other">Other</option>
       </select>
 
-      <div id="moveready-block" style="margin-bottom:16px;display:none;">
-        <div class="sifter-step-label" style="margin-bottom:8px;">If approved, are you ready to cover move-in costs? <span style="font-weight:400;opacity:.7;">(first month, security deposit, and representation fee — if not landlord-paid)</span></div>
+      <div style="margin-bottom:16px;">
+        <div class="sifter-step-label" style="margin-bottom:8px;">If approved, are you ready to cover move-in costs?</div>
         <div class="sifter-toggle">
           <button class="sifter-toggle-btn" id="mrYes"   onclick="moveReadyToggle('yes')">Yes — ready now</button>
           <button class="sifter-toggle-btn" id="mrSoon"  onclick="moveReadyToggle('soon')">Within a few days</button>
@@ -1345,7 +1388,7 @@
     <div class="sifter-step" id="step6">
       <div class="sifter-step-label">Step 6 of 6</div>
       <div class="sifter-step-q">Last step — how do we reach you?</div>
-      <form action="https://formspree.io/f/mdabaeyo" method="POST" id="sifterForm">
+      <form name="sifter-renter" method="POST" data-netlify="true" id="sifterForm">
         <input type="hidden" name="form-name" value="sifter-renter">
         <input type="hidden" name="subject" value="🔴 NEW RENTER — The Listing Side Registry">
         <input type="hidden" name="neighborhood" id="h-neighborhood">
@@ -1369,29 +1412,18 @@
         </label>
         <button class="sifter-next" type="submit">Submit — Request Representation</button>
       </form>
-      <p class="sifter-note">Every submission is reviewed personally.</p>
+      <p class="sifter-note">Every submission is reviewed personally. Cleared renters get priority access to upcoming exclusive inventory.</p>
     </div>
 
     <!-- STEP 7: Success -->
     <div class="sifter-step" id="step7">
       <div style="text-align:center; padding: 20px 0;">
         <div style="font-family:'Bebas Neue',sans-serif; font-size:48px; color:#C8102E; margin-bottom:12px; line-height:1;">Data<br>Received.</div>
-        <p style="font-size:15px; color:#555555; line-height:1.7; margin-bottom:20px;">Your file is in. Christofer Holland will review your profile — typically within one business day.</p>
-
-        <div style="background:#f4f4f4;border-left:3px solid #C8102E;padding:16px 18px;text-align:left;margin-bottom:16px;">
-          <p style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#C8102E;margin-bottom:10px;">What Happens Next</p>
-          <p style="font-size:13px;color:#333333;line-height:1.8;margin:0;">
-            <strong>1.</strong> Christofer reviews your file and confirms your Cleared status.<br>
-            <strong>2.</strong> You'll receive a DocuSign package by email — your Representation Agreement, NYS Agency Disclosure, and fee disclosure.<br>
-            <strong>3.</strong> Once signed, you're officially represented. We go to work.<br>
-          </p>
+        <p style="font-size:15px; color:#555555; line-height:1.7; margin-bottom:16px;">Christofer Holland is reviewing your file. To lock your capped rate, check your email to sign the required NYS Disclosures.</p>
+        <div style="background:#f4f4f4;border-left:3px solid #C8102E;padding:14px 16px;text-align:left;margin-bottom:16px;">
+          <p style="font-size:13px;color:#333333;line-height:1.7;margin:0;"><strong>Note:</strong> Your agreement includes a mandatory Owner-Credit clause — if the landlord pays a commission, it is credited to you, reducing your out-of-pocket fee to <strong>$0</strong>.</p>
         </div>
-
-        <div style="background:#f4f4f4;border-left:3px solid #1A2744;padding:14px 16px;text-align:left;margin-bottom:16px;">
-          <p style="font-size:13px;color:#333333;line-height:1.7;margin:0;"><strong>Fee reminder:</strong> Your rate is capped at 7% (or 5% for units $10k+). If the landlord pays a commission, that credit applies 1:1 — in many cases your fee is <strong>$0</strong>.</p>
-        </div>
-
-        <p style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#1A2744;line-height:1.2;margin-top:20px;">Ready renters move first.<br><span style="color:#C8102E;">I make sure you're ready before you start.</span></p>
+        <div id="stbPrompt" style="display:none; background:#f4f4f4; padding:20px; margin-top:12px; border-left: 3px solid #C8102E; text-align:left;">
           <p style="font-size:13px; font-weight:600; color:#1A2744; margin-bottom:4px;">One more thing —</p>
           <p style="font-size:13px; color:#555555;">Opening the Stop the Bleeding workshop for you now...</p>
         </div>
@@ -1507,9 +1539,6 @@
       var rentCeiling = annualIncome / 40;
       var needsConsultation = (credit === 'below-650') || (parseInt(rent) > rentCeiling);
       document.getElementById('h-status').value = needsConsultation ? 'Consultation Required' : 'Pre-Cleared';
-      // Show move-in readiness only for 0-30 day movers
-      var timing = document.getElementById('h-movein').value;
-      document.getElementById('moveready-block').style.display = (timing === '0-30') ? 'block' : 'none';
     }
     if (step === 4) {
       var occ = document.getElementById('s-occupants').value;
@@ -1531,13 +1560,13 @@
   document.getElementById('sifterForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var data = new FormData(this);
-    fetch('https://formspree.io/f/mdabaeyo', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } }).finally(function() {
+    fetch('/', { method: 'POST', body: data }).finally(function() {
       document.getElementById('step6').classList.remove('active');
       document.getElementById('step7').classList.add('active');
       if (buyingPower === 'yes') {
         document.getElementById('stbPrompt').style.display = 'block';
         setTimeout(function() {
-          window.open('https://christoferholland.com/workshops/stopthebleeding.html', '_blank');
+          window.open('../workshops/stopthebleeding.html', '_blank');
         }, 1500);
       }
     });

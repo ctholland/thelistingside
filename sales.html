@@ -195,7 +195,7 @@
   .path-btn.active { border-color: var(--red); background: rgba(200,16,46,.1); }
   .path-btn-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--red); margin-bottom: 6px; }
   .path-btn-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--white); line-height: 1; margin-bottom: 6px; }
-  .path-btn-sub { font-size: 13px; color: rgba(255,255,255,.78); line-height: 1.5; }
+  .path-btn-sub { font-size: 13px; color: #6b7a99; line-height: 1.5; }
 
   /* ── SECTIONS ── */
   .page-section { padding-left: 48px; padding-right: 48px; }
@@ -397,21 +397,33 @@
     .form-row, .form-row-3 { grid-template-columns: 1fr; }
   }
 </style>
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://christoferholland.com/thelistingside/images/og-listing-side.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="The Listing Side">
-  <meta property="og:title" content="Buy or Sell in NYC | The Listing Side">
-  <meta property="og:url" content="https://christoferholland.com/thelistingside/sales.html">
 </head>
 <body>
 
-<div id="nav"></div>
-<script src="nav.js"></script>
+<!-- STICKY HEADER -->
+<div id="stickyHeader">
+<div class="compliance-bar">
+  <div class="compliance-links">
+    <a href="https://d1e1jt2fj4r8r.cloudfront.net/documents/fairhousingnotice.pdf" target="_blank" rel="noopener">Fair Housing Notice</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://d1e1jt2fj4r8r.cloudfront.net/d36fff22-1ea6-464a-8fbd-aee2a2b71bb2/-jHhTwrOg/sop.pdf" target="_blank" rel="noopener">Standard Operating Procedures</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://kwnyc.com/ada-disclosure" target="_blank" rel="noopener">Reasonable Accommodation</a>
+    <span class="compliance-sep">●</span>
+    <a href="https://image.info.rebny.com/lib/fe35157075640479701d77/m/1/68142058-8e73-4146-b9d6-54fc56484a07.pdf?utm_source=sfmc&utm_medium=email&utm_campaign=FARE+Act+Updated+Compliance&utm_term=Flyer&utm_id=1811434&sfmc_id=628153611" target="_blank" rel="noopener">Agency Disclosure</a>
+  </div>
+</div>
+</div>
+
+<!-- NAV -->
+<script src="../nav.js"></script>
 
 <!-- UTILITY BAR -->
+<div class="utility-bar">
+  <a href="renters.html">I Am a Renter</a>
+  <a href="landlord.html">I Am a Landlord</a>
+  <a href="lease-break.html">I Need to Break a Lease</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -421,7 +433,7 @@
       <h1 class="hero-title">Buy or Sell<br>In NYC.<br><em>For Less.</em></h1>
       <p class="hero-sub">Professional representation — seller and buyer. All fees fully negotiable and not set by law. Staging and marketing costs paid directly by the seller. Fees tied to results — you pay at close.</p>
       <div class="hero-ctas">
-        <button class="btn-primary" onclick="document.getElementById('seller-tab').click();document.getElementById('forms').scrollIntoView({behavior:'smooth'})">I Want to Sell</button>
+        <button class="btn-primary" onclick="document.getElementById('forms').scrollIntoView({behavior:'smooth'})">I Want to Sell</button>
         <button class="btn-ghost" onclick="document.getElementById('buyer-tab').click();document.getElementById('forms').scrollIntoView({behavior:'smooth'})">I Want to Buy</button>
       </div>
     </div>
@@ -519,17 +531,17 @@
       <div class="feature-card">
         <div class="feature-num">01</div>
         <div class="feature-title">Pricing Strategy</div>
-        <p class="feature-body">Comparative market analysis using OLR/RLS data and neighborhood comps. We price to sell, not to sit.</p>
+        <p class="feature-body">Comparative market analysis, OLR and RLS data, neighborhood comp review. We price to sell, not to sit.</p>
       </div>
       <div class="feature-card">
         <div class="feature-num">02</div>
         <div class="feature-title">Professional Media</div>
-        <p class="feature-body">Photography, floor plan, and listing assets are part of every listing — paid directly by the seller. You own them permanently. If you need a photographer, we can arrange it.</p>
+        <p class="feature-body">Photography, floor plan, and listing assets paid for directly by the seller. You own them forever. We require professional-grade media on every listing.</p>
       </div>
       <div class="feature-card">
         <div class="feature-num">03</div>
         <div class="feature-title">Co-op & Condo Board</div>
-        <p class="feature-body">Board package preparation, interview coaching, and managing agent coordination. Co-ops require an agent who knows the process — we handle it front to back.</p>
+        <p class="feature-body">30+ years of NYC experience. Board package preparation, interview coaching, managing agent coordination. Co-ops require an agent who knows the process cold.</p>
       </div>
       <div class="feature-card">
         <div class="feature-num">04</div>
@@ -539,7 +551,7 @@
       <div class="feature-card">
         <div class="feature-num">05</div>
         <div class="feature-title">Contract & Negotiation</div>
-        <p class="feature-body">From offer to accepted deal — we manage the negotiation, the riders, and every disclosure required under NYS law. We refer you to trusted attorneys and lenders who know how to close.</p>
+        <p class="feature-body">From offer to accepted deal — we manage the negotiation, the riders, the attorney coordination, and every disclosure required under NYS law.</p>
       </div>
       <div class="feature-card">
         <div class="feature-num">06</div>
@@ -568,16 +580,16 @@
         <p class="panel-body">Tell us about your property. We review every submission personally and follow up within 24 hours to discuss pricing, timing, and the listing agreement.</p>
         <ul class="panel-list">
           <li>Listing commission — negotiable, paid at close</li>
-          <li>Staging, photography, and direct listing fees (StreetEasy, etc.) — seller pays directly</li>
+          <li>Staging and photography — seller pays directly</li>
           <li>All fees negotiable and disclosed upfront</li>
-          <li>Professional photography and floor plan — seller pays directly, we can arrange if needed</li>
+          <li>Professional media required before listing</li>
           <li>Co-op board package and interview prep included</li>
-          <li>Buyer-side intelligence applied to every listing decision</li>
+          <li>30+ years NYC sales experience</li>
         </ul>
       </div>
       <div class="intake-form">
         <div class="form-eyebrow">Seller Intake</div>
-        <form action="https://formspree.io/f/xykokwgk" method="POST" id="sellerForm">
+        <form name="seller-intake" method="POST" data-netlify="true" id="sellerForm">
           <input type="hidden" name="form-name" value="seller-intake">
           <input type="hidden" name="subject" value="🏠 NEW SELLER — The Listing Side Sales">
 
@@ -646,9 +658,9 @@
 
           <span class="form-section-label">Listing Assets</span>
           <select class="form-select" name="photography">
-            <option value="" disabled selected>Do you have professional photography?</option>
+            <option value="" disabled selected>Professional photography status</option>
             <option value="yes">Yes — ready</option>
-            <option value="no">No — we can arrange it</option>
+            <option value="no">No — need referral</option>
             <option value="scheduled">Scheduled / in progress</option>
           </select>
           <input class="form-input" type="url" name="photo-link" placeholder="Link to existing photos (Dropbox, Google Drive, etc.) — optional">
@@ -663,7 +675,7 @@
           <span class="form-section-label">Agreement</span>
           <label class="form-checkbox">
             <input type="checkbox" name="seller-agreement" required>
-            <span>I understand the listing commission is negotiable and not set by law, paid at close. Staging, photography, and direct listing costs are paid by me directly.</span>
+            <span>I understand the listing commission is negotiable and not set by law, paid at close. Staging and marketing costs are paid by me directly.</span>
           </label>
           <button class="form-submit" type="submit">Submit — I Want to List</button>
         </form>
@@ -693,7 +705,7 @@
       </div>
       <div class="intake-form">
         <div class="form-eyebrow">Buyer Sifter</div>
-        <form action="https://formspree.io/f/xeenegjg" method="POST" id="buyerForm">
+        <form name="buyer-sifter" method="POST" data-netlify="true" id="buyerForm">
           <input type="hidden" name="form-name" value="buyer-sifter">
           <input type="hidden" name="subject" value="🔑 NEW BUYER — The Listing Side Sales">
 
@@ -725,7 +737,7 @@
               <option value="below-650">Below 650</option>
             </select>
             <select class="form-select" name="dti" required>
-              <option value="" disabled selected>Estimated DTI — monthly debts ÷ gross monthly income</option>
+              <option value="" disabled selected>Estimated DTI (debt-to-income)</option>
               <option value="under-28">Under 28%</option>
               <option value="28-36">28–36%</option>
               <option value="36-43">36–43%</option>
@@ -771,7 +783,7 @@
             <option value="3">3 Bedrooms</option>
             <option value="4-plus">4+ Bedrooms</option>
           </select>
-          <input class="form-input" type="text" name="neighborhoods" placeholder="Target neighborhoods — optional (e.g. UWS, Gramercy, Park Slope)">
+          <input class="form-input" type="text" name="neighborhoods" placeholder="Target neighborhoods (e.g. UWS, Gramercy, Park Slope)" required>
           <select class="form-select" name="timeline" required>
             <option value="" disabled selected>Timeline to buy</option>
             <option value="now">Ready now</option>
@@ -812,7 +824,7 @@
       <div class="stb-card-eyebrow">Every Tuesday — 7–8 PM ET — Free</div>
       <div class="stb-card-title">From Renting<br>to Owning.</div>
       <p class="stb-card-body">One hour. The real cost of renting vs. owning in NYC. Bring your income, your savings, and your questions. We do the math live. No sales pitch.</p>
-      <a href="https://christoferholland.com/workshops/stopthebleeding.html" class="btn-primary" style="display:inline-block;margin-bottom:12px;">Reserve Your Seat</a><br>
+      <a href="../workshops/stopthebleeding.html" class="btn-primary" style="display:inline-block;margin-bottom:12px;">Reserve Your Seat</a><br>
       <a href="../buyer-orientation.html" style="font-size:12px;color:#c8d0e0;font-weight:500;">Or book a free Buyer Orientation Call →</a>
     </div>
   </div>
@@ -821,7 +833,7 @@
 <!-- INTERCEPT -->
 <div class="intercept" style="background:#111111;border-top:1px solid #222;">
   <div>
-    <div style="font-family:'DM Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#C8102E;margin-bottom:12px;">Looking for a Rental First?</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;margin-bottom:8px;">Looking for a Rental First?</div>
     <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;color:#ffffff;line-height:1;">Renting while you plan to buy.</div>
     <p style="font-size:14px;color:#a0aabb;line-height:1.6;margin-top:8px;max-width:480px;">7% representation cap for renters. If you're not ready to buy today, we get you into the right rental — at the right rate — while you build your buying power.</p>
   </div>
@@ -834,17 +846,6 @@
     <div>
       <div class="footer-brand">The Listing <span>Side</span></div>
       <p class="footer-tag">Clear Rates.<br>Faster Closings.</p>
-      <div class="footer-social" style="display:flex;gap:16px;margin-top:20px;">
-        <a href="https://instagram.com/christofer.holland" target="_blank" rel="noopener" aria-label="Instagram" style="color:#ffffff;transition:color .2s;display:flex;align-items:center;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/christoferholland/" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:#ffffff;transition:color .2s;display:flex;align-items:center;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8.5"/><path d="M12 16v-5m4 5v-3a2 2 0 0 0-4 0"/></svg>
-        </a>
-        <a href="https://facebook.com/christoferhollandrealestate" target="_blank" rel="noopener" aria-label="Facebook" style="color:#ffffff;transition:color .2s;display:flex;align-items:center;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-      </div>
     </div>
     <div>
       <div class="footer-col-title">The Listing Side System</div>
@@ -853,7 +854,7 @@
         <li><a href="landlord.html">Owners — Rent Your Unit</a></li>
         <li><a href="renters.html">Renters — Get Representation</a></li>
         <li><a href="lease-break.html">Exit a Lease</a></li>
-        <li><a href="https://christoferholland.com/workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
+        <li><a href="../workshops/stopthebleeding.html">Stop the Bleeding Workshop</a></li>
         <li><a href="../index.html">christoferholland.com</a></li>
       </ul>
     </div>
@@ -906,7 +907,7 @@
   // Seller form
   document.getElementById('sellerForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    fetch('https://formspree.io/f/xykokwgk', { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } }).finally(function() {
+    fetch('/', { method: 'POST', body: new FormData(this) }).finally(function() {
       document.getElementById('sellerForm').style.display = 'none';
       document.getElementById('sellerSuccess').style.display = 'block';
     });
@@ -915,7 +916,7 @@
   // Buyer form
   document.getElementById('buyerForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    fetch('https://formspree.io/f/xeenegjg', { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } }).finally(function() {
+    fetch('/', { method: 'POST', body: new FormData(this) }).finally(function() {
       document.getElementById('buyerForm').style.display = 'none';
       document.getElementById('buyerSuccess').style.display = 'block';
     });
