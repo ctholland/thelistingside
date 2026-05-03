@@ -2,7 +2,7 @@
 
   var links = [
     { label: 'Landlords',  href: 'landlord.html' },
-    { label: 'Renters',    href: 'renters.html' },
+    { label: 'Renters',    href: 'renter.html' },
     { label: 'Listings',   href: 'listings.html' },
     { label: 'Relocation', href: 'relocation.html' },
     { label: 'Sales',      href: 'sales.html' },
