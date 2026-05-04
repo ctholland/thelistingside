@@ -6,7 +6,6 @@
     { label: 'Listings',   href: 'listings.html' },
     { label: 'Relocation', href: 'relocation.html' },
     { label: 'Sales',      href: 'sales.html' },
-    { label: 'About',      href: 'about.html' },
   ];
 
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
