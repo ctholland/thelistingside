@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Send Documents | The Listing Side</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:   #C8102E;
+      --navy:  #1A2744;
+      --white: #FFFFFF;
+      --light: #F4F4F4;
+      --body:  #2A2A2A;
+      --muted: #666666;
+    }
+
+    html, body {
+      min-height: 100%;
+      background: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      color: var(--body);
+    }
+
+    /* ── ghosted % background ── */
+    body::before {
+      content: '7% 5%';
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(100px, 22vw, 260px);
+      letter-spacing: 0.04em;
+      color: var(--red);
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 0;
+      white-space: nowrap;
+    }
+
+    /* ── red top bar ── */
+    .topbar {
+      width: 100%;
+      height: 6px;
+      background: var(--red);
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ── header ── */
+    header {
+      position: relative;
+      z-index: 10;
+      border-bottom: 1px solid #E8E8E8;
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.08em;
+      color: var(--navy);
+      text-decoration: none;
+      line-height: 1;
+    }
+    .brand span { color: var(--red); }
+
+    .sub-brand {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    /* ── main ── */
+    main {
+      position: relative;
+      z-index: 10;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 72px 32px 80px;
+    }
+
+    .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(44px, 8vw, 72px);
+      line-height: 0.95;
+      letter-spacing: 0.03em;
+      color: var(--navy);
+      margin-bottom: 28px;
+    }
+
+    .intro {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--body);
+      max-width: 540px;
+      margin-bottom: 40px;
+    }
+
+    /* ── doc list ── */
+    .doc-list {
+      list-style: none;
+      margin-bottom: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .doc-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--body);
+    }
+
+    .doc-list li::before {
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border: 2px solid var(--red);
+      margin-top: 2px;
+      position: relative;
+    }
+
+    .doc-list li::before {
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpolyline points='3,9 7,13 15,5' fill='none' stroke='%23C8102E' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/cover no-repeat, white;
+      border: 2px solid var(--red);
+    }
+
+    /* ── CTA button ── */
+    .btn-upload {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      padding: 18px 48px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+    .btn-upload:hover {
+      background: #a50d25;
+      transform: translateY(-1px);
+    }
+
+    /* ── note ── */
+    .note {
+      margin-top: 24px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 460px;
+    }
+
+    .note a {
+      color: var(--navy);
+      text-decoration: underline;
+    }
+
+    /* ── divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid #E8E8E8;
+      margin: 56px 0 32px;
+    }
+
+    /* ── footer ── */
+    footer {
+      position: relative;
+      z-index: 10;
+      border-top: 1px solid #E8E8E8;
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-legal {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .footer-kw {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.6;
+    }
+
+    .back-link {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-link:hover { color: var(--red); }
+    .back-link span { margin-right: 4px; }
+
+    @media (max-width: 480px) {
+      header, footer { padding: 16px 20px; }
+      main { padding: 48px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar"></div>
+
+  <header>
+    <div>
+      <a class="brand" href="https://thelistingside.com">THE LISTING <span>SIDE</span></a>
+      <div class="sub-brand">Rentals &nbsp;|&nbsp; Sales &nbsp;|&nbsp; Premium Representation</div>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="https://thelistingside.com"><span>←</span> thelistingside.com</a>
+
+    <div class="label">Secure Document Transfer</div>
+    <h1>SEND YOUR<br>DOCUMENTS</h1>
+
+    <p class="intro">
+      Use the button below to drop files directly into a secure folder. No account required — just drag, drop, and you're done.
+    </p>
+
+    <ul class="doc-list">
+      <li>Lease agreement or current rental contract</li>
+      <li>Property income &amp; expense summary (NOI)</li>
+      <li>Tenant information or current rent roll</li>
+      <li>Photos or inspection reports</li>
+      <li>Any documents we discussed on our call</li>
+    </ul>
+
+    <a class="btn-upload" href="https://drive.google.com/drive/folders/1E4H_giDjtmgFlrPzDTn5SQEgbLLRzqzz?usp=drive_link" target="_blank" rel="noopener">
+      UPLOAD TO GOOGLE DRIVE
+    </a>
+
+    <p class="note">
+      Files land directly with Christofer and are removed from the shared folder promptly.<br>
+      Questions? <a href="mailto:info@thelistingside.com">info@thelistingside.com</a> &nbsp;·&nbsp; 917·207·1414
+    </p>
+
+    <hr class="divider" />
+
+  </main>
+
+  <footer>
+    <div class="footer-legal">
+      Christofer Holland &nbsp;·&nbsp; Licensed Real Estate Salesperson &nbsp;·&nbsp; Lic. #10401390448<br>
+      thelistingside.com
+    </div>
+    <div class="footer-kw">
+      NY Living Solutions | Keller Williams NYC<br>
+      90 John Street, New York NY 10038
+    </div>
+  </footer>
+
+</body>
+</html>
