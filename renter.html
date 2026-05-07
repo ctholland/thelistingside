@@ -1434,6 +1434,11 @@
   });
   document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeSifter(); });
 
+  // Auto-open modal if coming from thelistingside.com/apply
+  if (window.location.search.indexOf('apply=true') !== -1) {
+    openSifter();
+  }
+
   function guarantorToggle(val) {
     guarantor = val;
     ['gYes','gNo','gMaybe'].forEach(function(id) {
